@@ -46,9 +46,9 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                         ),
                       ),
                         horizontalSpace(12),
-                        Column(
+                        const Column(
                           children: [
-                            const Text(
+                         Text(
                               'خديجة أشرف',
                               textAlign: TextAlign.right,
                               style: TextStyle(
@@ -59,7 +59,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                                 height: 1.67,
                               ),
                             ),
-                            const Text(
+                          Text(
                               'UX UI Designer',
                               textAlign: TextAlign.right,
                               style: TextStyle(

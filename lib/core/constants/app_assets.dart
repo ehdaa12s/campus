@@ -6,7 +6,9 @@ class AssetsPaths {
   static const String lotties = '$assets/lotties';
 }
 
-class AppImages {}
+class AppImages {
+
+}
 
 class AppIcons {}
 

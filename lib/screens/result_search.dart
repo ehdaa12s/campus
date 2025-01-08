@@ -90,6 +90,8 @@ class ResultSearch extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomDropdownButton(
+                          height: 30,
+                          width: 100,
                           text: 'البلد',
                           items: ['مصر', 'السعودية', 'الإمارات', 'الأردن'],
                         ),
@@ -97,6 +99,8 @@ class ResultSearch extends StatelessWidget {
                           width: 4,
                         ),
                         CustomDropdownButton(
+                          height: 30,
+                          width: 100,
                           text: 'اللغة',
                           items: [
                             'العربية',
@@ -109,6 +113,9 @@ class ResultSearch extends StatelessWidget {
                           width: 4,
                         ),
                         CustomDropdownButton(
+                          height: 30,
+                          width: 100,
+
                           text: 'التخصص',
                           items: [
                             'التصميم',
@@ -122,6 +129,8 @@ class ResultSearch extends StatelessWidget {
                           width: 4,
                         ),
                         CustomDropdownButton(
+                          height: 30,
+                          width: 100,
                           text: 'المستوي',
                           items: ['المبتدئ', 'المتوسط', 'المتقدم'],
                         ),

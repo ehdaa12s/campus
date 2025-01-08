@@ -13,7 +13,7 @@ class SimplifiedColumnContainer extends StatelessWidget {
         children: [
           SizedBox(
             width: 345,
-            height: 50,
+            height: 30,
             child: Stack(
               children: [
                 const Positioned(
@@ -36,7 +36,7 @@ class SimplifiedColumnContainer extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 16),
+         // const SizedBox(height: 2),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
