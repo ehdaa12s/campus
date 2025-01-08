@@ -1,11 +1,11 @@
-import 'package:champs/compenent/custom_profile_card.dart';
-import 'package:champs/compenent/custom_text_button_for_fields_selection.dart';
+import 'package:champs/core/widgets/custom_profile_card.dart';
+import 'package:champs/core/widgets/custom_text_button_for_fields_selection.dart';
 import 'package:champs/constant.dart';
 import 'package:champs/core/helpers/spaces.dart';
 import 'package:champs/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../compenent/custom_search_button.dart';
+import '../core/widgets/custom_search_button.dart';
 
 class HomeScreenContent extends StatefulWidget {
   const HomeScreenContent({super.key});

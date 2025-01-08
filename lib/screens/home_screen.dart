@@ -1,4 +1,4 @@
-import 'package:champs/compenent/custom_navagation_bar.dart';
+import 'package:champs/core/widgets/custom_navagation_bar.dart';
 import 'package:champs/screens/home_screen_content.dart';
 import 'package:flutter/material.dart';
 

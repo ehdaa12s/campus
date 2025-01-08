@@ -1,11 +1,11 @@
-import 'package:champs/compenent/custom_text_button_for_boarding.dart';
-import 'package:champs/compenent/custom_text_field.dart';
+import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
+import 'package:champs/core/widgets/custom_text_field.dart';
 import 'package:champs/constant.dart';
 import 'package:champs/screens/enter_email_forget_password.dart';
 import 'package:champs/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../compenent/simplified_colum_contianer.dart';
+import '../core/widgets/simplified_colum_contianer.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});

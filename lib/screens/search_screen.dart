@@ -1,4 +1,4 @@
-import 'package:champs/compenent/custom_search_button.dart';
+import 'package:champs/core/widgets/custom_search_button.dart';
 import 'package:champs/constant.dart';
 
 import 'package:champs/screens/result_search.dart';

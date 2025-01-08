@@ -1,5 +1,5 @@
-import 'package:champs/compenent/custom_text_button_for_boarding.dart';
-import 'package:champs/compenent/custom_text_field.dart';
+import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
+import 'package:champs/core/widgets/custom_text_field.dart';
 import 'package:champs/constant.dart';
 
 import 'package:champs/screens/correct_login.dart';

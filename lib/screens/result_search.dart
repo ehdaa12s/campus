@@ -1,12 +1,12 @@
-import 'package:champs/compenent/custom_drop_button_list.dart';
-import 'package:champs/compenent/custom_navagation_bar.dart';
-import 'package:champs/compenent/custom_profile_card.dart';
-import 'package:champs/compenent/custom_search_button.dart';
+import 'package:champs/core/widgets/custom_drop_button_list.dart';
+import 'package:champs/core/widgets/custom_navagation_bar.dart';
+import 'package:champs/core/widgets/custom_profile_card.dart';
+import 'package:champs/core/widgets/custom_search_button.dart';
 import 'package:champs/constant.dart';
 import 'package:champs/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../compenent/custom_navagation_bar.dart';
+import '../core/widgets/custom_navagation_bar.dart';
 
 class ResultSearch extends StatelessWidget {
   const ResultSearch({super.key});

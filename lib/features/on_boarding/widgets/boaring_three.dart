@@ -1,4 +1,4 @@
-import 'package:champs/compenent/custom_text_button_for_boarding.dart';
+import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
 import 'package:champs/constant.dart';
 
 import 'package:champs/features/on_boarding/widgets/custom_container_boarding_image.dart';

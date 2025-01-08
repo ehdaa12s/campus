@@ -1,5 +1,5 @@
-import 'package:champs/compenent/custom_text_button_for_boarding.dart';
-import 'package:champs/compenent/simple_continar_block.dart';
+import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
+import 'package:champs/core/widgets/simple_continar_block.dart';
 import 'package:champs/constant.dart';
 import 'package:champs/screens/rest_password.dart';
 import 'package:flutter/material.dart';
