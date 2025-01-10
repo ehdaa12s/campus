@@ -6,7 +6,6 @@ import 'package:champs/constant.dart';
 import 'package:champs/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../core/widgets/custom_navagation_bar.dart';
 
 class ResultSearch extends StatelessWidget {
   const ResultSearch({super.key});

@@ -72,7 +72,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                             ),
                           ],
                         ),
-                      Spacer(),
+                      const Spacer(),
                       Container(
                         width: 40,
                         height: 40,
