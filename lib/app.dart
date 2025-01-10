@@ -1,3 +1,4 @@
+import 'package:champs/screens/edit_profile_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,9 +21,13 @@ class CampusApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: appTheme(),
+        
         navigatorKey: AppRouter.navigatorKey,
         onGenerateRoute: appRouter.generateRoute,
         initialRoute: Routes.onboardingScreen,
+        routes: {
+          Routes.editProfileScreen: (context) => const EditProfileScreen(),
+        },
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,

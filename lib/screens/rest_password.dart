@@ -19,7 +19,7 @@ class _RestPasswordState extends State<RestPassword> {
     return Scaffold(
       body: ListView(
         children: [
-          Padding(padding: EdgeInsets.all(24),
+          Padding(padding: const EdgeInsets.all(24),
           child:
           Column(
             children: [
