@@ -14,19 +14,19 @@ class SimplifiedContainerRow extends StatelessWidget {
 
 
           _buildBox(),
-          const SizedBox(width: 16),
+          const SizedBox(width: 14),
           _buildBox(),
-          const SizedBox(width: 16),
+          const SizedBox(width: 14),
 
           _buildBox(),
-          const SizedBox(width: 16),
+          const SizedBox(width: 14),
           _buildBox(
             child: const Text(
               '8',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 30,
+                fontSize: 28,
                 fontFamily: 'Lalezar',
                 fontWeight: FontWeight.w400,
                 height: 0.75,

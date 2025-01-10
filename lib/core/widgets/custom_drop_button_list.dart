@@ -5,11 +5,15 @@ class CustomDropdownButton extends StatefulWidget {
   final List<String> items;
   final Color defaultColor;
   final Color activeColor;
+  final double width;
+  final double height;
 
   const CustomDropdownButton({
     super.key,
     required this.text,
     required this.items,
+    required this.width,
+    required this.height,
     this.defaultColor = const Color(0xFFE5E7EB),
     this.activeColor = const Color(0xFF00008D),
   });
@@ -45,15 +49,21 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
         GestureDetector(
           onTap: _toggleDropdown,
           child: Container(
-            width: 100,
-            height: 30,
+            width: widget.width,
+            height: widget.height,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
               color: _backgroundColor,
               borderRadius: BorderRadius.circular(8),
+              border: Border.all(
+                width: 1,
+                color: const Color(0xFF98A1B2),
+              ),
+
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+             // mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   widget.text,
@@ -65,7 +75,7 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                const SizedBox(width: 4),
+
                 Transform.rotate(
                   angle: _isDropdownOpen ? 0 : -3.14,
                   child: const Icon(
@@ -80,7 +90,7 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
         ),
         if (_isDropdownOpen)
           Container(
-            width: 100,
+            width: double.infinity,
             decoration: BoxDecoration(
               color: widget.defaultColor,
               borderRadius: BorderRadius.circular(8),
@@ -98,7 +108,7 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
                         child: Text(
                           item,
                           style: const TextStyle(
-                            color: Color(0xFF475467),
+                           color: Color(0xFF475467),
                             fontSize: 14,
                             fontFamily: 'Almarai',
                           ),
