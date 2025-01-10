@@ -333,10 +333,12 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
                             child: ProfileSectionHeader(
                               title: 'خبراتي',
                               onAddTap: () {
-                                print("Add icon tapped");
+                                Navigator.pushNamed(
+                                    context, Routes.addExperienceScreen);
                               },
                               onEditTap: () {
-                                print("Edit icon tapped");
+                                Navigator.pushNamed(
+                                    context, Routes.editExperienceScreen);
                               },
                             ),
                           ),
@@ -508,10 +510,12 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
                             child: ProfileSectionHeader(
                               title: "الشهادات",
                               onAddTap: () {
-                                print("Add icon tapped");
+                                Navigator.pushNamed(
+                                    context, Routes.addCertificateScreen);
                               },
                               onEditTap: () {
-                                print("Edit icon tapped");
+                                Navigator.pushNamed(
+                                    context, Routes.editCertificateScreen);
                               },
                             ),
                           ),

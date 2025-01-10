@@ -25,4 +25,5 @@ class AppSvgs {
   static const String sharingNetwork = 'assets/svg/ShareNetwork.svg';
   static const String star = 'assets/svg/Star.svg';
   static const String add = 'assets/svg/add-square.svg';
+  static const String calender = 'assets/svg/Icon.svg';
 }
