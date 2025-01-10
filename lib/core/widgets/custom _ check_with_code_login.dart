@@ -9,19 +9,17 @@ import 'package:flutter/material.dart';
   final Widget targetScreen;
 
   const CustomCheckCodeForLogin({
-    Key? key,
+    super.key,
     required this.title,
     required this.description,
     required this.targetScreen,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
+      body:
+      Column(
             children: [
               const SizedBox(
                 height: 32,
@@ -91,10 +89,10 @@ import 'package:flutter/material.dart';
                 ),
               ),
               const SizedBox(
-                height: 400,
+                height: 360,
               ),
               CustomButton(
-                buttonText: 'تأكيد',
+                buttonText: 'إرسال',
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -105,9 +103,9 @@ import 'package:flutter/material.dart';
                 height: 44,
               ),
             ],
-          ),
+
         ),
-      ),
+
     );
   }
 }

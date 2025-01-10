@@ -1,6 +1,7 @@
 import 'package:champs/core/widgets/custom_drop_button_list.dart';
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
+import 'package:champs/core/widgets/custom_transform_widget.dart';
 import 'package:champs/core/widgets/simplified_colum_contianer.dart';
 import 'package:champs/screens/sign_up_two.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
           children: [
             const SizedBox(
               height: 24,
+            ),
+          const  CustomTransformWidget(labelText: '3/1',
+          progressColors: [
+          Color(0xFF00008D),
+            Color(0xFFECECEC),
+        Color(0xFFECECEC),
+          ],  targetScreen:SignUpTwo()
+
             ),
             const SizedBox(
               width: 345,

@@ -8,11 +8,22 @@ class CheckWithCodeLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body:CustomCheckCodeForLogin(
-        title: 'تأكيد رقم الهاتف',
-        description:'من فضلك أدخل الكود المرسل إلى رقم هاتفك لتأكيده.',
-        targetScreen: RestPassword(),
+      body:Padding(padding: const EdgeInsets.all(24),
+     child:
+     Column(
+    children: [
+      Expanded(child:
+    CustomCheckCodeForLogin(
+    title: 'تأكيد رقم الهاتف',
+    description:'من فضلك أدخل الكود المرسل إلى رقم هاتفك لتأكيده.',
+    targetScreen: RestPassword(),
+    ),
       ),
+
+    ],
+     ),
+    ),
+
     );
   }
 }
