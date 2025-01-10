@@ -6,15 +6,12 @@ import 'package:champs/constant.dart';
 import 'package:champs/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../core/widgets/custom_navagation_bar.dart';
-
 class ResultSearch extends StatelessWidget {
   const ResultSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       bottomNavigationBar: CustomNavigationBar(
         items: [
           NavItem(icon: Icons.home, label: 'الرئيسية'),
@@ -32,7 +29,6 @@ class ResultSearch extends StatelessWidget {
                         initialIndex: index,
                       )));
         },
-
       ),
       body: ListView(
         children: [
@@ -194,7 +190,6 @@ class ResultSearch extends StatelessWidget {
           )
         ],
       ),
-
     );
   }
 }

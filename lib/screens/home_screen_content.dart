@@ -49,6 +49,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                         const Column(
                           children: [
                          Text(
+                            Text(
                               'خديجة أشرف',
                               textAlign: TextAlign.right,
                               style: TextStyle(
@@ -60,6 +61,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                               ),
                             ),
                           Text(
+                    
                               'UX UI Designer',
                               textAlign: TextAlign.right,
                               style: TextStyle(
@@ -72,7 +74,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                             ),
                           ],
                         ),
-                      Spacer(),
+                      const Spacer(),
                       Container(
                         width: 40,
                         height: 40,
