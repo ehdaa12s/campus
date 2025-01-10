@@ -1,5 +1,4 @@
 import 'package:champs/core/routing/routes.dart';
-import 'package:champs/features/on_boarding/on_boarding_view.dart';
 import 'package:champs/features/splash/presentation%20layer/splash_view.dart';
 import 'package:flutter/material.dart';
 

@@ -160,7 +160,7 @@ class _SignUpTwoState extends State<SignUpTwo> {
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Opacity(
                     opacity: 0.50,
                     child: SizedBox(
