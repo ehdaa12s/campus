@@ -9,10 +9,10 @@ class AppTextStyles {
   static const String balooBhaiJaan2FontFamily = 'Baloo_Bhaijaan_2';
   static const String poppinsFontFamily = 'Poppins';
 
-  static TextStyle font16PrimaryRegularLalezar = TextStyle(
-    fontFamily: lalezarFontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeightHelper.regular,
-    color: AppColors.primary,
+  static TextStyle font20Grey900BalooBhaijaan2Bold = TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.gray900,
   );
 }

@@ -1,9 +1,13 @@
+import 'package:champs/screens/add_certificate_screen.dart';
+import 'package:champs/screens/add_experience_screen.dart';
+import 'package:champs/screens/edit_certificate_screen.dart';
+import 'package:champs/screens/edit_experience_screen.dart';
+import 'package:champs/screens/edit_profile_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'core/constants/app_strings.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'core/themes/app_theme.dart';
@@ -20,13 +24,21 @@ class CampusApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
-
-        title: AppStrings.appName,
         debugShowCheckedModeBanner: false,
         theme: appTheme(),
         navigatorKey: AppRouter.navigatorKey,
         onGenerateRoute: appRouter.generateRoute,
         initialRoute: Routes.onboardingScreen,
+        routes: {
+          Routes.editProfileScreen: (context) => const EditProfileScreen(),
+          Routes.addCertificateScreen: (context) =>
+              const AddCertificateScreen(),
+          Routes.addExperienceScreen: (context) => const AddExperienceScreen(),
+          Routes.editCertificateScreen: (context) =>
+              const EditCertificateScreen(),
+          Routes.editExperienceScreen: (context) =>
+              const EditExperienceScreen(),
+        },
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
