@@ -25,14 +25,17 @@ class CustomButton extends StatelessWidget {
             ),
           ],
         ),
-        child: Text(
-          text,
-          style: const TextStyle(
-            color: Colors.white, // Text color
-            fontSize: 24, // Text size
-            fontWeight: FontWeight.w700, // Text style
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 2.0),
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: Colors.white, // Text color
+              fontSize: 20, // Text size
+              fontWeight: FontWeight.w600, // Text style
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
         ),
       ),
     );
