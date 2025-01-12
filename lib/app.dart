@@ -25,7 +25,7 @@ class CampusApp extends StatelessWidget {
       splitScreenMode: true,
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: appTheme(),
+        theme: appTheme(context),
         navigatorKey: AppRouter.navigatorKey,
         onGenerateRoute: appRouter.generateRoute,
         initialRoute: Routes.onboardingScreen,
