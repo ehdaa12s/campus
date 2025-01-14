@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 class CustomSearchButton extends StatelessWidget {
 final double width;
 
-  const CustomSearchButton({super.key,  required this.onTap ,  required this.width });
+  const CustomSearchButton({super.key,  required this.onTap ,  required this.width,
+    required this.text,
+  });
 final VoidCallback onTap;
+final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,10 +35,10 @@ final VoidCallback onTap;
           Expanded(
             child: TextField(onTap: onTap,
               textAlign: TextAlign.right,
-              decoration: const InputDecoration(
+              decoration:InputDecoration(
                 hintText:
-                'ابحث عن افضل الموجهين في الوطن العربي ',
-                hintStyle: TextStyle(
+             text,
+                hintStyle: const TextStyle(
                   color: Color(0xFF98A1B2),
                   fontSize: 14,
                   fontFamily: fontName,

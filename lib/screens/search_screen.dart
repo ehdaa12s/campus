@@ -21,6 +21,7 @@ class SearchScreen extends StatelessWidget {
                 Row(
                   children: [
                     CustomSearchButton(
+                      text:    'ابحث عن افضل الموجهين في الوطن العربي ',
                       width: 296,
                       onTap: () {
                         Navigator.push(

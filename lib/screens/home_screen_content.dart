@@ -2,6 +2,7 @@ import 'package:champs/core/widgets/custom_profile_card.dart';
 import 'package:champs/core/widgets/custom_text_button_for_fields_selection.dart';
 import 'package:champs/constant.dart';
 import 'package:champs/core/helpers/spaces.dart';
+import 'package:champs/screens/notifcation_screen.dart';
 import 'package:champs/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -28,10 +29,8 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                   const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.all(8),
-                    child: Row(
-                      children: [
-
-                     Container(
+                    child: Row(children: [
+                      Container(
                         width: 50,
                         height: 50,
                         clipBehavior: Clip.antiAlias,
@@ -45,33 +44,33 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                           ),
                         ),
                       ),
-                        horizontalSpace(12),
-                        const Column(
-                          children: [
-                         Text(
-                              'خديجة أشرف',
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                color: Color(0xFF101828),
-                                fontSize: 18,
-                                fontFamily: fontName,
-                                fontWeight: FontWeight.w700,
-                                height: 1.67,
-                              ),
-                            ),
+                      horizontalSpace(12),
+                      const Column(
+                        children: [
                           Text(
-                              'UX UI Designer',
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                color: Color(0xFF475467),
-                                fontSize: 14,
-                                fontFamily: fontName,
-                                fontWeight: FontWeight.w500,
-                                height: 2.14,
-                              ),
+                            'خديجة أشرف',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Color(0xFF101828),
+                              fontSize: 18,
+                              fontFamily: fontName,
+                              fontWeight: FontWeight.w700,
+                              height: 1.67,
                             ),
-                          ],
-                        ),
+                          ),
+                          Text(
+                            'UX UI Designer',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Color(0xFF475467),
+                              fontSize: 14,
+                              fontFamily: fontName,
+                              fontWeight: FontWeight.w500,
+                              height: 2.14,
+                            ),
+                          ),
+                        ],
+                      ),
                       const Spacer(),
                       Container(
                         width: 40,
@@ -84,7 +83,16 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        child: const Icon(Icons.notifications_none_rounded),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const NotifcationScreen()));
+                          },
+                          child: const Icon(Icons.notifications_none_rounded),
+                        ),
                       ),
                     ]),
                   ),
@@ -94,6 +102,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                       children: [
                         Expanded(
                           child: CustomSearchButton(
+                            text:    'ابحث عن افضل الموجهين في الوطن العربي ',
                               width: double.infinity,
                               onTap: () {
                                 Navigator.push(
@@ -165,6 +174,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                           rating: '4.9',
                           numOfRating: '24',
                           sessions: '45 جلسة',
+                          iconColor: Colors.grey,
                           icon: Icon(Icons.star, color: Colors.amber, size: 16),
                         ),
                         SizedBox(width: 8),
@@ -177,6 +187,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                           rating: '4.9',
                           numOfRating: '24',
                           sessions: '45 جلسة',
+                          iconColor: Colors.grey,
                           icon: Icon(Icons.star, color: Colors.amber, size: 16),
                         ),
                       ],
@@ -209,6 +220,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),
@@ -221,6 +233,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),
@@ -233,6 +246,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),
@@ -245,6 +259,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),

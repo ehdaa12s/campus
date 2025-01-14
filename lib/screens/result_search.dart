@@ -77,7 +77,9 @@ class ResultSearch extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                CustomSearchButton(width: 345, onTap: () {}),
+                CustomSearchButton(
+                  text:    'ابحث عن افضل الموجهين في الوطن العربي '
+                ,width: 345, onTap: () {}),
                 const SizedBox(
                   height: 20,
                 ),
@@ -149,6 +151,7 @@ class ResultSearch extends StatelessWidget {
                   rating: '4.9',
                   numOfRating: '24',
                   sessions: '45 جلسة',
+                  iconColor: Colors.grey,
                   icon: Icon(Icons.star, color: Colors.amber, size: 16),
                 ),
                 const SizedBox(height: 8),
@@ -161,6 +164,7 @@ class ResultSearch extends StatelessWidget {
                   rating: '4.9',
                   numOfRating: '24',
                   sessions: '45 جلسة',
+                  iconColor: Colors.grey,
                   icon: Icon(Icons.star, color: Colors.amber, size: 16),
                 ),
                 const SizedBox(height: 8),
@@ -173,6 +177,7 @@ class ResultSearch extends StatelessWidget {
                   rating: '4.9',
                   numOfRating: '24',
                   sessions: '45 جلسة',
+                  iconColor: Colors.grey,
                   icon: Icon(Icons.star, color: Colors.amber, size: 16),
                 ),
                 const SizedBox(height: 8),
@@ -185,6 +190,7 @@ class ResultSearch extends StatelessWidget {
                   rating: '4.9',
                   numOfRating: '24',
                   sessions: '45 جلسة',
+                  iconColor: Colors.grey,
                   icon: Icon(Icons.star, color: Colors.amber, size: 16),
                 ),
                 const SizedBox(height: 8),
