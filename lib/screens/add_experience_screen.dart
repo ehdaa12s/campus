@@ -146,6 +146,7 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                         TextField(
                           controller: expiryDateController,
                           readOnly: true,
+                          enabled: !isChecked,
                           decoration: InputDecoration(
                             hintText: 'تاريخ الانتهاء',
                             suffixIcon: SizedBox(
@@ -162,20 +163,27 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                           ),
-                          onTap: () async {
-                            DateTime? pickedDate = await showDatePicker(
-                              context: context,
-                              initialDate: DateTime.now(),
-                              firstDate: DateTime(2000), // Earliest date
-                              lastDate: DateTime(2100), // Latest date
-                              locale: const Locale('ar'), // Arabic locale
-                            );
+                          onTap:
+                              !isChecked // Prevent opening the date picker if disabled
+                                  ? () async {
+                                      DateTime? pickedDate =
+                                          await showDatePicker(
+                                        context: context,
+                                        initialDate: DateTime.now(),
+                                        firstDate:
+                                            DateTime(2000), // Earliest date
+                                        lastDate: DateTime(2100), // Latest date
+                                        locale:
+                                            const Locale('ar'), // Arabic locale
+                                      );
 
-                            if (pickedDate != null) {
-                              expiryDateController.text =
-                                  "${pickedDate.toLocal()}".split(' ')[0];
-                            }
-                          },
+                                      if (pickedDate != null) {
+                                        expiryDateController.text =
+                                            "${pickedDate.toLocal()}"
+                                                .split(' ')[0];
+                                      }
+                                    }
+                                  : null,
                         ),
                       ],
                     ),
@@ -206,11 +214,20 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                   ),
-                  const Text(
-                    'مازلت اعمل في الشركة',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        isChecked = !isChecked;
+                      });
+                    },
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    child: const Text(
+                      'مازلت اعمل في الشركة',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ],

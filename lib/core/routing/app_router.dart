@@ -1,5 +1,18 @@
 import 'package:champs/core/routing/routes.dart';
 import 'package:champs/features/on_boarding/on_boarding_view.dart';
+import 'package:champs/screens/accepted_order_screen.dart';
+import 'package:champs/screens/achievements_screen.dart';
+import 'package:champs/screens/add_certificate_screen.dart';
+import 'package:champs/screens/add_experience_screen.dart';
+import 'package:champs/screens/contacts_screen.dart';
+import 'package:champs/screens/edit_certificate_screen.dart';
+import 'package:champs/screens/edit_experience_screen.dart';
+import 'package:champs/screens/edit_profile_screen.dart';
+import 'package:champs/screens/join_as_guide_instructions_screen.dart';
+import 'package:champs/screens/join_as_guide_screen.dart';
+import 'package:champs/screens/more_menu.dart';
+import 'package:champs/screens/rejected_order_screen.dart';
+import 'package:champs/screens/under_review_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -12,6 +25,33 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onboardingScreen:
         return MaterialPageRoute(builder: (_) => const OnBoardingView());
+      case Routes.editProfileScreen:
+        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+      case Routes.addCertificateScreen:
+        return MaterialPageRoute(builder: (_) => const AddCertificateScreen());
+      case Routes.addExperienceScreen:
+        return MaterialPageRoute(builder: (_) => const AddExperienceScreen());
+      case Routes.editCertificateScreen:
+        return MaterialPageRoute(builder: (_) => const EditCertificateScreen());
+      case Routes.editExperienceScreen:
+        return MaterialPageRoute(builder: (_) => const EditExperienceScreen());
+      case Routes.underReviewScreen:
+        return MaterialPageRoute(builder: (_) => const UnderReviewScreen());
+      case Routes.rejectedOrderScreen:
+        return MaterialPageRoute(builder: (_) => const RejectedOrderScreen());
+      case Routes.acceptedOrderScreen:
+        return MaterialPageRoute(builder: (_) => const AcceptedOrderScreen());
+      case Routes.joinAsGuideScreen:
+        return MaterialPageRoute(builder: (_) => const JoinAsGuideScreen());
+      case Routes.joinAsGuideScreenInstructions:
+        return MaterialPageRoute(
+            builder: (_) => const JoinAsGuideInstructionsScreen());
+      case Routes.moreMenuScreen:
+        return MaterialPageRoute(builder: (_) => const MoreMenu());
+      case Routes.achievementsScreen:
+        return MaterialPageRoute(builder: (_) => const AchievementsScreen());
+      case Routes.contactsScreen:
+        return MaterialPageRoute(builder: (_) => const ContactsScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

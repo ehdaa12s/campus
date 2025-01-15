@@ -669,6 +669,13 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
                             experienceYears: int.tryParse(
                                     profile['experienceYears'] ?? '0') ??
                                 0,
+                          
+                            widget: SvgPicture.asset(
+                              AppSvgs.filledHeart,
+                              width: 23,
+                              height: 23,
+                              color: const Color(0xFFEF072F),
+                            ),
                           ),
                           const SizedBox(height: 12),
                         ],

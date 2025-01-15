@@ -28,10 +28,8 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                   const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.all(8),
-                    child: Row(
-                      children: [
-
-                     Container(
+                    child: Row(children: [
+                      Container(
                         width: 50,
                         height: 50,
                         clipBehavior: Clip.antiAlias,
@@ -45,33 +43,33 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                           ),
                         ),
                       ),
-                        horizontalSpace(12),
-                        const Column(
-                          children: [
-                            Text(
-                              'خديجة أشرف',
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                color: Color(0xFF101828),
-                                fontSize: 18,
-                                fontFamily: fontName,
-                                fontWeight: FontWeight.w700,
-                                height: 1.67,
-                              ),
+                      horizontalSpace(12),
+                      const Column(
+                        children: [
+                          Text(
+                            'خديجة أشرف',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Color(0xFF101828),
+                              fontSize: 18,
+                              fontFamily: fontName,
+                              fontWeight: FontWeight.w700,
+                              height: 1.67,
                             ),
-                            Text(
-                              'UX UI Designer',
-                              textAlign: TextAlign.right,
-                              style: TextStyle(
-                                color: Color(0xFF475467),
-                                fontSize: 14,
-                                fontFamily: fontName,
-                                fontWeight: FontWeight.w500,
-                                height: 2.14,
-                              ),
+                          ),
+                          Text(
+                            'UX UI Designer',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Color(0xFF475467),
+                              fontSize: 14,
+                              fontFamily: fontName,
+                              fontWeight: FontWeight.w500,
+                              height: 2.14,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
+                      ),
                       const Spacer(),
                       Container(
                         width: 40,

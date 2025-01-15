@@ -11,6 +11,8 @@ class ProfileGuidesCard extends StatelessWidget {
   final double rating;
   final int experienceYears;
 
+  final Widget widget;
+
   const ProfileGuidesCard({
     super.key,
     required this.imagePath,
@@ -20,6 +22,7 @@ class ProfileGuidesCard extends StatelessWidget {
     required this.ratingsCount,
     required this.rating,
     required this.experienceYears,
+    required this.widget,
   });
 
   @override
@@ -69,12 +72,7 @@ class ProfileGuidesCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              SvgPicture.asset(
-                AppSvgs.filledHeart,
-                width: 23,
-                height: 23,
-                color: const Color(0xFFEF072F),
-              ),
+              widget
             ],
           ),
           const SizedBox(height: 15),
