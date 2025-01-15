@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
@@ -17,9 +18,9 @@ class CampusApp extends StatelessWidget {
       designSize: const Size(393, 852),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
+      child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: appTheme(),
+        theme: appTheme(context),
         navigatorKey: AppRouter.navigatorKey,
         onGenerateRoute: appRouter.generateRoute,
         initialRoute: Routes.onboardingScreen,
