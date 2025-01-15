@@ -1,0 +1,591 @@
+import 'dart:io';
+
+import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/routing/routes.dart';
+import 'package:champs/core/widgets/custom_button.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:open_file/open_file.dart';
+import 'dart:async';
+
+class JoinAsGuideScreen extends StatefulWidget {
+  const JoinAsGuideScreen({super.key});
+
+  @override
+  State<JoinAsGuideScreen> createState() => _JoinAsGuideScreenState();
+}
+
+class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
+  double uploadProgress = 0.0;
+  String fileName = '';
+  String fileSize = '';
+  String filePath = '';
+  String statusMessage = '';
+  String errorMessage = '';
+
+  Future<void> pickAndUploadFile() async {
+    try {
+      FilePickerResult? result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: [
+          'pdf',
+          'doc',
+          'docx'
+        ], // Restrict to specific file types
+      );
+
+      if (result != null) {
+        PlatformFile file = result.files.first;
+
+        if (file.size > 15 * 1024 * 1024) {
+          // File is too large
+          setState(() {
+            uploadProgress = -1;
+            fileName = file.name;
+            errorMessage = 'فشل التحميل، يرجى المحاولة مرة أخرى';
+          });
+        } else {
+          setState(() {
+            fileName = file.name;
+            fileSize = '${file.size ~/ 1024} KB';
+          });
+
+          // Simulate upload progress
+          for (int i = 0; i <= 100; i++) {
+            await Future.delayed(const Duration(milliseconds: 50), () {
+              setState(() {
+                uploadProgress = i / 100;
+              });
+            });
+          }
+
+          // After upload completes successfully
+          setState(() {
+            fileName = file.name;
+            fileSize = '${file.size ~/ 1024} KB';
+            filePath = file.path!;
+          });
+        }
+      } else {
+        // User canceled the picker
+        setState(() {
+          fileName = 'File picking canceled.';
+          uploadProgress = 0.0;
+        });
+      }
+    } catch (e) {
+      setState(() {
+        fileName = 'Error: $e';
+        uploadProgress = 0.0;
+      });
+    }
+  }
+
+  Future<void> openFile() async {
+    final result = await OpenFile.open(filePath);
+    if (result.type != ResultType.done) {
+      setState(() {
+        fileName = 'Error opening file: ${result.message}';
+      });
+    }
+  }
+
+  Future<void> deleteFile() async {
+    final file = File(filePath);
+
+    try {
+      if (await file.exists()) {
+        await file.delete(); // Deletes the file
+        setState(() {
+          filePath = '';
+          uploadProgress = 0;
+          statusMessage = 'File deleted successfully!';
+        });
+      } else {
+        setState(() {
+          statusMessage = 'File does not exist!';
+        });
+      }
+    } catch (e) {
+      setState(() {
+        statusMessage = 'Error deleting file: $e';
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 50),
+              const Text(
+                'انضم كموجه مهني',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 16),
+              // Years of Experience
+              buildTextField(
+                label: 'عدد سنوات الخبرة',
+                hint: '',
+              ),
+              const SizedBox(height: 16),
+              // LinkedIn URL
+              buildTextField(
+                label: 'رابط حساب لينكدان',
+                hint: 'https://www.linkedin.com/in/...',
+              ),
+              const SizedBox(height: 16),
+              // Specialization Dropdown
+              buildDropdownField(
+                label: 'التخصص',
+                hint: 'النص المقترح',
+                items: ['Option 1', 'Option 2', 'Option 3'],
+                onChanged: (String? value) {},
+              ),
+              const SizedBox(height: 16),
+              // Tool
+              buildTextField(
+                label: 'الأداة',
+                hint: 'النص المقترح',
+              ),
+              const SizedBox(height: 16),
+              // Target Audience
+              buildDropdownField(
+                label: 'الفئة المستهدفة من المتدربين',
+                hint: 'النص المقترح',
+                items: ['Option 1', 'Option 2', 'Option 3'],
+                onChanged: (String? value) {},
+              ),
+              const SizedBox(height: 16),
+              // About Me
+              buildTextField(
+                label: 'نبذة عني',
+                hint: 'النص المقترح',
+                height: 150,
+              ),
+              const SizedBox(height: 20),
+              // Show upload progress if uploading
+              if (uploadProgress < 1.0 && uploadProgress > 0.0) ...[
+                // Show file name and success message if upload is complete
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    // Success container
+                    Container(
+                      padding: const EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: const Color(0xFF98A2B3),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Document SVG icon
+                              SvgPicture.asset(
+                                AppSvgs.document,
+                                width: 25,
+                                height: 25,
+                              ),
+                              const SizedBox(width: 15),
+                              // File name and message
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      fileName,
+                                      style: const TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Color(0xFF353535)),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    Directionality(
+                                      textDirection: TextDirection.ltr,
+                                      child: Text(
+                                        fileSize,
+                                        style: const TextStyle(
+                                            fontSize: 13,
+                                            color: Color(0xFF989692)),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              // trash icon
+                              SvgPicture.asset(
+                                AppSvgs.trash,
+                                width: 25,
+                                height: 25,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 10),
+                          Row(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(right: 40),
+                                height: 6,
+                                width: 250,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: Colors.grey[300],
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: LinearProgressIndicator(
+                                    value: uploadProgress,
+                                    backgroundColor: Colors.transparent,
+                                    minHeight: 10,
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      uploadProgress == 1.0
+                                          ? Colors.green
+                                          : const Color(0xFF00008D),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 15),
+                              Text(
+                                "${(uploadProgress * 100).toStringAsFixed(0)}%",
+                                style: const TextStyle(fontSize: 16),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ] else if (uploadProgress == 1.0) ...[
+                // Show file name and success message if upload is complete
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    // Success container
+                    Container(
+                      padding: const EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: const Color(0xFF98A2B3),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Document SVG icon
+                              SvgPicture.asset(
+                                AppSvgs.document,
+                                width: 25,
+                                height: 25,
+                              ),
+                              const SizedBox(width: 15),
+                              // File name and message
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      fileName,
+                                      style: const TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w500,
+                                          color: Color(0xFF353535)),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    Directionality(
+                                      textDirection: TextDirection.ltr,
+                                      child: Text(
+                                        fileSize,
+                                        style: const TextStyle(
+                                            fontSize: 13,
+                                            color: Color(0xFF989692)),
+                                      ),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    TextButton(
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        minimumSize: const Size(0, 0),
+                                        tapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                      onPressed: () {
+                                        openFile();
+                                      },
+                                      child: const Text(
+                                        'اضغط للعرض',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Color(0xFF00008D),
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              // Success checkmark icon
+                              InkWell(
+                                onTap: () {
+                                  deleteFile();
+                                },
+                                child: SvgPicture.asset(
+                                  AppSvgs.trash,
+                                  width: 25,
+                                  height: 25,
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ] else if (uploadProgress == -1) ...[
+                // Show file name and error message if upload is not complete
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    // Failed container
+                    Container(
+                      padding: const EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: const Color(0xFF98A2B3),
+                          width: 1.0,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Document SVG icon
+                              SvgPicture.asset(
+                                AppSvgs.document,
+                                width: 25,
+                                height: 25,
+                                color: Colors.red,
+                              ),
+                              const SizedBox(width: 15),
+                              // File name and message
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      errorMessage,
+                                      style: const TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.red,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    Text(
+                                      fileName,
+                                      style: const TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.red,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    TextButton(
+                                      style: TextButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        minimumSize: const Size(0, 0),
+                                        tapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                      onPressed: () {
+                                        setState(() {
+                                          uploadProgress = 0.0;
+                                        });
+                                      },
+                                      child: const Text(
+                                        'حاول مجددا',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.red,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ] else ...[
+                // Show the upload container if the file hasn't been uploaded yet
+                GestureDetector(
+                  onTap: pickAndUploadFile,
+                  child: Container(
+                    height: 137,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(
+                            AppSvgs.upload,
+                            width: 44,
+                            height: 44,
+                          ),
+                          const SizedBox(height: 10),
+                          const Text(
+                            'اضغط لرفع السيرة الذاتية',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Color(0xFF00008D),
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          const Text(
+                            '(الحد الأقصى لحجم الملف: 25 MB)',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Color(0xFF667085),
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+
+              // Retry Button if upload fails
+              if (fileName.contains('Error')) ...[
+                const SizedBox(height: 20),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: pickAndUploadFile,
+                    child: const Text('Try Again'),
+                  ),
+                ),
+              ],
+              const SizedBox(height: 34),
+              CustomButton(
+                  text: 'انضم',
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.underReviewScreen);
+                  }),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildTextField({
+    required String label,
+    required String hint,
+    double? height,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 8),
+        SizedBox(
+          height: height,
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: hint,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 12,
+              ),
+            ),
+            maxLines: height != null
+                ? (height ~/ 24)
+                : 1, // Adjust max lines based on height
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget buildDropdownField({
+    required String label,
+    required String hint,
+    required List<String> items,
+    required ValueChanged<String?> onChanged,
+    String? selectedValue,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 8),
+        DropdownButtonFormField<String>(
+          value: selectedValue,
+          decoration: InputDecoration(
+            hintText: hint,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          ),
+          icon: SvgPicture.asset(
+            AppSvgs.arrowDown,
+            width: 28,
+            height: 28,
+            color: Colors.black,
+          ),
+          items: items
+              .map((item) => DropdownMenuItem<String>(
+                    value: item,
+                    child: Text(item),
+                  ))
+              .toList(),
+          onChanged: onChanged,
+        ),
+      ],
+    );
+  }
+}

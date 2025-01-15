@@ -26,4 +26,12 @@ class AppSvgs {
   static const String star = 'assets/svg/Star.svg';
   static const String add = 'assets/svg/add-square.svg';
   static const String calender = 'assets/svg/Icon.svg';
+  static const String upload = 'assets/svg/Icon frame.svg';
+  static const String document = 'assets/svg/document-text.svg';
+  static const String trash = 'assets/svg/trash.svg';
+  static const String underReview = 'assets/svg/under_review.svg';
+  static const String acceptedOrder = 'assets/svg/accepted_order.svg';
+  static const String rejectedOrder = 'assets/svg/rejected_order.svg';
+  static const String logout = 'assets/svg/logout.svg';
+  static const String medallions = 'assets/svg/Medallions.svg';
 }

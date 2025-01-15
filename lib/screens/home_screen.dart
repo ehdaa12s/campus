@@ -1,7 +1,7 @@
 import 'package:champs/core/widgets/custom_navagation_bar.dart';
 import 'package:champs/screens/home_screen_content.dart';
 import 'package:champs/screens/mente_profile_screen.dart';
-import 'package:champs/screens/mentor_profile_screen.dart';
+import 'package:champs/screens/more_menu.dart';
 import 'package:flutter/material.dart';
 
 import 'message_screen.dart';
@@ -26,7 +26,7 @@ class _HomeScreenForNaState extends State<HomeScreenForNavagationBar> {
     const MessagesScreen(),
     const SessionsScreen(),
     const MenteProfileScreen(),
-    const MentorProfileScreen()
+    const MoreMenu()
   ];
 
   final List<NavItem> _navItems = [

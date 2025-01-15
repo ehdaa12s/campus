@@ -146,6 +146,7 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
                         TextField(
                           controller: expiryDateController,
                           readOnly: true,
+                          enabled: !isChecked,
                           decoration: InputDecoration(
                             hintText: 'تاريخ الانتهاء',
                             suffixIcon: SizedBox(
@@ -206,11 +207,20 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
                       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                   ),
-                  const Text(
-                    'مازلت اعمل في الشركة',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        isChecked = !isChecked;
+                      });
+                    },
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    child: const Text(
+                      'مازلت اعمل في الشركة',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ],

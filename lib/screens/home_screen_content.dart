@@ -28,10 +28,8 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                   const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.all(8),
-                    child: Row(
-                      children: [
-
-                     Container(
+                    child: Row(children: [
+                      Container(
                         width: 50,
                         height: 50,
                         clipBehavior: Clip.antiAlias,
