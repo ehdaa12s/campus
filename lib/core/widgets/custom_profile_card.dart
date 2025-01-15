@@ -10,6 +10,7 @@ class ProfileCard extends StatelessWidget {
   final String sessions;
   final Icon icon;
   final double width;
+  final Color iconColor;
 
   const ProfileCard({
     super.key,
@@ -22,6 +23,7 @@ class ProfileCard extends StatelessWidget {
     required this.sessions,
     required this.icon,
     required this.width,
+   required this.iconColor ,
   });
 
   @override
@@ -81,7 +83,9 @@ class ProfileCard extends StatelessWidget {
                 ),
               ),
             ),
-            trailing: const Icon(Icons.favorite_border),
+            trailing:  Icon(Icons.favorite_border,
+            color: iconColor,
+            ),
           ),
           const SizedBox(height: 8),
           Row(

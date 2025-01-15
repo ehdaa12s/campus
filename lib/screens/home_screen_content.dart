@@ -2,6 +2,7 @@ import 'package:champs/core/widgets/custom_profile_card.dart';
 import 'package:champs/core/widgets/custom_text_button_for_fields_selection.dart';
 import 'package:champs/constant.dart';
 import 'package:champs/core/helpers/spaces.dart';
+import 'package:champs/screens/notifcation_screen.dart';
 import 'package:champs/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -82,7 +83,16 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        child: const Icon(Icons.notifications_none_rounded),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const NotifcationScreen()));
+                          },
+                          child: const Icon(Icons.notifications_none_rounded),
+                        ),
                       ),
                     ]),
                   ),
@@ -92,6 +102,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                       children: [
                         Expanded(
                           child: CustomSearchButton(
+                            text:    'ابحث عن افضل الموجهين في الوطن العربي ',
                               width: double.infinity,
                               onTap: () {
                                 Navigator.push(
@@ -163,6 +174,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                           rating: '4.9',
                           numOfRating: '24',
                           sessions: '45 جلسة',
+                          iconColor: Colors.grey,
                           icon: Icon(Icons.star, color: Colors.amber, size: 16),
                         ),
                         SizedBox(width: 8),
@@ -175,6 +187,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                           rating: '4.9',
                           numOfRating: '24',
                           sessions: '45 جلسة',
+                          iconColor: Colors.grey,
                           icon: Icon(Icons.star, color: Colors.amber, size: 16),
                         ),
                       ],
@@ -207,6 +220,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),
@@ -219,6 +233,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),
@@ -231,6 +246,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),
@@ -243,6 +259,7 @@ class _HomeScreenContentState extends State<HomeScreenContent> {
                     rating: '4.9',
                     numOfRating: '24',
                     sessions: '45 جلسة',
+                    iconColor: Colors.grey,
                     icon: Icon(Icons.star, color: Colors.amber, size: 16),
                   ),
                   const SizedBox(height: 8),
