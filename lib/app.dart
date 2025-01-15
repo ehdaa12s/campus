@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'core/constants/app_strings.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'core/themes/app_theme.dart';
@@ -20,10 +19,8 @@ class CampusApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
-
-        title: AppStrings.appName,
         debugShowCheckedModeBanner: false,
-        theme: appTheme(),
+        theme: appTheme(context),
         navigatorKey: AppRouter.navigatorKey,
         onGenerateRoute: appRouter.generateRoute,
         initialRoute: Routes.onboardingScreen,
