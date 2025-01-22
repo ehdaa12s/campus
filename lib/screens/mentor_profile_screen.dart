@@ -94,163 +94,159 @@ class _MenteProfileScreenState extends State<MentorProfileScreen> {
             // Profile Header
             Padding(
               padding: const EdgeInsets.only(top: 80),
-              child: Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Back Icon on the left
-                          IconButton(
-                            onPressed: () {
-                              // Add the action here
-                            },
-                            icon: SvgPicture.asset(
-                              AppSvgs.arrowRight,
-                              width: 28,
-                              height: 28,
-                            ),
-                          ),
-
-                          // Profile Image in the center
-                          Stack(
-                            alignment:
-                                Alignment.bottomLeft, // Center the avatar
-                            children: [
-                              Container(
-                                width: 160, // Double the radius (80 * 2)
-                                height: 160,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color:
-                                        const Color(0xFF9CA3AF), // Border color
-                                    width: 1.5, // Border width
-                                  ),
-                                ),
-                                child: CircleAvatar(
-                                  backgroundColor: Colors
-                                      .transparent, // Transparent background
-                                  radius: 80,
-                                  backgroundImage: _image != null
-                                      ? FileImage(_image!)
-                                      : null,
-                                  child: _image == null
-                                      ? const Icon(
-                                          Icons.person_rounded,
-                                          size: 100,
-                                          color: Color(0xFF80808E),
-                                        )
-                                      : null,
-                                ),
-                              ),
-                            ],
-                          ),
-
-                          // Share Icon on the right
-                          Column(
-                            children: [
-                              Container(
-                                width: 42,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  border: Border.all(
-                                    color: const Color(0xFF98A2B3),
-                                    width: 1.0,
-                                  ),
-                                ),
-                                child: IconButton(
-                                  onPressed: () {
-                                    // Add share functionality here
-                                  },
-                                  icon: SvgPicture.asset(
-                                    AppSvgs.heart,
-                                    width: 24,
-                                    height: 24,
-                                    color: const Color(0xFF9CA3AF),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(height: 8),
-                              Container(
-                                width: 42,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  border: Border.all(
-                                    color: const Color(0xFF98A2B3),
-                                    width: 1.0,
-                                  ),
-                                ),
-                                child: IconButton(
-                                  onPressed: () {
-                                    // Add share functionality here
-                                  },
-                                  icon: SvgPicture.asset(
-                                    AppSvgs.sharingNetwork,
-                                    width: 24,
-                                    height: 24,
-                                    color: const Color(0xFF9CA3AF),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      'معتصم شعبان',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xFF101828),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 2,
-                    ),
-                    const Text(
-                      'UX UI Designer',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF475467),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 1,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SvgPicture.asset(
-                          AppSvgs.star,
-                          width: 20,
-                          height: 20,
-                          color: const Color(0xFFFFCF00),
-                        ),
-                        const SizedBox(width: 3),
-                        const Text(
-                          '24 / 4.9',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: Color(0xFF101828),
+                        // Back Icon on the left
+                        IconButton(
+                          onPressed: () {
+                            // Add the action here
+                          },
+                          icon: SvgPicture.asset(
+                            AppSvgs.arrowRight,
+                            width: 28,
+                            height: 28,
                           ),
+                        ),
+
+                        // Profile Image in the center
+                        Stack(
+                          alignment: Alignment.bottomLeft, // Center the avatar
+                          children: [
+                            Container(
+                              width: 160, // Double the radius (80 * 2)
+                              height: 160,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color:
+                                      const Color(0xFF9CA3AF), // Border color
+                                  width: 1.5, // Border width
+                                ),
+                              ),
+                              child: CircleAvatar(
+                                backgroundColor: Colors
+                                    .transparent, // Transparent background
+                                radius: 80,
+                                backgroundImage:
+                                    _image != null ? FileImage(_image!) : null,
+                                child: _image == null
+                                    ? const Icon(
+                                        Icons.person_rounded,
+                                        size: 100,
+                                        color: Color(0xFF80808E),
+                                      )
+                                    : null,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        // Share Icon on the right
+                        Column(
+                          children: [
+                            Container(
+                              width: 42,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: const Color(0xFF98A2B3),
+                                  width: 1.0,
+                                ),
+                              ),
+                              child: IconButton(
+                                onPressed: () {
+                                  // Add share functionality here
+                                },
+                                icon: SvgPicture.asset(
+                                  AppSvgs.heart,
+                                  width: 24,
+                                  height: 24,
+                                  color: const Color(0xFF9CA3AF),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 8),
+                            Container(
+                              width: 42,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: const Color(0xFF98A2B3),
+                                  width: 1.0,
+                                ),
+                              ),
+                              child: IconButton(
+                                onPressed: () {
+                                  // Add share functionality here
+                                },
+                                icon: SvgPicture.asset(
+                                  AppSvgs.sharingNetwork,
+                                  width: 24,
+                                  height: 24,
+                                  color: const Color(0xFF9CA3AF),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'معتصم شعبان',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF101828),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 2,
+                  ),
+                  const Text(
+                    'UX UI Designer',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xFF475467),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 1,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        AppSvgs.star,
+                        width: 20,
+                        height: 20,
+                        color: const Color(0xFFFFCF00),
+                      ),
+                      const SizedBox(width: 3),
+                      const Text(
+                        '24 / 4.9',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFF101828),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 12),

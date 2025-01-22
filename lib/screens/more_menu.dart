@@ -1,5 +1,6 @@
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/routing/routes.dart';
+import 'package:champs/screens/favourite_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -93,19 +94,23 @@ class MoreMenu extends StatelessWidget {
               child: Divider(thickness: 1, height: 1),
             ),
             ListTile(
-              trailing: const Icon(Icons.arrow_forward_ios),
-              title: const Text(
-                'المفضلة',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
+                trailing: const Icon(Icons.arrow_forward_ios),
+                title: const Text(
+                  'المفضلة',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF667085),
+                  ),
                 ),
-              ),
-              onTap: () {
-                // Handle navigation
-              },
-            ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FavouriteScreen(),
+                    ),
+                  );
+                }),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Divider(thickness: 1, height: 1),

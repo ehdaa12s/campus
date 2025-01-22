@@ -13,7 +13,6 @@ import 'package:champs/screens/join_as_guide_screen.dart';
 import 'package:champs/screens/more_menu.dart';
 import 'package:champs/screens/rejected_order_screen.dart';
 import 'package:champs/screens/under_review_screen.dart';
-import 'package:champs/features/splash/presentation%20layer/splash_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
