@@ -10,14 +10,13 @@ class MoreMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.transparent,
-        title: const Center(
-          child: Text(
-            'المزيد',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
+        title: const Text(
+          'المزيد',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
           ),
         ),
       ),
@@ -29,9 +28,9 @@ class MoreMenu extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.3),
+              color: Colors.black.withOpacity(0.2),
               offset: const Offset(0, 2),
-              blurRadius: 4,
+              blurRadius: 6,
             ),
           ],
         ),

@@ -34,4 +34,5 @@ class AppSvgs {
   static const String rejectedOrder = 'assets/svg/rejected_order.svg';
   static const String logout = 'assets/svg/logout.svg';
   static const String medallions = 'assets/svg/Medallions.svg';
+  static const String tickCircle = 'assets/svg/tick-circle.svg';
 }

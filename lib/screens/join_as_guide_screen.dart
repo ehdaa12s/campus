@@ -23,6 +23,7 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
   String filePath = '';
   String statusMessage = '';
   String errorMessage = '';
+  double uploaded = 0.0;
 
   Future<void> pickAndUploadFile() async {
     try {
@@ -60,11 +61,16 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
             });
           }
 
+          // After progress reaches 100%, wait for 4 seconds
+          await Future.delayed(const Duration(seconds: 1));
+
           // After upload completes successfully
           setState(() {
             fileName = file.name;
             fileSize = '${file.size ~/ 1024} KB';
             filePath = file.path!;
+            uploaded = 1.0;
+            uploadProgress = 1.01;
           });
         }
       } else {
@@ -100,6 +106,7 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
         setState(() {
           filePath = '';
           uploadProgress = 0;
+          uploaded = 0;
           statusMessage = 'File deleted successfully!';
         });
       } else {
@@ -176,7 +183,7 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
               ),
               const SizedBox(height: 20),
               // Show upload progress if uploading
-              if (uploadProgress < 1.0 && uploadProgress > 0.0) ...[
+              if (uploadProgress <= 1.0 && uploadProgress > 0.0) ...[
                 // Show file name and success message if upload is complete
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -228,12 +235,13 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                   ],
                                 ),
                               ),
-                              // trash icon
-                              SvgPicture.asset(
-                                AppSvgs.trash,
-                                width: 25,
-                                height: 25,
-                              ),
+                              if (uploadProgress == 1.0)
+                                // trash icon
+                                SvgPicture.asset(
+                                  AppSvgs.tickCircle,
+                                  width: 25,
+                                  height: 25,
+                                ),
                             ],
                           ),
                           const SizedBox(height: 10),
@@ -242,7 +250,7 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                               Container(
                                 margin: const EdgeInsets.only(right: 40),
                                 height: 6,
-                                width: 250,
+                                width: 230,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   color: Colors.grey[300],
@@ -273,7 +281,7 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                     ),
                   ],
                 ),
-              ] else if (uploadProgress == 1.0) ...[
+              ] else if (uploaded == 1.0) ...[
                 // Show file name and success message if upload is complete
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
