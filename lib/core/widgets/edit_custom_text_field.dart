@@ -72,7 +72,7 @@ class _EditCustomTextFieldState extends State<EditCustomTextField> {
                 style: const TextStyle(
                   color: Color(0xFF00001D),
                   fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                 ),
                 decoration: InputDecoration(
                   labelText: widget.labelText,

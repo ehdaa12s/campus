@@ -31,9 +31,9 @@ class AchievementsScreen extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.3),
+              color: Colors.black.withOpacity(0.2),
               offset: const Offset(0, 2),
-              blurRadius: 4,
+              blurRadius: 6,
             ),
           ],
         ),

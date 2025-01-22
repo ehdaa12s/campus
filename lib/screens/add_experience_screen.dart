@@ -137,10 +137,13 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           'تاريخ الإنتهاء',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: isChecked ? Colors.grey : Colors.black,
+                          ),
                         ),
                         const SizedBox(height: 8),
                         TextField(
