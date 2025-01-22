@@ -7,8 +7,7 @@ class CustomCardWidget extends StatelessWidget {
   final String userImageUrl;
   final String appointmentTime;
   final String appointmentDate;
-final VoidCallback onTap;
-
+  final VoidCallback onTap;
 
   const CustomCardWidget({
     super.key,
@@ -89,21 +88,19 @@ final VoidCallback onTap;
                 GestureDetector(
                   onTap: () {
                     onTap();
-
                   },
-                  child:
-                Text(
-                  detailsText,
-                  style: const TextStyle(
-                    color: Color(0xFF00008D),
-                    fontSize: 14,
-                    fontFamily: 'Baloo Bhaijaan 2',
-                    fontWeight: FontWeight.w400,
-                    decoration: TextDecoration.underline,
-                    height: 1.50,
+                  child: Text(
+                    detailsText,
+                    style: const TextStyle(
+                      color: Color(0xFF00008D),
+                      fontSize: 14,
+                      fontFamily: 'Baloo Bhaijaan 2',
+                      fontWeight: FontWeight.w400,
+                      decoration: TextDecoration.underline,
+                      height: 1.50,
+                    ),
                   ),
                 ),
-      ),
               ],
             ),
             const SizedBox(height: 16),
@@ -138,7 +135,6 @@ final VoidCallback onTap;
                             height: 1.50,
                           ),
                         ),
-
                       ],
                     ),
                   ],
@@ -146,7 +142,6 @@ final VoidCallback onTap;
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-
                     const Text(
                       'الساعة',
                       style: TextStyle(
@@ -172,7 +167,6 @@ final VoidCallback onTap;
                             height: 1.50,
                           ),
                         ),
-
                       ],
                     ),
                   ],

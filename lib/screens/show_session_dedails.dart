@@ -1,5 +1,6 @@
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
-import 'package:champs/screens/account_screen.dart';
+
+import 'package:champs/screens/mente_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class ShowSessionDedails extends StatefulWidget {
@@ -19,7 +20,7 @@ class _ShowSessionDedailsState extends State<ShowSessionDedails> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-             const SizedBox(height: 16),
+              const SizedBox(height: 16),
               Row(
                 children: [
                   IconButton(
@@ -110,7 +111,7 @@ class _ShowSessionDedailsState extends State<ShowSessionDedails> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const AccountScreen()));
+                                        const MenteProfileScreen()));
                           },
                           child: const Text(
                             'عرض الملف الشخصي ',
