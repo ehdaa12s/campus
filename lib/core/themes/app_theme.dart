@@ -10,6 +10,7 @@ ThemeData appTheme(context) => ThemeData(
           ),
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.white,
+        scrolledUnderElevation: 0,
         elevation: 0.0,
         shadowColor: AppColors.white,
       ),
@@ -38,27 +39,27 @@ ThemeData appTheme(context) => ThemeData(
           //   fontWeight: FontWeight.w400,
           // ),
           dividerColor: AppColors.white,
-          todayBackgroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          todayBackgroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return AppColors.primary25;
             }
             return AppColors.white;
           }),
-          dayBackgroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          dayBackgroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return AppColors.primary25;
             }
             return AppColors.white;
           }),
           todayBorder: BorderSide.none,
-          todayForegroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          todayForegroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return AppColors.gray700;
             }
             return AppColors.gray400;
           }),
-          dayForegroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          dayForegroundColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return AppColors.gray700;
             }
             return AppColors.gray400;

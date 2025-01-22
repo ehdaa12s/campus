@@ -95,15 +95,16 @@ class MoreMenu extends StatelessWidget {
               child: Divider(thickness: 1, height: 1),
             ),
             ListTile(
-              trailing: const Icon(Icons.arrow_forward_ios),
-              title: const Text(
-                'المفضلة',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
+                trailing: const Icon(Icons.arrow_forward_ios),
+                title: const Text(
+                  'المفضلة',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF667085),
+                  ),
                 ),
-              ),
+
               onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const FavouriteScreen()));
               },

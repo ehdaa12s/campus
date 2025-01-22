@@ -11,7 +11,6 @@ class BookYourSession extends StatefulWidget {
 }
 
 class _BookYourSessionState extends State<BookYourSession> {
-  DateTime? _selectedDate;
   String selectedDate = '25 سبتمبر 2024';
 
   final List<String> availableTimes = [
