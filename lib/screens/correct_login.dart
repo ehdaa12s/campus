@@ -1,6 +1,6 @@
 import 'package:champs/constant.dart';
 import 'package:champs/core/utiles/size_config.dart';
-import 'package:champs/screens/home_screen.dart';
+import 'package:champs/features/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
