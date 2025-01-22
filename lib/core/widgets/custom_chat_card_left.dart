@@ -19,12 +19,11 @@ class RotatedTextCardForAnotherSide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-
           Transform(
             transform: Matrix4.identity()..rotateZ(rotationAngle),
             alignment: Alignment.center,
@@ -38,7 +37,7 @@ class RotatedTextCardForAnotherSide extends StatelessWidget {
                   color: backgroundColor,
                 ),
               ),
-              child: Transform(
+              child:  Transform(
                 transform: Matrix4.identity()..rotateZ(-rotationAngle),
                 alignment: Alignment.center,
                 child: Row(
@@ -47,7 +46,7 @@ class RotatedTextCardForAnotherSide extends StatelessWidget {
                   children: [
                     // Content (Text)
                     Flexible(
-                      child: Text(
+                      child:Expanded(child: Text(
                         content,
                         textAlign: TextAlign.left,
                         style: const TextStyle(
@@ -59,9 +58,9 @@ class RotatedTextCardForAnotherSide extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         maxLines: 7,
                       ),
+                      ),
                     ),
                     const SizedBox(width: 8),
-
 
                     Text(
                       time,
@@ -76,18 +75,23 @@ class RotatedTextCardForAnotherSide extends StatelessWidget {
                   ],
                 ),
               ),
+
             ),
           ),
-          const SizedBox(width: 12),
+          const Expanded(child:  SizedBox(width: 12)),
 
           // User Image
           if (userImageUrl != null)
-            CircleAvatar(
+            Expanded(child: CircleAvatar(
               radius: 24,
               backgroundImage: AssetImage(userImageUrl!),
             ),
+            ),
           if (userImageUrl == null)
-            const Padding(padding: EdgeInsets.symmetric(horizontal: 24)),
+            const Expanded(child:  Padding(padding: EdgeInsets.symmetric(horizontal: 24))),
+
+
+
         ],
       ),
     );

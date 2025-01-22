@@ -1,4 +1,5 @@
 import 'package:champs/core/widgets/custom_navagation_bar.dart';
+import 'package:champs/screens/account_screen.dart';
 import 'package:champs/screens/favourite_screen.dart';
 import 'package:champs/screens/home_screen_content.dart';
 import 'package:champs/screens/mente_profile_screen.dart';

@@ -11,7 +11,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SingleChildScrollView(
-        child: Column(
+        child:  Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -20,6 +20,7 @@ class ChatScreen extends StatelessWidget {
               status: 'نشط الأن',
               userImageUrl: 'assets/images/profile 2.png',
             ),
+
             SizedBox(
               height: 16,
             ),
@@ -60,16 +61,16 @@ class ChatScreen extends StatelessWidget {
               content: 'محتوى قابل للتغيير',
               time: '1 :13 AM',
             ),
-           SizedBox(
-             height: 240,
-           ),
-           CustomContainerToEnterMessage(
-                  hintText: 'اكتب رسالة',
-                  leadingIcon: Icons.send,
-                  trailingIcon: Icons.camera_enhance_sharp),
-
+            SizedBox(
+              height: 240,
+            ),
+            CustomContainerToEnterMessage(
+                hintText: 'اكتب رسالة',
+                leadingIcon: Icons.send,
+                trailingIcon: Icons.camera_enhance_sharp),
           ],
         ),
+
       ),
     );
   }
