@@ -1,6 +1,7 @@
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:champs/core/widgets/custom_status_screen.dart';
+import 'package:champs/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class UnderReviewScreen extends StatelessWidget {
@@ -27,7 +28,9 @@ class UnderReviewScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: CustomButton(
                 text: 'تم',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreenForNavagationBar()));
+                },
               ),
             ),
           ],

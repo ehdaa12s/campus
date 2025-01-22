@@ -20,14 +20,18 @@ class RotatedTextCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16,),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child:  Row(
+
         children: [
+
           if (userImageUrl != null)
-            CircleAvatar(
+            Expanded(child:  CircleAvatar(
               radius: 24,
               backgroundImage: AssetImage(userImageUrl!),
             ),
+            ),
+
+
           if (userImageUrl == null)
             const Padding(padding: EdgeInsets.symmetric(horizontal: 24)),
           const SizedBox(width: 12),
@@ -78,10 +82,13 @@ class RotatedTextCard extends StatelessWidget {
                     ),
                   ],
                 ),
+                ),
               ),
             ),
-          ),
+
         ],
+
+
       ),
     );
   }

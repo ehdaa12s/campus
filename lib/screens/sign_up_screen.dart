@@ -26,14 +26,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 24,
             ),
-          const  CustomTransformWidget(labelText: '3/1',
-          progressColors: [
-          Color(0xFF00008D),
-            Color(0xFFECECEC),
-        Color(0xFFECECEC),
-          ],  targetScreen:SignUpTwo()
-
-            ),
+            const CustomTransformWidget(
+                labelText: '3/1',
+                progressColors: [
+                  Color(0xFF00008D),
+                  Color(0xFFECECEC),
+                  Color(0xFFECECEC),
+                ],
+                targetScreen: SignUpTwo()),
             const SizedBox(
               width: 345,
               child: Text(
@@ -81,11 +81,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 8,
             ),
-            const CustomDropdownButton(
+            const  CustomDropdownButton(
               width: 330,
               height: 48,
-              text: 'الجنس',
-              items: ['ذكر', 'أنثى'],
+              text: 'عدد سنوات الخبرة',
+              items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
             ),
             const SizedBox(
               height: 10,
@@ -159,7 +159,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
               constraints: const BoxConstraints(maxWidth: 345, maxHeight: 150),
               child: const SimplifiedColumnContainer(),
             ),
-
             CustomButton(
               buttonText: 'التالي',
               onPressed: () {

@@ -1,6 +1,7 @@
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/routing/routes.dart';
 import 'package:champs/screens/favourite_screen.dart';
+import 'package:champs/screens/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -103,14 +104,11 @@ class MoreMenu extends StatelessWidget {
                     color: Color(0xFF667085),
                   ),
                 ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const FavouriteScreen(),
-                    ),
-                  );
-                }),
+
+              onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const FavouriteScreen()));
+              },
+            ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Divider(thickness: 1, height: 1),
@@ -149,7 +147,7 @@ class MoreMenu extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                // Handle logout
+               Navigator.push(context, MaterialPageRoute(builder: (context) => const SignIn()));
               },
             ),
           ],

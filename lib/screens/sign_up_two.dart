@@ -25,14 +25,14 @@ class _SignUpTwoState extends State<SignUpTwo> {
             const SizedBox(
               height: 24,
             ),
-            const  CustomTransformWidget(labelText: '3/2',
+            const CustomTransformWidget(
+                labelText: '3/2',
                 progressColors: [
                   Color(0xFF00008D),
                   Color(0xFF00008D),
                   Color(0xFFECECEC),
-                ],  targetScreen:SignUpWithCode()
-
-            ),
+                ],
+                targetScreen: SignUpWithCode()),
             const SizedBox(
               width: 345,
               child: Text(
@@ -170,16 +170,16 @@ class _SignUpTwoState extends State<SignUpTwo> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                        Text(
-                         'نبذة عنك',
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                            color: Color(0xFF98A1B2),
-                            fontSize: 12,
-                            fontFamily: 'Baloo Bhaijaan 2',
-                            fontWeight: FontWeight.w500,
+                          Text(
+                            'نبذة عنك',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Color(0xFF98A1B2),
+                              fontSize: 12,
+                              fontFamily: 'Baloo Bhaijaan 2',
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
                         ],
                       ),
                     ),
