@@ -1,4 +1,4 @@
-import 'package:champs/constant.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardForNotifaction extends StatelessWidget {
@@ -39,41 +39,26 @@ class CustomCardForNotifaction extends StatelessWidget {
             title: Text(
               title,
               textAlign: TextAlign.right,
-              style: const TextStyle(
-                color: Color(0xFF101828),
-                fontSize: 12,
-                fontFamily: 'Baloo Bhaijaan 2',
-                fontWeight: FontWeight.w700,
-                height: 1.75,
-              ),
+              style: AppTextStyles.font12Grey900BalooBhaijaan2w700,
             ),
+
             subtitle: Text(
               subTitle,
               textAlign: TextAlign.right,
-              style: const TextStyle(
-                color: Color(0xFF667085),
-                fontSize: 12,
-                fontFamily: fontName,
-                fontWeight: FontWeight.w500,
-                height: 1.75,
-              ),
+              style: AppTextStyles.font12Grey500BalooBhaijaan2w500,
             ),
             trailing: const SizedBox(width: 8),
           ),
-Padding(padding: const EdgeInsets.only(right: 40),
-          child:
+
+Expanded(child:
+
           Text(
             reminder,
             textAlign: TextAlign.center,
 
-            style: const TextStyle(
-              color: Color(0xFF475467),
-              fontSize: 12,
-              fontFamily: fontName,
-              fontWeight: FontWeight.w400,
-              height: 1.75,
-            ),
-          ),
+            style: AppTextStyles.font12Grey600BalooBhaijaan2w400,
+
+),
 ),
 
 
