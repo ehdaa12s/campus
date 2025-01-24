@@ -1,3 +1,4 @@
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
@@ -55,22 +56,12 @@ class ProfileCard extends StatelessWidget {
             title: Text(
               name,
               textAlign: TextAlign.right,
-              style: const TextStyle(
-                color: Color(0xFF101828),
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                height: 1.50,
-              ),
+              style: AppTextStyles.font14Grey900BalooBhaijaan2Bold,
             ),
             subtitle: Text(
               role,
               textAlign: TextAlign.right,
-              style: const TextStyle(
-                color: Color(0xFF475467),
-                fontSize: 10,
-                fontWeight: FontWeight.w500,
-                height: 2.20,
-              ),
+              style: AppTextStyles.font10Grey600BalooBhaijaan2Regular,
             ),
             leading: Container(
               width: 40,
@@ -123,23 +114,13 @@ class _InfoColumn extends StatelessWidget {
         Text(
           title,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Color(0xFF475467),
-            fontSize: 11,
-            fontWeight: FontWeight.w400,
-            height: 1.45,
-          ),
+          style: AppTextStyles.font11Grey600BalooBhaijaan2w400,
         ),
         const SizedBox(height: 4),
         Text(
           value,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Color(0xFF101828),
-            fontSize: 12,
-            fontWeight: FontWeight.w700,
-            height: 1.33,
-          ),
+          style: AppTextStyles.font12Grey900BalooBhaijaan2w700,
         ),
       ],
     );
@@ -166,12 +147,7 @@ class _RatingColumn extends StatelessWidget {
         Text(
           title,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Color(0xFF475467),
-            fontSize: 11,
-            fontWeight: FontWeight.w400,
-            height: 1.45,
-          ),
+          style: AppTextStyles.font11Grey600BalooBhaijaan2w400,
         ),
         const SizedBox(height: 4),
         Row(
@@ -179,22 +155,12 @@ class _RatingColumn extends StatelessWidget {
           children: [
             Text(
               '($numOfRating)',
-              style: const TextStyle(
-                color: Color(0xFF101828),
-                fontSize: 12,
-                fontWeight: FontWeight.w500,
-                height: 1.14,
-              ),
+              style: AppTextStyles.font12Grey900BalooBhaijaan2w500,
             ),
             const SizedBox(width: 4),
             Text(
               rating,
-              style: const TextStyle(
-                color: Color(0xFF101828),
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                height: 1.14,
-              ),
+              style: AppTextStyles.font14Grey900BalooBhaijaan2w600,
             ),
             icon,
             const SizedBox(width: 4),
