@@ -1,7 +1,7 @@
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
 import 'package:champs/constant.dart';
 import 'package:champs/features/on_boarding/widgets/boaring_three.dart';
-import 'package:champs/screens/sign_in.dart';
+import 'package:champs/features/auth/login/sign_in.dart';
 import 'package:flutter/material.dart';
 
 import 'package:champs/features/on_boarding/widgets/custom_container_boarding_image.dart';
