@@ -11,6 +11,7 @@ import 'package:champs/screens/edit_profile_screen.dart';
 import 'package:champs/screens/join_as_guide_instructions_screen.dart';
 import 'package:champs/screens/join_as_guide_screen.dart';
 import 'package:champs/screens/more_menu.dart';
+import 'package:champs/screens/notifcation_screen.dart';
 import 'package:champs/screens/rejected_order_screen.dart';
 import 'package:champs/screens/under_review_screen.dart';
 import 'package:flutter/material.dart';
@@ -52,6 +53,9 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const AchievementsScreen());
       case Routes.contactsScreen:
         return MaterialPageRoute(builder: (_) => const ContactsScreen());
+      case Routes.notificationsScreen:
+        return MaterialPageRoute(builder: (_) => const NotifcationScreen());
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

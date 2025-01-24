@@ -1,7 +1,7 @@
 import 'package:champs/core/widgets/custom_card%20_session_profile.dart';
 import 'package:champs/core/widgets/custom_card_for_secudle%20_session.dart';
-import 'package:champs/screens/account_screen.dart';
 import 'package:champs/screens/book_your_session.dart';
+import 'package:champs/screens/mente_profile_screen.dart';
 import 'package:champs/screens/show_session_dedails.dart';
 import 'package:flutter/material.dart';
 
@@ -90,26 +90,25 @@ class SessionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const AccountScreen(),
+                                    builder: (context) =>
+                                        const MenteProfileScreen(),
                                   ),
                                 );
                               },
-
-
-
                               icon: Icons.check_circle,
                               cancelButtonLabel: 'محادثة الموجه',
                               detailsButtonLabel: 'تغيير الموعد',
-                              statusMessage: 'هذا الحجز مؤكد و مجدول. يمكنك إلغاءه فقط قبل \n12 ساعة من موعد بدايته', onDetailsTap: () {
+                              statusMessage:
+                                  'هذا الحجز مؤكد و مجدول. يمكنك إلغاءه فقط قبل \n12 ساعة من موعد بدايته',
+                              onDetailsTap: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const BookYourSession(),
+                                    builder: (context) =>
+                                        const BookYourSession(),
                                   ),
                                 );
-
-
-                            },
+                              },
                             ),
                             const SizedBox(
                               height: 16,
@@ -121,7 +120,6 @@ class SessionsScreen extends StatelessWidget {
                       SingleChildScrollView(
                         child: Column(
                           children: [
-
                             CustomCardWidgetForSecudle(
                               detailsText: 'عرض تفاصيل الطلب',
                               userName: 'فاطمة علي',
@@ -133,7 +131,8 @@ class SessionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const AccountScreen(),
+                                    builder: (context) =>
+                                        const MenteProfileScreen(),
                                   ),
                                 );
                               },
@@ -141,17 +140,17 @@ class SessionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const ShowSessionDedails(),
+                                    builder: (context) =>
+                                        const ShowSessionDedails(),
                                   ),
                                 );
                               },
-
                               cancelButtonLabel: 'إلغاء الطلب',
                               detailsButtonLabel: 'تفاصيل الحجز',
-                              statusMessage: 'لم يتم قبول او رفض طلبك من قبل الموجه حتى الآن', icon: Icons.info,
-
+                              statusMessage:
+                                  'لم يتم قبول او رفض طلبك من قبل الموجه حتى الآن',
+                              icon: Icons.info,
                             ),
-
                             const SizedBox(
                               height: 16,
                             ),
@@ -173,7 +172,8 @@ class SessionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const AccountScreen(),
+                                    builder: (context) =>
+                                        const MenteProfileScreen(),
                                   ),
                                 );
                               },
@@ -192,7 +192,27 @@ class SessionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const AccountScreen(),
+                                      builder: (context) =>
+                                          const MenteProfileScreen()),
+                                );
+                              },
+                            ),
+                            const SizedBox(
+                              height: 18,
+                            ),
+                            CustomCardWidget(
+                              detailsText: 'عرض تفاصيل الطلب',
+                              userName: 'فاطمة علي',
+                              userRole: 'UX Designer',
+                              userImageUrl: 'assets/images/profile 2.png',
+                              appointmentTime: '3:00 PM - 3:30 PM',
+                              appointmentDate: 'الجمعة ,3 يناير',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const MenteProfileScreen(),
                                   ),
                                 );
                               },
@@ -211,26 +231,8 @@ class SessionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const AccountScreen(),
-                                  ),
-                                );
-                              },
-                            ),
-                            const SizedBox(
-                              height: 18,
-                            ),
-                            CustomCardWidget(
-                              detailsText: 'عرض تفاصيل الطلب',
-                              userName: 'فاطمة علي',
-                              userRole: 'UX Designer',
-                              userImageUrl: 'assets/images/profile 2.png',
-                              appointmentTime: '3:00 PM - 3:30 PM',
-                              appointmentDate: 'الجمعة ,3 يناير',
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const AccountScreen(),
+                                    builder: (context) =>
+                                        const MenteProfileScreen(),
                                   ),
                                 );
                               },

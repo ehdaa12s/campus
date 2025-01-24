@@ -14,4 +14,5 @@ class Routes {
       "/joinAsGuideScreenInstructions";
   static const String achievementsScreen = "/achievementsScreen";
   static const String contactsScreen = "/contactsScreen";
+  static const String notificationsScreen = "/notificationsScreen";
 }
