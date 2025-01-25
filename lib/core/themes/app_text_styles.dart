@@ -143,4 +143,13 @@ class AppTextStyles {
     color: AppColors.gray500,
     height:1.75,
   );
+
+  static TextStyle font24DarkBlueBalooBhaijaan2w700 = TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w700,
+    color: AppColors.darkBlue,
+    height: 1.50
+  );
+
 }
