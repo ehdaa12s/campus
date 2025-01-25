@@ -6,7 +6,7 @@ import 'package:champs/screens/accepted_order_screen.dart';
 import 'package:champs/screens/achievements_screen.dart';
 import 'package:champs/screens/add_certificate_screen.dart';
 import 'package:champs/screens/add_experience_screen.dart';
-import 'package:champs/screens/chat_screen.dart';
+import 'package:champs/features/chat_screen/chat_screen.dart';
 import 'package:champs/screens/contacts_screen.dart';
 import 'package:champs/features/auth/login/correct_login.dart';
 import 'package:champs/screens/edit_certificate_screen.dart';

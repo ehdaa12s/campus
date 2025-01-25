@@ -1,3 +1,4 @@
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class RotatedTextCard extends StatelessWidget {
@@ -59,12 +60,7 @@ class RotatedTextCard extends StatelessWidget {
                       child: Text(
                         content,
                         textAlign: TextAlign.right,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontFamily: 'Baloo Bhaijaan 2',
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: AppTextStyles. fornt12WhiteBalooBhaijaan2w700,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                       ),
@@ -73,12 +69,7 @@ class RotatedTextCard extends StatelessWidget {
                     Text(
                       time,
                       textAlign: TextAlign.right,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontFamily: 'Baloo Bhaijaan 2',
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: AppTextStyles.fornt14WhiteBalooBhaijaan2w500,
                     ),
                   ],
                 ),

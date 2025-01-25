@@ -1,3 +1,4 @@
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class RotatedTextCardForAnotherSide extends StatelessWidget {
@@ -46,31 +47,21 @@ class RotatedTextCardForAnotherSide extends StatelessWidget {
                   children: [
                     // Content (Text)
                     Flexible(
-                      child:Expanded(child: Text(
+                      child: Text(
                         content,
                         textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontFamily: 'Baloo Bhaijaan 2',
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: AppTextStyles.fornt12BlackBalooBhaijaan2w700,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 7,
                       ),
                       ),
-                    ),
+
                     const SizedBox(width: 8),
 
                     Text(
                       time,
                       textAlign: TextAlign.left,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontFamily: 'Baloo Bhaijaan 2',
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: AppTextStyles. fornt14BlackBalooBhaijaan2w500
                     ),
                   ],
                 ),

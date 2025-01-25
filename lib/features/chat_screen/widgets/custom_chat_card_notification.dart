@@ -1,4 +1,3 @@
-import 'package:champs/constant.dart';
 import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -22,8 +21,7 @@ class NotificationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-      Container(
+    return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -77,13 +75,7 @@ class NotificationCard extends StatelessWidget {
                           ),
                           Text(
                             '$notificationCount',
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 12,
-                              fontFamily: fontName,
-                              fontWeight: FontWeight.w700,
-                              height: 1.83,
-                            ),
+                            style: AppTextStyles.fornt12WhiteBalooBhaijaan2w700,
                           ),
                         ],
                       ),
