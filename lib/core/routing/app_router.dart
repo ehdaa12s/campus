@@ -2,11 +2,13 @@ import 'package:champs/core/routing/routes.dart';
 import 'package:champs/features/auth/login/check_with_code_login.dart';
 import 'package:champs/features/home_screen/home_screen.dart';
 import 'package:champs/features/on_boarding/on_boarding_view.dart';
+import 'package:champs/features/sessions_screen/show_session_dedails.dart';
 import 'package:champs/screens/accepted_order_screen.dart';
 import 'package:champs/screens/achievements_screen.dart';
 import 'package:champs/screens/add_certificate_screen.dart';
 import 'package:champs/screens/add_experience_screen.dart';
 import 'package:champs/features/chat_screen/chat_screen.dart';
+import 'package:champs/screens/book_your_session.dart';
 import 'package:champs/screens/contacts_screen.dart';
 import 'package:champs/features/auth/login/correct_login.dart';
 import 'package:champs/screens/edit_certificate_screen.dart';
@@ -15,10 +17,11 @@ import 'package:champs/screens/edit_profile_screen.dart';
 import 'package:champs/features/auth/login/enter_email_forget_password.dart';
 import 'package:champs/screens/join_as_guide_instructions_screen.dart';
 import 'package:champs/screens/join_as_guide_screen.dart';
+import 'package:champs/screens/mente_profile_screen.dart';
 import 'package:champs/screens/more_menu.dart';
 import 'package:champs/features/notification/notifcation_screen.dart';
 import 'package:champs/screens/rejected_order_screen.dart';
-import 'package:champs/screens/sign_up_screen.dart';
+import 'package:champs/features/auth/register/sign_up_screen.dart';
 import 'package:champs/screens/under_review_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -73,6 +76,12 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const CorrectLogin());
       case Routes.checkWithCodeLogin:
         return MaterialPageRoute(builder: (_) => const CheckWithCodeLogin());
+      case Routes.menteProfileScreen:
+        return MaterialPageRoute(builder: (_) => const MenteProfileScreen());
+        case Routes.bookYourSession:
+        return MaterialPageRoute(builder: (_) => const BookYourSession());
+        case Routes.showSessionDetails:
+        return MaterialPageRoute(builder: (_) => const ShowSessionDetails());
 
       default:
         return MaterialPageRoute(

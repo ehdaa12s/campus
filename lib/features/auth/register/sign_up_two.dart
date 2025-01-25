@@ -2,18 +2,17 @@ import 'package:champs/core/widgets/custom_drop_button_list.dart';
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
 import 'package:champs/core/widgets/custom_transform_widget.dart';
-import 'package:champs/core/widgets/simplified_colum_contianer.dart';
-import 'package:champs/screens/sign_up_two.dart';
+import 'package:champs/features/auth/register/sign_up_with_code.dart';
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class SignUpTwo extends StatefulWidget {
+  const SignUpTwo({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignUpTwo> createState() => _SignUpTwoState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignUpTwoState extends State<SignUpTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,13 +26,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 24,
             ),
             const CustomTransformWidget(
-                labelText: '3/1',
+                labelText: '3/2',
                 progressColors: [
                   Color(0xFF00008D),
-                  Color(0xFFECECEC),
+                  Color(0xFF00008D),
                   Color(0xFFECECEC),
                 ],
-                targetScreen: SignUpTwo()),
+                targetScreen: SignUpWithCode()),
             const SizedBox(
               width: 345,
               child: Text(
@@ -52,7 +51,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 12.5,
             ),
             const Text(
-              'الإسم كاملا',
+              'البلد',
               textAlign: TextAlign.right,
               style: TextStyle(
                 color: Color(0xFF101828),
@@ -69,7 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 8,
             ),
             const Text(
-              'الجنس',
+              'رابط حساب لينكدان',
               textAlign: TextAlign.right,
               style: TextStyle(
                 color: Color(0xFF101828),
@@ -81,7 +80,50 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 8,
             ),
-            const  CustomDropdownButton(
+            const CustomTextField(
+                label: 'https://www.linkedin.com/in/your-profile'),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              'التخصص',
+              textAlign: TextAlign.right,
+              style: TextStyle(
+                color: Color(0xFF101828),
+                fontSize: 16,
+                fontFamily: 'Baloo Bhaijaan 2',
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            const CustomDropdownButton(
+              width: 330,
+              height: 48,
+              text: 'التخصص',
+              items: ['تخصص 1', 'تخصص 2', 'تخصص 3', 'تخصص 4', 'تخصص 5'],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            const Text(
+              'عدد سنوات الخبرة',
+              textAlign: TextAlign.right,
+              style: TextStyle(
+                color: Color(0xFF101828),
+                fontSize: 16,
+                fontFamily: 'Baloo Bhaijaan 2',
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            const CustomDropdownButton(
               width: 330,
               height: 48,
               text: 'عدد سنوات الخبرة',
@@ -91,73 +133,62 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 10,
             ),
             const Text(
-              'البريد الإلكتروني',
+              'نبذة عني',
               textAlign: TextAlign.right,
               style: TextStyle(
-                color: Color(0xFF101828),
+                color: Color(0xFF1F1F1F),
                 fontSize: 16,
                 fontFamily: 'Baloo Bhaijaan 2',
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
               ),
             ),
             const SizedBox(
               height: 8,
-            ),
-            const CustomTextField(label: 'البريد الإلكتروني'),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'رقم الهاتف ',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                color: Color(0xFF101828),
-                fontSize: 14,
-                fontFamily: 'Baloo Bhaijaan 2',
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            const CustomTextField(label: 'رقم الهاتف'),
-            const Text(
-              'كلمة المرور',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                color: Color(0xFF101828),
-                fontSize: 14,
-                fontFamily: 'Baloo Bhaijaan 2',
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            const CustomTextField(label: 'كلمة المرور'),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'تأكيد كلمة المرور',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                color: Color(0xFF101828),
-                fontSize: 16,
-                fontFamily: 'Baloo Bhaijaan 2',
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            const CustomTextField(label: 'تأكيد كلمة المرور'),
-            const SizedBox(
-              height: 10,
             ),
             Container(
-              constraints: const BoxConstraints(maxWidth: 345, maxHeight: 150),
-              child: const SimplifiedColumnContainer(),
+              width: 345,
+              height: 132,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: ShapeDecoration(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(width: 1, color: Color(0xFF98A1B2)),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Opacity(
+                    opacity: 0.50,
+                    child: SizedBox(
+                      width: 75,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            'نبذة عنك',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Color(0xFF98A1B2),
+                              fontSize: 12,
+                              fontFamily: 'Baloo Bhaijaan 2',
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 100,
             ),
             CustomButton(
               buttonText: 'التالي',
@@ -165,7 +196,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SignUpTwo(),
+                    builder: (context) => const SignUpWithCode(),
                   ),
                 );
               },

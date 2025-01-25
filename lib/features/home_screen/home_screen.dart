@@ -5,7 +5,7 @@ import 'package:champs/screens/mente_profile_screen.dart';
 import 'package:champs/screens/more_menu.dart';
 import 'package:flutter/material.dart';
 import '../chat_screen/message_screen.dart';
-import '../../screens/sessions_screen.dart';
+import '../sessions_screen/sessions_screen.dart';
 
 class HomeScreenForNavagationBar extends StatefulWidget {
   final int initialIndex;
