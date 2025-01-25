@@ -1,7 +1,7 @@
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/routing/routes.dart';
 import 'package:champs/screens/favourite_screen.dart';
-import 'package:champs/screens/sign_in.dart';
+import 'package:champs/features/auth/login/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

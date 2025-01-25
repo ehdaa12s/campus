@@ -8,16 +8,13 @@ class SimplifiedContainerRow extends StatelessWidget {
     return SizedBox(
       width: 345,
       height: 74,
-      child: Row(
+      child:Expanded(child:  Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-
-
-          _buildBox(),
+         Expanded(child:  _buildBox(),),
           const SizedBox(width: 14),
           _buildBox(),
           const SizedBox(width: 14),
-
           _buildBox(),
           const SizedBox(width: 14),
           _buildBox(
@@ -36,6 +33,7 @@ class SimplifiedContainerRow extends StatelessWidget {
           ),
         ],
       ),
+      ),
     );
   }
 
@@ -44,15 +42,13 @@ class SimplifiedContainerRow extends StatelessWidget {
       width: 74,
       height: 74,
       padding: padding,
-      decoration:const  BoxDecoration(
-        border:BorderDirectional(
-
-          bottom: BorderSide(
-            color:  Color(0xFF98A1B2),
-            width: 2,
-          ),
-        )
-      ),
+      decoration: const BoxDecoration(
+          border: BorderDirectional(
+        bottom: BorderSide(
+          color: Color(0xFF98A1B2),
+          width: 2,
+        ),
+      )),
       child: child ?? const SizedBox.shrink(),
     );
   }

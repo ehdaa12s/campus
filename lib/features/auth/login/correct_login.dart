@@ -1,4 +1,4 @@
-import 'package:champs/constant.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/utiles/size_config.dart';
 import 'package:champs/features/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -46,29 +46,26 @@ class _CorrectLoginState extends State<CorrectLogin>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
-            const SizedBox(
+            SizedBox(
               child: Column(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage("assets/images/correct_login.png"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
+
                   SizedBox(
                     width: 231,
-                    child: Text(
+                    child: Expanded(child: Text(
                       'تم انشاء الحساب بنجاح ',
                       textAlign: TextAlign.right,
-                      style: TextStyle(
-                        color: Color(0xFF101828),
-                        fontSize: 24,
-                        fontFamily: fontName,
-                        fontWeight: FontWeight.w700,
-                        height: 1.50,
-                      ),
+                      style: AppTextStyles.font24Grey900BalooBhaijaan2w700,
                     ),
-                  )
+                    ),
+                  ),
+
                 ],
               ),
             ),
@@ -86,6 +83,7 @@ class _CorrectLoginState extends State<CorrectLogin>
 
 void goToNextView() {
   Future.delayed(const Duration(seconds: 3), () {
-    Get.to(() => const HomeScreenForNavagationBar(), transition: Transition.fade);
+    Get.to(() => const HomeScreenForNavagationBar(),
+        transition: Transition.fade);
   });
 }

@@ -15,4 +15,12 @@ class Routes {
   static const String achievementsScreen = "/achievementsScreen";
   static const String contactsScreen = "/contactsScreen";
   static const String notificationsScreen = "/notificationsScreen";
+  static const String chatScreen = "/chatScreen";
+  static const String enterEmailForPasswordResetScreen =
+      "/enterEmailForPasswordResetScreen";
+  static const String homeScreen = "/homeScreenforNavagatorBar";
+  static const String signUpScreen = "/signUpScreen";
+  static const String correctLogin = "/correctLogin";
+  static const String checkWithCodeLogin = "/checkWithCodeLogin";
+
 }
