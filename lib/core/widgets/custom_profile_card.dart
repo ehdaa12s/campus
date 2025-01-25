@@ -24,7 +24,7 @@ class ProfileCard extends StatelessWidget {
     required this.sessions,
     required this.icon,
     required this.width,
-   required this.iconColor ,
+    required this.iconColor,
   });
 
   @override
@@ -50,7 +50,7 @@ class ProfileCard extends StatelessWidget {
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        // Allows the column to shrink-wrap its content
+
         children: [
           ListTile(
             title: Text(
@@ -74,8 +74,9 @@ class ProfileCard extends StatelessWidget {
                 ),
               ),
             ),
-            trailing:  Icon(Icons.favorite_border,
-            color: iconColor,
+            trailing: Icon(
+              Icons.favorite_border,
+              color: iconColor,
             ),
           ),
           const SizedBox(height: 8),
