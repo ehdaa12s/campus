@@ -1,4 +1,5 @@
 import 'package:champs/constant.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class NotificationCard extends StatelessWidget {
@@ -21,7 +22,8 @@ class NotificationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return
+      Container(
       width: double.infinity,
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -42,24 +44,12 @@ class NotificationCard extends StatelessWidget {
                     children: [
                       Text(
                         userName,
-                        style: const TextStyle(
-                          color: Color(0xFF101828),
-                          fontSize: 12,
-                          fontFamily: 'Baloo Bhaijaan 2',
-                          fontWeight: FontWeight.w700,
-                          height: 1.75,
-                        ),
+                        style: AppTextStyles.font12Grey900BalooBhaijaan2w700,
                       ),
                       const SizedBox(height: 4),
                       Text(
                         notificationText,
-                        style: const TextStyle(
-                          color: Color(0xFF475467),
-                          fontSize: 12,
-                          fontFamily: fontName,
-                          fontWeight: FontWeight.w400,
-                          height: 1.75,
-                        ),
+                        style: AppTextStyles.font12Grey900BalooBhaijaan2w400,
                       ),
                     ],
                   ),
@@ -70,13 +60,7 @@ class NotificationCard extends StatelessWidget {
                   children: [
                     Text(
                       timeAgo,
-                      style: const TextStyle(
-                        color: Color(0xFF667085),
-                        fontSize: 12,
-                        fontFamily: fontName,
-                        fontWeight: FontWeight.w400,
-                        height: 1.75,
-                      ),
+                      style: AppTextStyles.font12Grey900BalooBhaijaan2w400,
                     ),
                     const SizedBox(height: 4),
                     if (notificationCount != null)
