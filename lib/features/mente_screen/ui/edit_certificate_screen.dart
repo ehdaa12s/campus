@@ -1,17 +1,18 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/widgets/build_text_field.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class AddCertificateScreen extends StatefulWidget {
-  const AddCertificateScreen({super.key});
+class EditCertificateScreen extends StatefulWidget {
+  const EditCertificateScreen({super.key});
 
   @override
-  State<AddCertificateScreen> createState() => _AddCertificateScreenState();
+  State<EditCertificateScreen> createState() => _EditCertificateScreenState();
 }
 
-class _AddCertificateScreenState extends State<AddCertificateScreen> {
+class _EditCertificateScreenState extends State<EditCertificateScreen> {
   final TextEditingController issueDateController = TextEditingController();
   final TextEditingController expiryDateController = TextEditingController();
 
@@ -23,7 +24,7 @@ class _AddCertificateScreenState extends State<AddCertificateScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
-          'إضافة الشهادة',
+          'تعديل الشهادة',
           style: TextStyle(
             color: Colors.black,
             fontSize: 20,
@@ -67,9 +68,7 @@ class _AddCertificateScreenState extends State<AddCertificateScreen> {
                         const Text(
                           'تاريخ الإصدار',
                           style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
+                              fontSize: 14, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                         TextField(
@@ -181,28 +180,7 @@ class _AddCertificateScreenState extends State<AddCertificateScreen> {
     );
   }
 
-  Widget buildTextField({required String label, required String hint}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        TextField(
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-        ),
-      ],
-    );
-  }
+  
 
   Widget buildDateField({required String label}) {
     return Column(

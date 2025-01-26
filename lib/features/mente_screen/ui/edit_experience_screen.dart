@@ -1,19 +1,22 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/widgets/build_dropdown_field.dart';
 import 'package:champs/core/widgets/custom_button.dart';
-import 'package:champs/core/widgets/custom_text_field.dart';
+import 'package:champs/core/widgets/build_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class EditCertificateScreen extends StatefulWidget {
-  const EditCertificateScreen({super.key});
+class EditExperienceScreen extends StatefulWidget {
+  const EditExperienceScreen({super.key});
 
   @override
-  State<EditCertificateScreen> createState() => _EditCertificateScreenState();
+  State<EditExperienceScreen> createState() => _EditExperienceScreenState();
 }
 
-class _EditCertificateScreenState extends State<EditCertificateScreen> {
+class _EditExperienceScreenState extends State<EditExperienceScreen> {
   final TextEditingController issueDateController = TextEditingController();
   final TextEditingController expiryDateController = TextEditingController();
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +26,7 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
-          'تعديل الشهادة',
+          'تعديل الخبرة',
           style: TextStyle(
             color: Colors.black,
             fontSize: 20,
@@ -50,11 +53,35 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              buildTextField(label: 'اسم الشهادة', hint: 'AI in UX/UI Design'),
+              buildTextField(
+                label: 'المسمى الوظيفي',
+                hint: 'Senior Product Designer',
+              ),
+              const SizedBox(height: 16),
+              buildDropdownField(
+                label: 'نوع الدوام',
+                hint: 'Full-time',
+                items: ['Option 1', 'Option 2', 'Option 3'],
+                onChanged: (String? value) {},
+              ),
               const SizedBox(height: 16),
               buildTextField(
-                label: 'الجهة المانحة للشهادة',
-                hint: 'The Interaction Design Foundation',
+                label: 'اسم الشركة او المؤسسة',
+                hint: 'Aaseya',
+              ),
+              const SizedBox(height: 16),
+              buildDropdownField(
+                label: 'الموقع الجغرافي',
+                hint: 'Riyadh, Saudi Ararbia',
+                items: ['Option 1', 'Option 2', 'Option 3'],
+                onChanged: (String? value) {},
+              ),
+              const SizedBox(height: 16),
+              buildDropdownField(
+                label: 'طبيعة الموقع',
+                hint: 'On Site',
+                items: ['Option 1', 'Option 2', 'Option 3'],
+                onChanged: (String? value) {},
               ),
               const SizedBox(height: 16),
               Row(
@@ -74,7 +101,7 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
                           controller: issueDateController,
                           readOnly: true,
                           decoration: InputDecoration(
-                            hintText: 'تاريخ الإصدار',
+                            hintText: 'تاريخ البدء',
                             suffixIcon: SizedBox(
                               width: 20,
                               height: 20,
@@ -113,15 +140,19 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'تاريخ الانتهاء',
+                        Text(
+                          'تاريخ الإنتهاء',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: isChecked ? Colors.grey : Colors.black,
+                          ),
                         ),
                         const SizedBox(height: 8),
                         TextField(
                           controller: expiryDateController,
                           readOnly: true,
+                          enabled: !isChecked,
                           decoration: InputDecoration(
                             hintText: 'تاريخ الانتهاء',
                             suffixIcon: SizedBox(
@@ -158,14 +189,49 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
-              buildTextField(label: 'رقم الشهادة', hint: 'Credential ID 10485'),
-              const SizedBox(height: 16),
-              buildTextField(
-                label: 'رابط الشهادة',
-                hint: 'https://app.uxcel.com/certificates/F6T8H05JM9JI',
+              const SizedBox(height: 10),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Transform.scale(
+                    scale: 1.1, // Adjust size of checkbox
+                    child: Checkbox(
+                      value: isChecked,
+                      side: const BorderSide(
+                          color: Color(0xFFD1D1D6), width: 1.5),
+                      onChanged: (bool? value) {
+                        setState(() {
+                          isChecked = value!;
+                        });
+                      },
+                      activeColor:
+                          AppColors.primary, // Active color when checked
+                      checkColor: Colors.white, // Color of check mark
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        isChecked = !isChecked;
+                      });
+                    },
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    child: const Text(
+                      'مازلت اعمل في الشركة',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 155),
+              const SizedBox(height: 8),
               CustomButton(
                 text: 'حفظ',
                 onPressed: () {
@@ -176,43 +242,6 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget buildTextField({required String label, required String hint}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        TextField(
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget buildDateField({required String label}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        CustomTextField(label: label)
-      ],
     );
   }
 }

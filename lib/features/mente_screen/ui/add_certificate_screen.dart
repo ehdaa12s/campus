@@ -1,19 +1,20 @@
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/widgets/custom_button.dart';
+import 'package:champs/core/widgets/custom_text_field.dart';
+import 'package:champs/core/widgets/build_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class EditExperienceScreen extends StatefulWidget {
-  const EditExperienceScreen({super.key});
+class AddCertificateScreen extends StatefulWidget {
+  const AddCertificateScreen({super.key});
 
   @override
-  State<EditExperienceScreen> createState() => _EditExperienceScreenState();
+  State<AddCertificateScreen> createState() => _AddCertificateScreenState();
 }
 
-class _EditExperienceScreenState extends State<EditExperienceScreen> {
+class _AddCertificateScreenState extends State<AddCertificateScreen> {
   final TextEditingController issueDateController = TextEditingController();
   final TextEditingController expiryDateController = TextEditingController();
-  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
-          'تعديل الخبرة',
+          'إضافة الشهادة',
           style: TextStyle(
             color: Colors.black,
             fontSize: 20,
@@ -50,35 +51,11 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              buildTextField(
-                label: 'المسمى الوظيفي',
-                hint: 'Senior Product Designer',
-              ),
-              const SizedBox(height: 16),
-              buildDropdownField(
-                label: 'نوع الدوام',
-                hint: 'Full-time',
-                items: ['Option 1', 'Option 2', 'Option 3'],
-                onChanged: (String? value) {},
-              ),
+              buildTextField(label: 'اسم الشهادة', hint: 'AI in UX/UI Design'),
               const SizedBox(height: 16),
               buildTextField(
-                label: 'اسم الشركة او المؤسسة',
-                hint: 'Aaseya',
-              ),
-              const SizedBox(height: 16),
-              buildDropdownField(
-                label: 'الموقع الجغرافي',
-                hint: 'Riyadh, Saudi Ararbia',
-                items: ['Option 1', 'Option 2', 'Option 3'],
-                onChanged: (String? value) {},
-              ),
-              const SizedBox(height: 16),
-              buildDropdownField(
-                label: 'طبيعة الموقع',
-                hint: 'On Site',
-                items: ['Option 1', 'Option 2', 'Option 3'],
-                onChanged: (String? value) {},
+                label: 'الجهة المانحة للشهادة',
+                hint: 'The Interaction Design Foundation',
               ),
               const SizedBox(height: 16),
               Row(
@@ -91,14 +68,16 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
                         const Text(
                           'تاريخ الإصدار',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         const SizedBox(height: 8),
                         TextField(
                           controller: issueDateController,
                           readOnly: true,
                           decoration: InputDecoration(
-                            hintText: 'تاريخ البدء',
+                            hintText: 'تاريخ الإصدار',
                             suffixIcon: SizedBox(
                               width: 20,
                               height: 20,
@@ -137,19 +116,15 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'تاريخ الإنتهاء',
+                        const Text(
+                          'تاريخ الانتهاء',
                           style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: isChecked ? Colors.grey : Colors.black,
-                          ),
+                              fontSize: 14, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 8),
                         TextField(
                           controller: expiryDateController,
                           readOnly: true,
-                          enabled: !isChecked,
                           decoration: InputDecoration(
                             hintText: 'تاريخ الانتهاء',
                             suffixIcon: SizedBox(
@@ -186,49 +161,14 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Transform.scale(
-                    scale: 1.1, // Adjust size of checkbox
-                    child: Checkbox(
-                      value: isChecked,
-                      side: const BorderSide(
-                          color: Color(0xFFD1D1D6), width: 1.5),
-                      onChanged: (bool? value) {
-                        setState(() {
-                          isChecked = value!;
-                        });
-                      },
-                      activeColor:
-                          const Color(0xFF00008D), // Active color when checked
-                      checkColor: Colors.white, // Color of check mark
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      setState(() {
-                        isChecked = !isChecked;
-                      });
-                    },
-                    highlightColor: Colors.transparent,
-                    splashColor: Colors.transparent,
-                    child: const Text(
-                      'مازلت اعمل في الشركة',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
+              const SizedBox(height: 16),
+              buildTextField(label: 'رقم الشهادة', hint: 'Credential ID 10485'),
+              const SizedBox(height: 16),
+              buildTextField(
+                label: 'رابط الشهادة',
+                hint: 'https://app.uxcel.com/certificates/F6T8H05JM9JI',
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 155),
               CustomButton(
                 text: 'حفظ',
                 onPressed: () {
@@ -242,36 +182,9 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
     );
   }
 
-  Widget buildTextField({required String label, required String hint}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        TextField(
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-        ),
-      ],
-    );
-  }
+  
 
-  Widget buildDropdownField({
-    required String label,
-    required String hint,
-    required List<String> items,
-    required ValueChanged<String?> onChanged,
-    String? selectedValue,
-  }) {
+  Widget buildDateField({required String label}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -280,30 +193,7 @@ class _EditExperienceScreenState extends State<EditExperienceScreen> {
           style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
-        DropdownButtonFormField<String>(
-          value: selectedValue,
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-          icon: SvgPicture.asset(
-            AppSvgs.arrowDown,
-            width: 28,
-            height: 28,
-            color: Colors.black,
-          ),
-          items: items
-              .map((item) => DropdownMenuItem<String>(
-                    value: item,
-                    child: Text(item),
-                  ))
-              .toList(),
-          onChanged: onChanged,
-        ),
+        CustomTextField(label: label)
       ],
     );
   }

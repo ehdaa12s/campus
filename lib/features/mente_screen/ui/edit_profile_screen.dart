@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_colors.dart';
 import 'package:champs/core/widgets/edit_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -88,7 +89,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: const Color(0xFF9CA3AF),
+                          color: AppColors.gray350,
                           width: 1.5,
                         ),
                       ),
@@ -129,7 +130,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                             AppSvgs.edit,
                             width: 24,
                             height: 24,
-                            color: const Color(0xFF9CA3AF),
+                            color: AppColors.gray350,
                           ),
                         ),
                       ),
@@ -166,7 +167,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     height: 50,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF00008D),
+                        backgroundColor: AppColors.primary,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -189,7 +190,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
-                        side: const BorderSide(color: Color(0xFF00008D)),
+                        side: const BorderSide(color: AppColors.primary),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -200,7 +201,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       child: const Text(
                         "إلغاء التعديلات",
                         style: TextStyle(
-                          color: Color(0xFF00008D),
+                          color: AppColors.primary,
                           fontSize: 14,
                           fontWeight: FontWeight.w800,
                         ),

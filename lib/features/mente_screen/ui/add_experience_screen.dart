@@ -1,4 +1,7 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/widgets/build_dropdown_field.dart';
+import 'package:champs/core/widgets/build_text_field.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -209,7 +212,7 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                         });
                       },
                       activeColor:
-                          const Color(0xFF00008D), // Active color when checked
+                          AppColors.primary, // Active color when checked
                       checkColor: Colors.white, // Color of check mark
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
@@ -246,72 +249,6 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget buildTextField({required String label, required String hint}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        TextField(
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget buildDropdownField({
-    required String label,
-    required String hint,
-    required List<String> items,
-    required ValueChanged<String?> onChanged,
-    String? selectedValue,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        DropdownButtonFormField<String>(
-          value: selectedValue,
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-          icon: SvgPicture.asset(
-            AppSvgs.arrowDown,
-            width: 28,
-            height: 28,
-            color: Colors.black,
-          ),
-          items: items
-              .map((item) => DropdownMenuItem<String>(
-                    value: item,
-                    child: Text(item),
-                  ))
-              .toList(),
-          onChanged: onChanged,
-        ),
-      ],
     );
   }
 }
