@@ -30,7 +30,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
           ),
           alignment: Alignment.topRight,
           child:Padding(
-            padding: const EdgeInsets.all(50),
+            padding: const EdgeInsets.all(24),
             child: Column(
             children: [
               const SizedBox(

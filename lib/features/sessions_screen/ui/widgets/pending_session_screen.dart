@@ -8,7 +8,14 @@ class PendingSessionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
+      child: Padding(
+        padding:const  EdgeInsets.symmetric(
+          horizontal: 8,
+        ),
+          child:
+          Column(
+
+
         children: [
           CustomCardWidgetForSecudle(
             detailsText: 'عرض تفاصيل الطلب',
@@ -18,7 +25,7 @@ class PendingSessionsScreen extends StatelessWidget {
             appointmentTime: '3:00 PM - 3:30 PM',
             appointmentDate: 'الجمعة ,3 يناير',
             onTap: () {
-              Navigator.pushNamed(context, Routes.menteProfileScreen);
+              Navigator.pushNamed(context, Routes.showSessionDetails);
             },
             onDetailsTap: () {
               Navigator.pushNamed(context, Routes.showSessionDetails);
@@ -31,6 +38,7 @@ class PendingSessionsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
         ],
+      ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 
+import 'package:champs/core/routing/routes.dart';
 import 'package:champs/features/chat_screen/ui/widgets/custom_chat_card_notification.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -11,7 +12,7 @@ class MessgaeNoticationBody extends StatelessWidget {
       children: [
         NotificationCard(
           onTap: () {
-            Navigator.pushNamed(context, "/chatScreen");
+            Navigator.pushNamed(context,Routes.chatScreen);
           },
           timeAgo: 'منذ 5 دقائق',
           notificationText: 'محتوى قابل للتغيير محتوى قابل للتغيير.',
@@ -26,7 +27,7 @@ class MessgaeNoticationBody extends StatelessWidget {
           userImageUrl: 'assets/images/profile.png',
           notificationCount: 1,
           onTap: () {
-            Navigator.pushNamed(context, "/chatScreen");
+            Navigator.pushNamed(context,Routes.chatScreen);
           },
         ),
         NotificationCard(
@@ -35,7 +36,7 @@ class MessgaeNoticationBody extends StatelessWidget {
           userName: 'ماريان نبيل',
           userImageUrl: 'assets/images/profile.png',
           onTap: () {
-            Navigator.pushNamed(context, "/chatScreen");
+            Navigator.pushNamed(context,Routes.chatScreen);
           },
         ),
         NotificationCard(
@@ -44,7 +45,7 @@ class MessgaeNoticationBody extends StatelessWidget {
           userName: 'عبدالله حسين',
           userImageUrl: 'assets/images/profile.png',
           onTap: () {
-            Navigator.pushNamed(context, "/chatScreen");
+            Navigator.pushNamed(context,Routes.chatScreen);
           },
         ),
         NotificationCard(
@@ -53,7 +54,7 @@ class MessgaeNoticationBody extends StatelessWidget {
           userName: 'خالد مكرم',
           userImageUrl: 'assets/images/profile.png',
           onTap: () {
-            Navigator.pushNamed(context, "/chatScreen");
+            Navigator.pushNamed(context,Routes.chatScreen);
           },
         ),
         NotificationCard(
@@ -62,7 +63,7 @@ class MessgaeNoticationBody extends StatelessWidget {
           userName: 'فيروز البغدادي',
           userImageUrl: 'assets/images/profile.png',
           onTap: () {
-            Navigator.pushNamed(context, "/chatScreen");
+            Navigator.pushNamed(context,Routes.chatScreen);
           },
         ),
       ],

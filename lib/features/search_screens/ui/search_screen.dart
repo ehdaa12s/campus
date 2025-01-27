@@ -1,7 +1,7 @@
 import 'package:champs/core/widgets/custom_search_button.dart';
 import 'package:champs/constant.dart';
 
-import 'package:champs/features/search_screens/result_search.dart';
+import 'package:champs/features/search_screens/ui/result_search.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatelessWidget {

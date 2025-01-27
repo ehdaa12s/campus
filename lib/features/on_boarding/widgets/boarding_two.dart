@@ -31,7 +31,7 @@ class _BoardingTwoState extends State<BoardingTwo> {
           ),
           alignment: Alignment.topRight,
           child: Padding(
-            padding: const EdgeInsets.all(50),
+            padding: const EdgeInsets.all(24),
           child:
           Column(
             children: [

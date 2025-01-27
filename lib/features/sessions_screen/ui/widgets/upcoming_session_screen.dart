@@ -8,7 +8,8 @@ class UpcomingSessionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
+      child:
+      Column(
         children: [
           CustomCardWidgetForSecudle(
             detailsText: 'عرض تفاصيل الطلب',
@@ -18,7 +19,7 @@ class UpcomingSessionsScreen extends StatelessWidget {
             appointmentTime: '3:00 PM - 3:30 PM',
             appointmentDate: 'الجمعة ,3 يناير',
             onTap: () {
-              Navigator.pushNamed(context, Routes.menteProfileScreen);
+              Navigator.pushNamed(context, Routes.showSessionDetails);
             },
             icon: Icons.check_circle,
             cancelButtonLabel: 'محادثة الموجه',
@@ -26,7 +27,7 @@ class UpcomingSessionsScreen extends StatelessWidget {
             statusMessage:
                 'هذا الحجز مؤكد و مجدول. يمكنك إلغاءه فقط قبل \n12 ساعة من موعد بدايته',
             onDetailsTap: () {
-              Navigator.pushNamed(context, Routes.bookYourSession );
+              Navigator.pushNamed(context, Routes.chatScreen );
             },
           ),
           const SizedBox(height: 16),
