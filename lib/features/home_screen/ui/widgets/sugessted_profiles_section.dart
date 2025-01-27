@@ -12,7 +12,7 @@ class SuggestedProfilesSection extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, Routes.menteProfileScreen);
+            Navigator.pushNamed(context, Routes.mentorProfileScreen);
           },
           child: const ProfileCard(
             width: double.infinity,
@@ -30,7 +30,7 @@ class SuggestedProfilesSection extends StatelessWidget {
         const SizedBox(height: 8),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, Routes.menteProfileScreen);
+            Navigator.pushNamed(context, Routes.mentorProfileScreen);
           },
           child: const ProfileCard(
             width: double.infinity,
@@ -48,7 +48,7 @@ class SuggestedProfilesSection extends StatelessWidget {
         const SizedBox(height: 8),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, Routes.menteProfileScreen);
+            Navigator.pushNamed(context, Routes.mentorProfileScreen);
           },
           child: const ProfileCard(
             width: double.infinity,

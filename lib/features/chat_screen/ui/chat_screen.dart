@@ -1,3 +1,4 @@
+import 'package:champs/core/routing/routes.dart';
 import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/custom_user_info_card_chat.dart';
 import 'package:champs/features/chat_screen/ui/widgets/chat_body_screen.dart';
@@ -15,15 +16,24 @@ class ChatScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const UserInfoCard(
+          GestureDetector(
+        onTap: () {
+            Navigator.pushNamed(context, Routes.mentorProfileScreen);
+        },
+        child:
+
+
+          const  UserInfoCard(
               userName: 'أميرة محمد',
               status: 'نشط الأن',
               userImageUrl: 'assets/images/profile 2.png',
             ),
+          ),
 
             const SizedBox(
               height: 16,
             ),
+
             Text(
               'اليوم',
               textAlign: TextAlign.right,

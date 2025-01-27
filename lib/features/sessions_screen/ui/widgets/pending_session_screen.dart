@@ -9,36 +9,33 @@ class PendingSessionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding:const  EdgeInsets.symmetric(
-          horizontal: 8,
+        padding: const EdgeInsets.only(
+          left: 24,
+          right: 24,
         ),
-          child:
-          Column(
-
-
-        children: [
-          CustomCardWidgetForSecudle(
-            detailsText: 'عرض تفاصيل الطلب',
-            userName: 'فاطمة علي',
-            userRole: 'UX Designer',
-            userImageUrl: 'assets/images/profile 2.png',
-            appointmentTime: '3:00 PM - 3:30 PM',
-            appointmentDate: 'الجمعة ,3 يناير',
-            onTap: () {
-              Navigator.pushNamed(context, Routes.showSessionDetails);
-            },
-            onDetailsTap: () {
-              Navigator.pushNamed(context, Routes.showSessionDetails);
-
-            },
-            cancelButtonLabel: 'إلغاء الطلب',
-            detailsButtonLabel: 'تفاصيل الحجز',
-            statusMessage: 'لم يتم قبول او رفض طلبك من قبل الموجه حتى الآن',
-            icon: Icons.info,
-          ),
-          const SizedBox(height: 16),
-        ],
-      ),
+        child: Column(
+          children: [
+            CustomCardWidgetForSecudle(
+              detailsText: 'عرض تفاصيل الطلب',
+              userName: 'فاطمة علي',
+              userRole: 'UX Designer',
+              userImageUrl: 'assets/images/profile 2.png',
+              appointmentTime: '3:00 PM - 3:30 PM',
+              appointmentDate: 'الجمعة ,3 يناير',
+              onTap: () {
+                Navigator.pushNamed(context, Routes.showSessionDetails);
+              },
+              onDetailsTap: () {
+                Navigator.pushNamed(context, Routes.showSessionDetails);
+              },
+              cancelButtonLabel: 'إلغاء الطلب',
+              detailsButtonLabel: 'تفاصيل الحجز',
+              statusMessage: 'لم يتم قبول او رفض طلبك من قبل الموجه حتى الآن',
+              icon: Icons.info,
+            ),
+            const SizedBox(height: 16),
+          ],
+        ),
       ),
     );
   }

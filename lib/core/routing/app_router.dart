@@ -86,7 +86,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const ShowSessionDetails());
       case Routes.searchScreen:
         return MaterialPageRoute(builder: (_) => const SearchScreen());
-      case Routes.menteProfileScreen:
+      case Routes.mentorProfileScreen:
         return MaterialPageRoute(builder: (_) => const MentorProfileScreen());
 
       default:

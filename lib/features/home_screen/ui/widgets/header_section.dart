@@ -11,7 +11,15 @@ class HeaderSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8),
-      child: Row(
+      child: GestureDetector
+      (
+        onTap: () {
+          Navigator.pushNamed(context, Routes.menteProfileScreen);
+        },
+        child:
+
+
+      Row(
         children: [
           const CircleAvatar(
             radius: 25,
@@ -39,6 +47,7 @@ class HeaderSection extends StatelessWidget {
             },
           ),
         ],
+      ),
       ),
     );
   }
