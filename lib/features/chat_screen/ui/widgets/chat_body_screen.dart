@@ -38,7 +38,7 @@ class ChatBodyScreen extends StatelessWidget {
           time: '1 :13 AM',
         ),
         SizedBox(
-          height: 240,
+          height: 280,
         ),
         CustomContainerToEnterMessage(
             hintText: 'اكتب رسالة',

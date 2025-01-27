@@ -13,12 +13,18 @@ class SessionsScreen extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
+        body:
+        Column(
             children: [
               const SizedBox(height: 24),
               _buildHeader(context),
+              Padding(padding:const EdgeInsets.all(
+                24
+
+
+              ),
+              child:
+
               TabBar(
                 indicatorColor: const Color(0xFF00008D),
                 labelColor: const Color(0xFF00008D),
@@ -30,9 +36,15 @@ class SessionsScreen extends StatelessWidget {
                   Tab(text: 'المكتملة'),
                 ],
               ),
+              ),
               const SizedBox(height: 24),
               const Expanded(
-                child: TabBarView(
+                child: Padding(padding: EdgeInsets.only(
+                  left: 24,
+                  right: 24,
+                  bottom: 24,
+                ),
+                child:TabBarView(
                   children: [
                     UpcomingSessionsScreen(),
                     PendingSessionsScreen(),
@@ -40,15 +52,21 @@ class SessionsScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              ),
+
             ],
           ),
         ),
-      ),
+
     );
   }
 
   Widget _buildHeader(BuildContext context) {
-    return Row(
+    return Padding(padding: const EdgeInsets.all(
+      24,
+    ),
+      child:
+      Row(
       children: [
         IconButton(
           onPressed: () {
@@ -56,16 +74,23 @@ class SessionsScreen extends StatelessWidget {
           },
           icon: const Icon(Icons.arrow_back_ios),
         ),
-        const SizedBox(width: 60),
+        const Spacer(
+          flex: 1,
+        ),
         SizedBox(
-          width: 90,
+          width: 120,
           child: Text(
             'الجلسات ',
             textAlign: TextAlign.center,
             style: AppTextStyles. font24BlackBalooBhaijaan2w700,
           ),
         ),
+       const  Spacer(
+          flex: 1,
+        )
+
       ],
+      ),
     );
   }
 }
