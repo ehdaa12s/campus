@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -128,25 +129,13 @@ class MentorProfileHeader extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Text(
-            'معتصم شعبان',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              color: AppColors.black,
-            ),
-          ),
+          Text('معتصم شعبان',
+              style: AppTextStyles.font20blackBalooBhaijaan2w700),
           const SizedBox(
             height: 2,
           ),
-          const Text(
-            'UX UI Designer',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: AppColors.gray600,
-            ),
-          ),
+          Text('UX UI Designer',
+              style: AppTextStyles.font16Gray600BalooBhaijaan2w500),
           const SizedBox(
             height: 1,
           ),
@@ -160,14 +149,8 @@ class MentorProfileHeader extends StatelessWidget {
                 color: AppColors.amber,
               ),
               const SizedBox(width: 3),
-              const Text(
-                '24 / 4.9',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.black,
-                ),
-              ),
+              Text('24 / 4.9',
+                  style: AppTextStyles.font14BlackBalooBhaijaan2w700),
             ],
           ),
         ],

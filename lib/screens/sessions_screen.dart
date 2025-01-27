@@ -1,7 +1,7 @@
 import 'package:champs/core/widgets/custom_card%20_session_profile.dart';
 import 'package:champs/core/widgets/custom_card_for_secudle%20_session.dart';
 import 'package:champs/screens/book_your_session.dart';
-import 'package:champs/features/mente_screen/ui/mente_profile_screen.dart';
+import 'package:champs/features/mentee_screen/ui/mentee_profile_screen.dart';
 import 'package:champs/screens/show_session_dedails.dart';
 import 'package:flutter/material.dart';
 

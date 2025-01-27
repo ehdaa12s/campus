@@ -50,13 +50,12 @@ class ProfileCard extends StatelessWidget {
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-
         children: [
           ListTile(
             title: Text(
               name,
               textAlign: TextAlign.right,
-              style: AppTextStyles.font14Grey900BalooBhaijaan2Bold,
+              style: AppTextStyles.font14BlackBalooBhaijaan2Bold,
             ),
             subtitle: Text(
               role,

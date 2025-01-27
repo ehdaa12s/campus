@@ -1,6 +1,6 @@
 import 'package:champs/core/widgets/custom_navagation_bar.dart';
 import 'package:champs/features/home_screen/widgets/home_screen_view_body.dart';
-import 'package:champs/features/mente_screen/ui/mente_profile_screen.dart';
+import 'package:champs/features/mentee_screen/ui/mentee_profile_screen.dart';
 
 import 'package:champs/screens/more_menu.dart';
 import 'package:flutter/material.dart';

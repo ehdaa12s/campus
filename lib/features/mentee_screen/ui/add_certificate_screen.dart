@@ -1,4 +1,5 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
 import 'package:champs/core/widgets/build_text_field.dart';
@@ -23,14 +24,8 @@ class _AddCertificateScreenState extends State<AddCertificateScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'إضافة الشهادة',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: Text('إضافة الشهادة',
+            style: AppTextStyles.font20Grey900BalooBhaijaan2Bold),
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         leading: IconButton(
@@ -65,13 +60,8 @@ class _AddCertificateScreenState extends State<AddCertificateScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'تاريخ الإصدار',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        Text('تاريخ الإصدار',
+                            style: AppTextStyles.font14BlackBalooBhaijaan2Bold),
                         const SizedBox(height: 8),
                         TextField(
                           controller: issueDateController,
@@ -116,10 +106,9 @@ class _AddCertificateScreenState extends State<AddCertificateScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           'تاريخ الانتهاء',
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                          style: AppTextStyles.font14BlackBalooBhaijaan2Bold,
                         ),
                         const SizedBox(height: 8),
                         TextField(
@@ -182,15 +171,13 @@ class _AddCertificateScreenState extends State<AddCertificateScreen> {
     );
   }
 
-  
-
   Widget buildDateField({required String label}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+          style: AppTextStyles.font14BlackBalooBhaijaan2Bold,
         ),
         const SizedBox(height: 8),
         CustomTextField(label: label)

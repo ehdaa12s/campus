@@ -1,12 +1,14 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/helpers/extensions.dart';
+import 'package:champs/core/routing/routes.dart';
 import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/profile_about_card.dart';
 import 'package:champs/core/widgets/profile_section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class MentorExperiences extends StatelessWidget {
-  const MentorExperiences({
+class MenteExperience extends StatelessWidget {
+  const MenteExperience({
     super.key,
   });
 
@@ -14,10 +16,16 @@ class MentorExperiences extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: ProfileSectionHeader(
             title: 'خبراتي',
+            onAddTap: () {
+              context.pushNamed(Routes.addExperienceScreen);
+            },
+            onEditTap: () {
+              context.pushNamed(Routes.editExperienceScreen);
+            },
           ),
         ),
         const SizedBox(height: 15),

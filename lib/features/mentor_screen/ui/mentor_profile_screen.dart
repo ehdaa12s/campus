@@ -1,16 +1,17 @@
-import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/helpers/extensions.dart';
+import 'package:champs/core/routing/routes.dart';
 import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:champs/core/widgets/profile_about_card.dart';
 import 'package:champs/core/widgets/profile_recommendation_card.dart';
 import 'package:champs/core/widgets/profile_section_header.dart';
 import 'package:champs/features/mentor_screen/data/mentor_profile_data.dart';
+import 'package:champs/features/mentor_screen/ui/widgets/mentor_certificates.dart';
 import 'package:champs/features/mentor_screen/ui/widgets/mentor_experiences.dart';
 import 'package:champs/features/mentor_screen/ui/widgets/mentor_profile_header.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:io';
 
 class MentorProfileScreen extends StatefulWidget {
@@ -21,13 +22,6 @@ class MentorProfileScreen extends StatefulWidget {
 }
 
 class _MenteProfileScreenState extends State<MentorProfileScreen> {
-  // Open Link Function
-  Future<void> _launchUrl(Uri url) async {
-    if (!await launchUrl(url)) {
-      throw Exception('Could not launch $url');
-    }
-  }
-
   // Image Picker Function
   File? _image;
 
@@ -76,18 +70,12 @@ class _MenteProfileScreenState extends State<MentorProfileScreen> {
             ),
             const SizedBox(height: 12),
             // TabBar
-            const TabBar(
+            TabBar(
               indicatorColor: AppColors.primary,
               labelColor: AppColors.primary,
-              labelStyle: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-              unselectedLabelStyle: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFF666677)),
-              tabs: [
+              labelStyle: AppTextStyles.font16BlackBalooBhaijaan2w700,
+              unselectedLabelStyle: AppTextStyles.font16BrownBalooBhaijaan2w600,
+              tabs: const [
                 Tab(text: 'معلوماتي'),
                 Tab(text: 'أراء عملائي'),
               ],
@@ -109,15 +97,11 @@ class _MenteProfileScreenState extends State<MentorProfileScreen> {
                             ),
                           ),
                           const SizedBox(height: 15),
-                          const ProfileAboutCard(
+                          ProfileAboutCard(
                             content: Text(
-                              'هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير ',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black,
-                              ),
-                            ),
+                                'هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير هذا المحتوى قابل للتغيير هذا المحتوى قابل للتغير ',
+                                style: AppTextStyles
+                                    .font16BlackBalooBhaijaan2w400),
                           ),
                           const SizedBox(height: 15),
                           const Padding(
@@ -175,119 +159,12 @@ class _MenteProfileScreenState extends State<MentorProfileScreen> {
                           const SizedBox(height: 15),
                           const MentorExperiences(),
                           const SizedBox(height: 10),
-                          const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 8.0),
-                            child: ProfileSectionHeader(
-                              title: 'الشهادات',
-                            ),
-                          ),
-                          const SizedBox(height: 15),
-                          Directionality(
-                            textDirection: TextDirection.ltr,
-                            child: ProfileAboutCard(
-                              content: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 1, horizontal: 8),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const SizedBox(width: 10),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        const Text(
-                                          'Data-Driven Design: Quantitative Research for UX ',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w700,
-                                            color: Colors.black,
-                                          ),
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            _launchUrl(Uri.parse(
-                                                'https://www.interaction-design.org/members/sherif-amin/certificate/course/ec16d088-dbe9-421b-82a0-e96b11d2d5c5'));
-                                          },
-                                          child: const Text(
-                                            'IxDF - The Interaction Design Foundation',
-                                            style: TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w500,
-                                              color: AppColors.gray600,
-                                              decoration:
-                                                  TextDecoration.underline,
-                                            ),
-                                          ),
-                                        ),
-                                        const SizedBox(height: 8),
-                                        const Text(
-                                          'Issued Des 2023',
-                                          style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                            color: AppColors.gray600,
-                                          ),
-                                        ),
-                                        const Text(
-                                          'Credential ID 10485',
-                                          style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                            color: AppColors.gray600,
-                                          ),
-                                        ),
-                                        Container(
-                                          margin:
-                                              const EdgeInsets.only(left: 150),
-                                          width: 155,
-                                          padding: const EdgeInsets.all(5),
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            border: Border.all(
-                                              color: AppColors.gray400,
-                                              width: 1.0,
-                                            ),
-                                          ),
-                                          child: InkWell(
-                                            onTap: () {
-                                              _launchUrl(Uri.parse(
-                                                  'https://www.interaction-design.org/members/sherif-amin/certificate/course/ec16d088-dbe9-421b-82a0-e96b11d2d5c5'));
-                                            },
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                const Text(
-                                                  'Show credential',
-                                                  style: TextStyle(
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: AppColors.black,
-                                                  ),
-                                                ),
-                                                const SizedBox(width: 5),
-                                                SvgPicture.asset(
-                                                  AppSvgs.export,
-                                                  width: 15,
-                                                  height: 15,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 50),
+                          const MentorCertificates(),
                           CustomButton(
                             text: 'احجز الان',
-                            onPressed: () {},
+                            onPressed: () {
+                              context.pushNamed(Routes.sessionsScreen);
+                            },
                           )
                         ],
                       ),

@@ -1,4 +1,6 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -41,14 +43,8 @@ class ProfileRecommendationCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      name,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xFF666677),
-                      ),
-                    ),
+                    Text(name,
+                        style: AppTextStyles.font16Gray550BalooBhaijaan2w700),
                     const SizedBox(height: 3),
                     Row(
                       children: List.generate(
@@ -57,7 +53,7 @@ class ProfileRecommendationCard extends StatelessWidget {
                           AppSvgs.star,
                           width: 13,
                           height: 13,
-                          color: const Color(0xFFFFCF00),
+                          color: AppColors.amber,
                         ),
                       ),
                     ),
@@ -67,14 +63,7 @@ class ProfileRecommendationCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Text(
-            content,
-            style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              color: Color(0xFF666677),
-            ),
-          ),
+          Text(content, style: AppTextStyles.fornt14Gray550BalooBhaijaan2w400),
         ],
       ),
     );

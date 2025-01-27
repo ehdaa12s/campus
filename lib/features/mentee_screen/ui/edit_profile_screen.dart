@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/edit_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -174,16 +175,11 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         padding: const EdgeInsets.symmetric(vertical: 14),
                       ),
                       onPressed: _saveProfileData,
-                      child: const Text(
-                        "حفظ",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
+                      child: Text("حفظ",
+                          style: AppTextStyles.fornt16WhiteBalooBhaijaan2w700),
                     ),
                   ),
+                  const SizedBox(width: 5),
                   SizedBox(
                     width: 171,
                     height: 50,
@@ -198,14 +194,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: const Text(
-                        "إلغاء التعديلات",
-                        style: TextStyle(
-                          color: AppColors.primary,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
+                      child: Text("إلغاء التعديلات",
+                          style: AppTextStyles.font14PrimaryBalooBhaijaan2w800),
                     ),
                   ),
                 ],
