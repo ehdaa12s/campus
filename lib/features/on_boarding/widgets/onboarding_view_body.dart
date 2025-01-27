@@ -3,7 +3,7 @@ import 'package:champs/constant.dart';
 import 'package:champs/features/on_boarding/widgets/boarding_two.dart';
 import 'package:champs/features/on_boarding/widgets/custom_container_boarding_image.dart';
 import 'package:champs/features/on_boarding/widgets/custom_sizedbox.dart';
-import 'package:champs/features/auth/login/sign_in.dart';
+import 'package:champs/features/auth/login/ui/sign_in.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingViewBody extends StatefulWidget {

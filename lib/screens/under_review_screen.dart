@@ -1,7 +1,7 @@
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:champs/core/widgets/custom_status_screen.dart';
-import 'package:champs/features/home_screen/home_screen.dart';
+import 'package:champs/features/home_screen/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class UnderReviewScreen extends StatelessWidget {
