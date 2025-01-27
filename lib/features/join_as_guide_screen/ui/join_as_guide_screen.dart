@@ -1,8 +1,12 @@
 import 'dart:io';
 
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/helpers/extensions.dart';
 import 'package:champs/core/routing/routes.dart';
+import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/build_dropdown_field.dart';
+import 'package:champs/core/widgets/build_text_field.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -218,20 +222,15 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                   children: [
                                     Text(
                                       fileName,
-                                      style: const TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color(0xFF353535)),
+                                      style: AppTextStyles
+                                          .fornt15DarkBrownBalooBhaijaan2w400,
                                     ),
                                     const SizedBox(height: 5),
                                     Directionality(
                                       textDirection: TextDirection.ltr,
-                                      child: Text(
-                                        fileSize,
-                                        style: const TextStyle(
-                                            fontSize: 13,
-                                            color: Color(0xFF989692)),
-                                      ),
+                                      child: Text(fileSize,
+                                          style: AppTextStyles
+                                              .fornt13Gray450BalooBhaijaan2),
                                     ),
                                   ],
                                 ),
@@ -265,7 +264,7 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                     valueColor: AlwaysStoppedAnimation<Color>(
                                       uploadProgress == 1.0
                                           ? Colors.green
-                                          : const Color(0xFF00008D),
+                                          : AppColors.primary,
                                     ),
                                   ),
                                 ),
@@ -314,22 +313,15 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      fileName,
-                                      style: const TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color(0xFF353535)),
-                                    ),
+                                    Text(fileName,
+                                        style: AppTextStyles
+                                            .fornt15DarkBrownBalooBhaijaan2w400),
                                     const SizedBox(height: 5),
                                     Directionality(
                                       textDirection: TextDirection.ltr,
-                                      child: Text(
-                                        fileSize,
-                                        style: const TextStyle(
-                                            fontSize: 13,
-                                            color: Color(0xFF989692)),
-                                      ),
+                                      child: Text(fileSize,
+                                          style: AppTextStyles
+                                              .fornt13Gray450BalooBhaijaan2),
                                     ),
                                     const SizedBox(height: 5),
                                     TextButton(
@@ -342,14 +334,9 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                       onPressed: () {
                                         openFile();
                                       },
-                                      child: const Text(
-                                        'اضغط للعرض',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                          color: Color(0xFF00008D),
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                      ),
+                                      child: Text('اضغط للعرض',
+                                          style: AppTextStyles
+                                              .font14PrimaryBalooBhaijaan2w600),
                                     ),
                                   ],
                                 ),
@@ -405,22 +392,13 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      errorMessage,
-                                      style: const TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        color: Colors.red,
-                                      ),
-                                    ),
+                                    Text(errorMessage,
+                                        style: AppTextStyles
+                                            .fornt15RedBalooBhaijaan2w500),
                                     const SizedBox(height: 5),
-                                    Text(
-                                      fileName,
-                                      style: const TextStyle(
-                                        fontSize: 13,
-                                        color: Colors.red,
-                                      ),
-                                    ),
+                                    Text(fileName,
+                                        style: AppTextStyles
+                                            .fornt13RedBalooBhaijaan2),
                                     const SizedBox(height: 5),
                                     TextButton(
                                       style: TextButton.styleFrom(
@@ -434,13 +412,10 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                           uploadProgress = 0.0;
                                         });
                                       },
-                                      child: const Text(
+                                      child: Text(
                                         'حاول مجددا',
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                          color: Colors.red,
-                                          fontWeight: FontWeight.w700,
-                                        ),
+                                        style: AppTextStyles
+                                            .fornt15RedBalooBhaijaan2w500,
                                       ),
                                     ),
                                   ],
@@ -473,14 +448,9 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                             height: 44,
                           ),
                           const SizedBox(height: 10),
-                          const Text(
-                            'اضغط لرفع السيرة الذاتية',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Color(0xFF00008D),
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
+                          Text('اضغط لرفع السيرة الذاتية',
+                              style: AppTextStyles
+                                  .font14PrimaryBalooBhaijaan2w600),
                           const SizedBox(height: 5),
                           const Text(
                             '(الحد الأقصى لحجم الملف: 25 MB)',
@@ -511,7 +481,7 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
               CustomButton(
                   text: 'انضم',
                   onPressed: () {
-                    Navigator.pushNamed(context, Routes.underReviewScreen);
+                    context.pushNamed(Routes.underReviewScreen);
                   }),
             ],
           ),
@@ -519,41 +489,4 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
       ),
     );
   }
-
-  Widget buildTextField({
-    required String label,
-    required String hint,
-    double? height,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        SizedBox(
-          height: height,
-          child: TextField(
-            decoration: InputDecoration(
-              hintText: hint,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 12,
-              ),
-            ),
-            maxLines: height != null
-                ? (height ~/ 24)
-                : 1, // Adjust max lines based on height
-          ),
-        ),
-      ],
-    );
-  }
-
- 
 }

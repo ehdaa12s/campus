@@ -1,3 +1,4 @@
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -24,24 +25,13 @@ class CustomStatusScreen extends StatelessWidget {
           height: 200,
         ),
         const SizedBox(height: 30),
-        Text(
-          title,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        Text(title,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.font20blackBalooBhaijaan2Bold),
         const SizedBox(height: 15),
-        Text(
-          subtitle,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 14,
-            color: Color(0xFF666677),
-          ),
-        ),
+        Text(subtitle,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.fornt14Gray550BalooBhaijaan2w400),
       ],
     );
   }
