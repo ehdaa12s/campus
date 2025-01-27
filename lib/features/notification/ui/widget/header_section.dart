@@ -1,7 +1,7 @@
 import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
-class HeaderSection extends StatelessWidget {
-  const HeaderSection({super.key});
+class HeaderSectionForNotifcation extends StatelessWidget {
+  const HeaderSectionForNotifcation({super.key});
 
   @override
   Widget build(BuildContext context) {

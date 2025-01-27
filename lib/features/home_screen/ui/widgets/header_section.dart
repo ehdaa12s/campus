@@ -1,3 +1,4 @@
+import 'package:champs/core/routing/routes.dart';
 import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:champs/core/helpers/spaces.dart';
@@ -34,7 +35,7 @@ class HeaderSection extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.notifications_none_rounded),
             onPressed: () {
-              Navigator.pushNamed(context, "/notificationsScreen");
+              Navigator.pushNamed(context, Routes.notificationsScreen);
             },
           ),
         ],

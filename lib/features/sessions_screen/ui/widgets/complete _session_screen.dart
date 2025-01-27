@@ -18,7 +18,7 @@ class CompletedSessionsScreen extends StatelessWidget {
             appointmentTime: '3:00 PM - 3:30 PM',
             appointmentDate: 'الجمعة ,3 يناير',
             onTap: () {
-              Navigator.pushNamed(context, Routes.menteProfileScreen);
+              Navigator.pushNamed(context, Routes.showSessionDetails);
             },
           ),
           const SizedBox(
@@ -32,7 +32,7 @@ class CompletedSessionsScreen extends StatelessWidget {
             appointmentTime: '3:00 PM - 3:30 PM',
             appointmentDate: 'الجمعة ,3 يناير',
             onTap: () {
-              Navigator.pushNamed(context, Routes.menteProfileScreen);
+              Navigator.pushNamed(context, Routes.showSessionDetails);
             },
           ),
           const SizedBox(
@@ -46,7 +46,7 @@ class CompletedSessionsScreen extends StatelessWidget {
             appointmentTime: '3:00 PM - 3:30 PM',
             appointmentDate: 'الجمعة ,3 يناير',
             onTap: () {
-              Navigator.pushNamed(context, Routes.menteProfileScreen);
+              Navigator.pushNamed(context, Routes.showSessionDetails);
             },
           ),
           const SizedBox(
@@ -60,7 +60,7 @@ class CompletedSessionsScreen extends StatelessWidget {
             appointmentTime: '3:00 PM - 3:30 PM',
             appointmentDate: 'الجمعة ,3 يناير',
             onTap: () {
-              Navigator.pushNamed(context, Routes.menteProfileScreen);
+              Navigator.pushNamed(context, Routes.showSessionDetails);
             },
           ),
           const SizedBox(height: 16),

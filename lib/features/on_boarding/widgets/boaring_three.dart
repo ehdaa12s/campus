@@ -28,7 +28,7 @@ class _BoaringThreeState extends State<BoaringThree> {
           ),
           alignment: Alignment.topRight,
           child:Padding(
-            padding: const EdgeInsets.all(50),
+            padding: const EdgeInsets.all(24),
             child: Column(
             children: [
               const SizedBox(

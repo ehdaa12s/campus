@@ -1,5 +1,5 @@
 
-import 'package:champs/features/home_screen/ui/widgets/header_section.dart';
+import 'package:champs/features/notification/ui/widget/header_section.dart';
 import 'package:champs/features/notification/ui/widget/notifcation_body_section.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +24,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
               SizedBox(
                 height: 24,
               ),
-              HeaderSection(),
+              HeaderSectionForNotifcation(),
               SizedBox(
                 height: 16,
               ),
