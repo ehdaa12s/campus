@@ -26,6 +26,7 @@ class Routes {
   static const String bookYourSession = "/bookYourSession";
   static const String showSessionDetails="/showSessionDetails";
   static const String searchScreen = "/searchScreen ";
+  static const String resultSearchScreen= "/resultSearch Screen";
   static const String mentorProfileScreen = "/mentorProfileScreen";
 
 
