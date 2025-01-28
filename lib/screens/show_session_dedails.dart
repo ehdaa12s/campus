@@ -1,6 +1,6 @@
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
+import 'package:champs/features/mentee_screen/ui/mentee_profile_screen.dart';
 
-import 'package:champs/screens/mente_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class ShowSessionDedails extends StatefulWidget {

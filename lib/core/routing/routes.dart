@@ -23,6 +23,13 @@ class Routes {
   static const String correctLogin = "/correctLogin";
   static const String checkWithCodeLogin = "/checkWithCodeLogin";
   static const String sessionsScreen = "/sessionsScreen";
+  static const String mentorProfileScreen = "/mentorProfileScreen";
+  static const String menteProfileScreen = "/menteProfileScreen";
+  static const String searchScreen = "/searchScreen";
+  static const String resultSearchScreen = "/resultSearchScreen";
+  static const String showSessionDetails = "/showSessionDetails";
+  static const String favouriteScreen = "/favouriteScreen";
+  static const String signInScreen = "/signInScreen";
 
 
 }

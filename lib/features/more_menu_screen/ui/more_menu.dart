@@ -1,8 +1,7 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/helpers/extensions.dart';
 import 'package:champs/core/routing/routes.dart';
-import 'package:champs/features/favourite_screen/favourite_screen.dart';
-import 'package:champs/features/auth/login/sign_in.dart';
-import 'package:champs/features/mentor_screen/ui/mentor_profile_screen.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -15,13 +14,8 @@ class MoreMenu extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        title: const Text(
-          'المزيد',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
-        ),
+        title:
+            Text('المزيد', style: AppTextStyles.font20blackBalooBhaijaan2Bold),
       ),
       body: Container(
         height: 350,
@@ -41,17 +35,12 @@ class MoreMenu extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             ListTile(
-              title: const Text(
-                'إنجازاتي',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
-                ),
-              ),
+              title: Text('إنجازاتي',
+                  textAlign: TextAlign.right,
+                  style: AppTextStyles.font16Gray500BalooBhaijaan2),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-                Navigator.pushNamed(context, Routes.achievementsScreen);
+                context.pushNamed(Routes.achievementsScreen);
               },
             ),
             const Padding(
@@ -60,16 +49,11 @@ class MoreMenu extends StatelessWidget {
             ),
             ListTile(
               trailing: const Icon(Icons.arrow_forward_ios),
-              title: const Text(
-                'اتصالاتي',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
-                ),
-              ),
+              title: Text('اتصالاتي',
+                  textAlign: TextAlign.right,
+                  style: AppTextStyles.font16Gray500BalooBhaijaan2),
               onTap: () {
-                Navigator.pushNamed(context, Routes.contactsScreen);
+                context.pushNamed(Routes.contactsScreen);
               },
             ),
             const Padding(
@@ -78,17 +62,11 @@ class MoreMenu extends StatelessWidget {
             ),
             ListTile(
               trailing: const Icon(Icons.arrow_forward_ios),
-              title: const Text(
-                'انضم كموجه',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
-                ),
-              ),
+              title: Text('انضم كموجه',
+                  textAlign: TextAlign.right,
+                  style: AppTextStyles.font16Gray500BalooBhaijaan2),
               onTap: () {
-                Navigator.pushNamed(
-                    context, Routes.joinAsGuideScreenInstructions);
+                context.pushNamed(Routes.joinAsGuideScreenInstructions);
               },
             ),
             const Padding(
@@ -97,19 +75,11 @@ class MoreMenu extends StatelessWidget {
             ),
             ListTile(
               trailing: const Icon(Icons.arrow_forward_ios),
-              title: const Text(
-                'المفضلة',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
-                ),
-              ),
+              title: Text('المفضلة',
+                  textAlign: TextAlign.right,
+                  style: AppTextStyles.font16Gray500BalooBhaijaan2),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const FavouriteScreen()));
+                context.pushNamed(Routes.favouriteScreen);
               },
             ),
             const Padding(
@@ -118,19 +88,11 @@ class MoreMenu extends StatelessWidget {
             ),
             ListTile(
               trailing: const Icon(Icons.arrow_forward_ios),
-              title: const Text(
-                'الإعدادات',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
-                ),
-              ),
+              title: Text('الإعدادات',
+                  textAlign: TextAlign.right,
+                  style: AppTextStyles.font16Gray500BalooBhaijaan2),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const MentorProfileScreen()));
+                // Settings
               },
             ),
             const Padding(
@@ -144,17 +106,11 @@ class MoreMenu extends StatelessWidget {
                 height: 28,
                 color: Colors.black,
               ),
-              title: const Text(
-                'تسجيل الخروج',
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xFF667085),
-                ),
-              ),
+              title: Text('تسجيل الخروج',
+                  textAlign: TextAlign.right,
+                  style: AppTextStyles.font16Gray500BalooBhaijaan2),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const SignIn()));
+                context.pushNamed(Routes.signInScreen);
               },
             ),
           ],

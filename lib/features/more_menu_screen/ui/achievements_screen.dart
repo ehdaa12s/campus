@@ -1,4 +1,6 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
+import 'package:champs/features/more_menu_screen/data/achievements_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,12 +11,9 @@ class AchievementsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'إنجازاتي',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
+          style: AppTextStyles.font20blackBalooBhaijaan2Bold
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -39,9 +38,9 @@ class AchievementsScreen extends StatelessWidget {
         ),
         child: ListView.separated(
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16),
-          itemCount: achievements.length,
+          itemCount: AchievementsData().achievements.length,
           itemBuilder: (context, index) {
-            final achievement = achievements[index];
+            final achievement = AchievementsData().achievements[index];
             return ListTile(
               contentPadding:
                   EdgeInsets.zero, // Remove padding around the ListTile
@@ -71,11 +70,8 @@ class AchievementsScreen extends StatelessWidget {
                   Text(
                     '  ${achievement['progress']!}',
                     textAlign: TextAlign.right,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF667085),
-                    ),
+                    style: AppTextStyles.fornt14Gray500BalooBhaijaan2Bold 
+                    
                   ),
                 ],
               ),
@@ -94,18 +90,3 @@ class AchievementsScreen extends StatelessWidget {
   }
 }
 
-// Example data for achievements
-const List<Map<String, String>> achievements = [
-  {'title': 'تهانينا! لقد أكملت أول جلسة إرشاد مهني', 'progress': '1/1'},
-  {'title': 'محتوى قابل للتغيير', 'progress': '1/1'},
-  {'title': 'استمر في العمل الجاد', 'progress': '1/3'},
-  {'title': 'تعلم دائماً ونموا بشكل مستمر', 'progress': '1/4'},
-  {'title': 'كافح من أجل النجاح', 'progress': '1/5'},
-  {'title': 'تجاوز التحديات بثقة', 'progress': '1/6'},
-  {'title': 'ابق قوياً ومتفائلاً', 'progress': '1/7'},
-  {'title': 'استمر في تطوير مهاراتك', 'progress': '1/8'},
-  {'title': 'كن ملتزماً بأهدافك', 'progress': '1/9'},
-  {'title': 'ابق قوياً ومتفائلاً', 'progress': '1/7'},
-  {'title': 'استمر في تطوير مهاراتك', 'progress': '1/8'},
-  {'title': 'كن ملتزماً بأهدافك', 'progress': '1/9'},
-];

@@ -24,7 +24,7 @@ class SearchBarWidget extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           decoration: ShapeDecoration(
             shape: RoundedRectangleBorder(
-              side: const BorderSide(width: 1, color: AppColors.white50),
+              side: const BorderSide(width: 1, color: AppColors.white),
               borderRadius: BorderRadius.circular(8),
             ),
           ),

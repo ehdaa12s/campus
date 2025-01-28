@@ -1,26 +1,33 @@
 import 'package:champs/core/routing/routes.dart';
-import 'package:champs/features/auth/login/check_with_code_login.dart';
-import 'package:champs/features/home_screen/home_screen.dart';
+import 'package:champs/features/auth/login/ui/check_with_code_login.dart';
+import 'package:champs/features/auth/login/ui/correct_login.dart';
+import 'package:champs/features/auth/login/ui/enter_email_forget_password.dart';
+import 'package:champs/features/auth/login/ui/sign_in.dart';
+import 'package:champs/features/auth/register/ui/sign_up_screen.dart';
+import 'package:champs/features/chat_screen/ui/chat_screen.dart';
+import 'package:champs/features/favourite_screen/ui/favourite_screen.dart';
+import 'package:champs/features/home_screen/ui/home_screen.dart';
+import 'package:champs/features/mentee_screen/ui/mentee_profile_screen.dart';
+import 'package:champs/features/mentor_screen/ui/mentor_profile_screen.dart';
+import 'package:champs/features/notification/ui/notifcation_screen.dart';
 import 'package:champs/features/on_boarding/on_boarding_view.dart';
 import 'package:champs/features/join_as_guide_screen/ui/accepted_order_screen.dart';
 import 'package:champs/features/more_menu_screen/ui/achievements_screen.dart';
 import 'package:champs/features/mentee_screen/ui/add_certificate_screen.dart';
 import 'package:champs/features/mentee_screen/ui/add_experience_screen.dart';
-import 'package:champs/features/chat_screen/chat_screen.dart';
 import 'package:champs/features/more_menu_screen/ui/contacts_screen.dart';
-import 'package:champs/features/auth/login/correct_login.dart';
 import 'package:champs/features/mentee_screen/ui/edit_certificate_screen.dart';
 import 'package:champs/features/mentee_screen/ui/edit_experience_screen.dart';
 import 'package:champs/features/mentee_screen/ui/edit_profile_screen.dart';
-import 'package:champs/features/auth/login/enter_email_forget_password.dart';
 import 'package:champs/features/join_as_guide_screen/ui/join_as_guide_instructions_screen.dart';
 import 'package:champs/features/join_as_guide_screen/ui/join_as_guide_screen.dart';
 import 'package:champs/features/more_menu_screen/ui/more_menu.dart';
-import 'package:champs/features/notification/notifcation_screen.dart';
 import 'package:champs/features/join_as_guide_screen/ui/rejected_order_screen.dart';
+import 'package:champs/features/search_screens/ui/result_search.dart';
+import 'package:champs/features/search_screens/ui/search_screen.dart';
 import 'package:champs/screens/sessions_screen.dart';
-import 'package:champs/screens/sign_up_screen.dart';
 import 'package:champs/features/join_as_guide_screen/ui/under_review_screen.dart';
+import 'package:champs/screens/show_session_dedails.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -76,6 +83,20 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const CheckWithCodeLogin());
       case Routes.sessionsScreen:
         return MaterialPageRoute(builder: (_) => const SessionsScreen());
+      case Routes.mentorProfileScreen:
+        return MaterialPageRoute(builder: (_) => const MentorProfileScreen());
+      case Routes.menteProfileScreen:
+        return MaterialPageRoute(builder: (_) => const MenteProfileScreen());
+      case Routes.searchScreen:
+        return MaterialPageRoute(builder: (_) => const SearchScreen());
+      case Routes.resultSearchScreen:
+        return MaterialPageRoute(builder: (_) => const ResultSearch());
+      case Routes.showSessionDetails:
+        return MaterialPageRoute(builder: (_) => const ShowSessionDedails());
+      case Routes.favouriteScreen:
+        return MaterialPageRoute(builder: (_) => const FavouriteScreen());
+      case Routes.signInScreen:
+        return MaterialPageRoute(builder: (_) => const SignIn());
 
       default:
         return MaterialPageRoute(
