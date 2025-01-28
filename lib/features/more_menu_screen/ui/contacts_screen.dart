@@ -1,5 +1,8 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/profile_guides_card.dart';
+import 'package:champs/features/more_menu_screen/data/contacts_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,66 +16,26 @@ class ContactsScreen extends StatefulWidget {
 class _ContactsScreenState extends State<ContactsScreen> {
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, String>> profiles = [
-      {
-        'imagePath': 'assets/images/profile.png',
-        'name': 'خديجة أشرف',
-        'profession': 'Product Designer',
-        'sessionsCount': '45',
-        'ratingsCount': '24',
-        'rating': '4.9',
-        'experienceYears': '8',
-      },
-      {
-        'imagePath': 'assets/images/profile.png',
-        'name': 'خديجة أشرف',
-        'profession': 'Product Designer',
-        'sessionsCount': '45',
-        'ratingsCount': '24',
-        'rating': '4.9',
-        'experienceYears': '8',
-      },
-      {
-        'imagePath': 'assets/images/profile.png',
-        'name': 'خديجة أشرف',
-        'profession': 'Product Designer',
-        'sessionsCount': '45',
-        'ratingsCount': '24',
-        'rating': '4.9',
-        'experienceYears': '8',
-      },
-      {
-        'imagePath': 'assets/images/profile.png',
-        'name': 'خديجة أشرف',
-        'profession': 'Product Designer',
-        'sessionsCount': '45',
-        'ratingsCount': '24',
-        'rating': '4.9',
-        'experienceYears': '8',
-      },
-    ];
+    
     return Scaffold(
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             'اتصالاتي',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            ),
+            style: AppTextStyles.font20blackBalooBhaijaan2Bold
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: const Icon(
             Icons.arrow_back_ios,
-            color: Colors.black,
+            color: AppColors.black,
           ),
         ),
         body: ListView.builder(
           padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
-          itemCount: profiles.length,
+          itemCount: ContactsData().contacts.length,
           itemBuilder: (context, index) {
-            final profile = profiles[index];
+            final profile = ContactsData().contacts[index];
 
             return Column(
               children: [
@@ -96,18 +59,16 @@ class _ContactsScreenState extends State<ContactsScreen> {
                     ),
                     child: Row(
                       children: [
-                        const Text(
+                        Text(
                           '(24) ',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: const Color(0xFF667085),
-                          ),
+                          style: AppTextStyles.font16Gray500BalooBhaijaan2
+                          
                         ),
                         SvgPicture.asset(
                           AppSvgs.calender,
                           height: 25,
                           width: 25,
-                          color: const Color(0xFF101828),
+                          color: AppColors.gray900,
                         )
                       ],
                     ),
