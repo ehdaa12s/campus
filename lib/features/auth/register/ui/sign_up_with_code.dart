@@ -1,6 +1,7 @@
 import 'package:champs/core/widgets/custom%20_%20check_with_code_login.dart';
-import 'package:champs/core/widgets/custom_transform_widget.dart';
+
 import 'package:champs/features/auth/login/ui/correct_login.dart';
+import 'package:champs/features/auth/register/ui/widget/custom_transform_widget.dart';
 import 'package:flutter/material.dart';
 
 class SignUpWithCode extends StatelessWidget {

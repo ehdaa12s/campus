@@ -73,7 +73,7 @@ class CustomCheckCodeForLogin extends StatelessWidget {
           const SizedBox(
             height: 360,
           ),
-         CustomButton(
+         CustomTextButtonForBoarding(
             buttonText: 'إرسال',
             onPressed: () {
               Navigator.push(

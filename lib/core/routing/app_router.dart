@@ -1,5 +1,17 @@
 import 'package:champs/core/routing/routes.dart';
 import 'package:champs/features/auth/login/ui/check_with_code_login.dart';
+import 'package:champs/features/auth/login/ui/sign_in.dart';
+import 'package:champs/features/home_screen/ui/home_screen.dart';
+import 'package:champs/features/on_boarding/on_boarding_view.dart';
+import 'package:champs/features/search_screens/ui/search_screen.dart';
+import 'package:champs/features/sessions_screen/ui/show_session_dedails.dart';
+import 'package:champs/screens/accepted_order_screen.dart';
+import 'package:champs/screens/achievements_screen.dart';
+import 'package:champs/screens/add_certificate_screen.dart';
+import 'package:champs/screens/add_experience_screen.dart';
+import 'package:champs/features/chat_screen/ui/chat_screen.dart';
+import 'package:champs/screens/book_your_session.dart';
+import 'package:champs/screens/contacts_screen.dart';
 import 'package:champs/features/auth/login/ui/correct_login.dart';
 import 'package:champs/features/auth/login/ui/enter_email_forget_password.dart';
 import 'package:champs/features/auth/login/ui/sign_in.dart';
@@ -89,6 +101,9 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const MenteProfileScreen());
       case Routes.searchScreen:
         return MaterialPageRoute(builder: (_) => const SearchScreen());
+      case Routes.mentorProfileScreen:
+        return MaterialPageRoute(builder: (_) => const MentorProfileScreen());
+        case Routes.signIn:
       case Routes.resultSearchScreen:
         return MaterialPageRoute(builder: (_) => const ResultSearch());
       case Routes.showSessionDetails:
@@ -97,7 +112,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const FavouriteScreen());
       case Routes.signInScreen:
         return MaterialPageRoute(builder: (_) => const SignIn());
-
+        return MaterialPageRoute(builder: (_) => const SignIn());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

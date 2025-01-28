@@ -294,7 +294,7 @@ class _BookYourSessionState extends State<BookYourSession> {
               const SizedBox(
                 height: 24,
               ),
-              CustomButton(
+              CustomTextButtonForBoarding(
                 buttonText: 'احجز الان ',
                 onPressed: () {},
                 width: 345,

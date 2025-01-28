@@ -1,13 +1,13 @@
 import 'package:champs/constant.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomTextButtonForBoarding extends StatelessWidget {
   final String buttonText;
   final VoidCallback onPressed;
   final double width;
   final double height;
 
-  const CustomButton({
+  const CustomTextButtonForBoarding({
     super.key,
     required this.buttonText,
     required this.onPressed,

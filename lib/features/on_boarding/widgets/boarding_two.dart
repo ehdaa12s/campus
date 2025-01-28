@@ -92,7 +92,7 @@ class _BoardingTwoState extends State<BoardingTwo> {
                 fontWight: FontWeight.w500,
               ),
               const Spacer(),
-              CustomButton(
+              CustomTextButtonForBoarding(
                   width: 345,
                   height: 44,
                   buttonText: 'التالي',
