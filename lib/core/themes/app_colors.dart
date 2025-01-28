@@ -23,6 +23,7 @@ class AppColors {
   static const Color darkBlue = Color(0xFF00001D);
   static const  Color brown50  = Color(0xFF666677);
   static const Color brown100 =  Color(0xFF7F7F8E);
+  static const Color brown200 =Color(0xFF9098A3);
 
   static const MaterialColor themeColor =
       MaterialColor(0xFF00008D, <int, Color>{

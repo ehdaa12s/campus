@@ -1,3 +1,4 @@
+import 'package:champs/core/routing/routes.dart';
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
 import 'package:champs/constant.dart';
 
@@ -88,15 +89,15 @@ class _BoaringThreeState extends State<BoaringThree> {
                 fontWight: FontWeight.w500,
               ),
               const Spacer(),
-              CustomButton(
+              CustomTextButtonForBoarding(
                   width: 345,
                   height: 44,
                   buttonText: 'التالي',
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushNamed(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignIn()));
+                        Routes.signIn
+                      );
                   }),
             ],
           ),

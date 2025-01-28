@@ -1,4 +1,5 @@
 import 'package:champs/core/themes/app_text_styles.dart';
+import 'package:champs/features/rating_screen/ui/show_fedback_container.dart';
 import 'package:champs/features/sessions_screen/ui/widgets/profile_card_show_details_check.dart';
 import 'package:champs/features/sessions_screen/ui/widgets/show_deails_info_card.dart';
 
@@ -24,9 +25,12 @@ class ShowSessionDetails extends StatelessWidget {
               const SizedBox(height: 16),
               const SessionInfoCard(),
               const SizedBox(height: 60),
-              CustomButton(
+              CustomTextButtonForBoarding(
                 buttonText: 'تاكيد الحجز',
-                onPressed: () {},
+                onPressed: () {
+                  //Navigator.pushNamed(context, Routes.feadbackScreen);
+                  showFeedbackDialog(context);
+                },
                 width: 345,
                 height: 54,
               ),

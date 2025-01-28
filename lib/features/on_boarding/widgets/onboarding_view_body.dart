@@ -88,7 +88,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                 fontWight: FontWeight.w500,
               ),
               const Spacer(),
-              CustomButton(
+              CustomTextButtonForBoarding(
                 width: 345,
                 height: 44,
                 buttonText: nextText,

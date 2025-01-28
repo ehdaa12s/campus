@@ -1,9 +1,10 @@
 import 'package:champs/core/widgets/custom_drop_button_list.dart';
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
-import 'package:champs/core/widgets/custom_transform_widget.dart';
+
 import 'package:champs/core/widgets/simplified_colum_contianer.dart';
 import 'package:champs/features/auth/register/ui/sign_up_two.dart';
+import 'package:champs/features/auth/register/ui/widget/custom_transform_widget.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -159,7 +160,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               constraints: const BoxConstraints(maxWidth: 345, maxHeight: 150),
               child: const SimplifiedColumnContainer(),
             ),
-            CustomButton(
+            CustomTextButtonForBoarding(
               buttonText: 'التالي',
               onPressed: () {
                 Navigator.push(

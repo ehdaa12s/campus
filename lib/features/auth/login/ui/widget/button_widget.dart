@@ -11,7 +11,7 @@ class ReusableButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomButton(
+    return CustomTextButtonForBoarding(
       width: 345,
       height: 44,
       buttonText: buttonText,

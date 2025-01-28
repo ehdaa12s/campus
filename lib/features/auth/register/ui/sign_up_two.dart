@@ -1,8 +1,9 @@
 import 'package:champs/core/widgets/custom_drop_button_list.dart';
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
-import 'package:champs/core/widgets/custom_transform_widget.dart';
+
 import 'package:champs/features/auth/register/ui/sign_up_with_code.dart';
+import 'package:champs/features/auth/register/ui/widget/custom_transform_widget.dart';
 import 'package:flutter/material.dart';
 
 class SignUpTwo extends StatefulWidget {
@@ -190,7 +191,7 @@ class _SignUpTwoState extends State<SignUpTwo> {
             const SizedBox(
               height: 100,
             ),
-            CustomButton(
+            CustomTextButtonForBoarding(
               buttonText: 'التالي',
               onPressed: () {
                 Navigator.push(

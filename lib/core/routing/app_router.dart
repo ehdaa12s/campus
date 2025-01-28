@@ -1,5 +1,6 @@
 import 'package:champs/core/routing/routes.dart';
 import 'package:champs/features/auth/login/ui/check_with_code_login.dart';
+import 'package:champs/features/auth/login/ui/sign_in.dart';
 import 'package:champs/features/home_screen/ui/home_screen.dart';
 import 'package:champs/features/on_boarding/on_boarding_view.dart';
 import 'package:champs/features/search_screens/ui/search_screen.dart';
@@ -88,6 +89,9 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SearchScreen());
       case Routes.mentorProfileScreen:
         return MaterialPageRoute(builder: (_) => const MentorProfileScreen());
+        case Routes.signIn:
+        return MaterialPageRoute(builder: (_) => const SignIn());
+
 
       default:
         return MaterialPageRoute(
