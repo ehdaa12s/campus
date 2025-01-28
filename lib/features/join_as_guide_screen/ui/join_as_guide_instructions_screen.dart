@@ -1,4 +1,5 @@
 import 'package:champs/core/routing/routes.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -9,14 +10,8 @@ class JoinAsGuideInstructionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'هل تريد الانضمام كموجه؟',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: Text('هل تريد الانضمام كموجه؟',
+            style: AppTextStyles.font20blackBalooBhaijaan2Bold),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -30,72 +25,43 @@ class JoinAsGuideInstructionsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'إليك إرشادات مجتمع Campus !',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF344054),
-              ),
-            ),
+            Text('إليك إرشادات مجتمع Campus !',
+                style: AppTextStyles.fornt18Gray750BalooBhaijaan2Bold),
             const SizedBox(height: 10),
-            const Text(
+            Text(
               'للاستمرار، نرجو قراءة وقبول إرشادات المجتمع. يساعدنا ذلك في الحفاظ على تجربة موثوقة لجميع أعضاء المجتمع.',
-              style: TextStyle(
-                fontSize: 14,
-                color: Color(0xFF667085),
-              ),
+              style: AppTextStyles.fornt14Gray500BalooBhaijaan2
+             
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'كن محترفًا',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF344054),
-              ),
+              style: AppTextStyles.fornt16Gray700BalooBhaijaan2Bold
             ),
             const SizedBox(height: 8),
-            const Text(
+            Text(
               'نحترم الوقت والطاقة والجهود التي قدمها المجتمع لمنصة Campus. ويجب أن تعكس تفاعلاتنا هذا الاحترام.',
-              style: TextStyle(
-                fontSize: 14,
-                color: Color(0xFF667085),
-              ),
+              style: AppTextStyles.fornt14Gray500BalooBhaijaan2
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'كن ممتنًا',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF344054),
-              ),
+              style: AppTextStyles.fornt16Gray700BalooBhaijaan2Bold
             ),
             const SizedBox(height: 8),
-            const Text(
+            Text(
               'نقدر فعل الإحسان ومشاركة الخبرات، وما تعلمته وتنموه من خلال دروس وتجارب الآخرين.',
-              style: TextStyle(
-                fontSize: 14,
-                color: Color(0xFF667085),
-              ),
+              style: AppTextStyles.fornt14Gray500BalooBhaijaan2
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'تفاعل بإيجابية',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF344054),
-              ),
+              style: AppTextStyles.fornt16Gray700BalooBhaijaan2Bold
             ),
             const SizedBox(height: 8),
-            const Text(
+            Text(
               'سدد الجميل بالطاقة والجهد، من خلال الالتزام بالحضور والتفاعل الجاد وتقديم أفضل ما لدينا.',
-              style: TextStyle(
-                fontSize: 14,
-                color: Color(0xFF667085),
-              ),
+              style: AppTextStyles.fornt14Gray500BalooBhaijaan2
             ),
             const Spacer(),
             CustomButton(
