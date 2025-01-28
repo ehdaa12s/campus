@@ -1,4 +1,6 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
+import 'package:champs/core/widgets/build_text_field.dart';
 import 'package:champs/core/widgets/custom_button.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
@@ -22,14 +24,8 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'تعديل الشهادة',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: Text('تعديل الشهادة',
+            style: AppTextStyles.font20Grey900BalooBhaijaan2Bold),
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         leading: IconButton(
@@ -64,11 +60,8 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'تاريخ الإصدار',
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
-                        ),
+                        Text('تاريخ الإصدار',
+                            style: AppTextStyles.font14BlackBalooBhaijaan2Bold),
                         const SizedBox(height: 8),
                         TextField(
                           controller: issueDateController,
@@ -113,10 +106,9 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           'تاريخ الانتهاء',
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                          style: AppTextStyles.font14BlackBalooBhaijaan2Bold,
                         ),
                         const SizedBox(height: 8),
                         TextField(
@@ -176,29 +168,6 @@ class _EditCertificateScreenState extends State<EditCertificateScreen> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget buildTextField({required String label, required String hint}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        TextField(
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-        ),
-      ],
     );
   }
 

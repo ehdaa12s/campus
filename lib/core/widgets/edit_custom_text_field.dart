@@ -1,3 +1,4 @@
+import 'package:champs/core/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class EditCustomTextField extends StatefulWidget {
@@ -45,8 +46,8 @@ class _EditCustomTextFieldState extends State<EditCustomTextField> {
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
           color: _isFocused
-              ? const Color(0xFF00008D) // Focused border color
-              : const Color(0xFF9CA3AF), // Default border color
+              ? AppColors.primary // Focused border color
+              : AppColors.gray400, // Default border color
           width: 0.8,
         ),
         boxShadow: [
@@ -70,7 +71,7 @@ class _EditCustomTextFieldState extends State<EditCustomTextField> {
                 focusNode: _focusNode,
                 maxLines: 5,
                 style: const TextStyle(
-                  color: Color(0xFF00001D),
+                  color: AppColors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                 ),
@@ -78,7 +79,7 @@ class _EditCustomTextFieldState extends State<EditCustomTextField> {
                   labelText: widget.labelText,
                   labelStyle: const TextStyle(
                     fontSize: 18,
-                    color: Color(0xFF666677),
+                    color: AppColors.gray550,
                     fontWeight: FontWeight.bold,
                   ),
                   border: InputBorder.none,

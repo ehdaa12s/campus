@@ -1,11 +1,11 @@
 import 'package:champs/core/widgets/custom_navagation_bar.dart';
-import 'package:champs/features/home_screen/ui/widgets/home_screen_view_body.dart';
-import 'package:champs/screens/mente_profile_screen.dart';
+import 'package:champs/features/home_screen/widgets/home_screen_view_body.dart';
+import 'package:champs/features/mentee_screen/ui/mentee_profile_screen.dart';
 
 import 'package:champs/screens/more_menu.dart';
 import 'package:flutter/material.dart';
-import '../../chat_screen/ui/message_screen.dart';
-import '../../sessions_screen/ui/sessions_screen.dart';
+import '../chat_screen/message_screen.dart';
+import '../../screens/sessions_screen.dart';
 
 class HomeScreenForNavagationBar extends StatefulWidget {
   final int initialIndex;

@@ -1,4 +1,5 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -50,23 +51,11 @@ class ProfileGuidesCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      name,
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                        color: Color(0xFF101828),
-                      ),
-                    ),
+                    Text(name,
+                        style: AppTextStyles.font12BlackBalooBhaijaan2w700),
                     const SizedBox(height: 3),
-                    Text(
-                      profession,
-                      style: const TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF475467),
-                      ),
-                    ),
+                    Text(profession,
+                        style: AppTextStyles.font10Grey600BalooBhaijaan2w500),
                     const SizedBox(height: 3),
                   ],
                 ),
@@ -99,25 +88,11 @@ class ProfileGuidesCard extends StatelessWidget {
       {IconData? icon, Color? iconColor}) {
     return Column(
       children: [
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.w400,
-            color: Color(0xFF475467),
-          ),
-        ),
+        Text(label, style: AppTextStyles.font11Grey600BalooBhaijaan2w400),
         const SizedBox(height: 5),
         Row(
           children: [
-            Text(
-              value,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF101828),
-              ),
-            ),
+            Text(value, style: AppTextStyles.font12BlackBalooBhaijaan2w700),
             if (icon != null) ...[
               const SizedBox(width: 4),
               Icon(
@@ -139,36 +114,17 @@ class ProfileGuidesCard extends StatelessWidget {
 
     return Column(
       children: [
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.w400,
-            color: Color(0xFF475467),
-          ),
-        ),
+        Text(label, style: AppTextStyles.font11Grey600BalooBhaijaan2w400),
         const SizedBox(height: 5),
         Row(
           children: [
             // Display the rating count with a different style
-            Text(
-              valueParts[0], // Rating count
-              style: const TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w400,
-                color: Color(0xFF101828),
-              ),
-            ),
+            Text(valueParts[0], // Rating count
+                style: AppTextStyles.font10BlackBalooBhaijaan2Regularw400),
             const SizedBox(width: 4),
             // Display the rating with a different style
-            Text(
-              valueParts.length > 1 ? valueParts[1] : '', // Rating
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF101828),
-              ),
-            ),
+            Text(valueParts.length > 1 ? valueParts[1] : '', // Rating
+                style: AppTextStyles.font12Grey900BalooBhaijaan2w700),
             if (icon != null) ...[
               const SizedBox(width: 4),
               SvgPicture.asset(

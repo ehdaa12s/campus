@@ -1,16 +1,20 @@
 import 'package:champs/core/constants/app_assets.dart';
+import 'package:champs/core/themes/app_colors.dart';
+import 'package:champs/core/themes/app_text_styles.dart';
+import 'package:champs/core/widgets/build_dropdown_field.dart';
 import 'package:champs/core/widgets/custom_button.dart';
+import 'package:champs/core/widgets/build_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class AddExperienceScreen extends StatefulWidget {
-  const AddExperienceScreen({super.key});
+class EditExperienceScreen extends StatefulWidget {
+  const EditExperienceScreen({super.key});
 
   @override
-  State<AddExperienceScreen> createState() => _AddExperienceScreenState();
+  State<EditExperienceScreen> createState() => _EditExperienceScreenState();
 }
 
-class _AddExperienceScreenState extends State<AddExperienceScreen> {
+class _EditExperienceScreenState extends State<EditExperienceScreen> {
   final TextEditingController issueDateController = TextEditingController();
   final TextEditingController expiryDateController = TextEditingController();
   bool isChecked = false;
@@ -22,14 +26,8 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'إضافة الخبرة',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: Text('تعديل الخبرة',
+            style: AppTextStyles.font20Grey900BalooBhaijaan2Bold),
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         leading: IconButton(
@@ -88,10 +86,9 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           'تاريخ الإصدار',
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                          style: AppTextStyles.font14BlackBalooBhaijaan2Bold,
                         ),
                         const SizedBox(height: 8),
                         TextField(
@@ -139,9 +136,8 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                       children: [
                         Text(
                           'تاريخ الإنتهاء',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
+                          style: AppTextStyles.font14BlackBalooBhaijaan2Bold
+                              .copyWith(
                             color: isChecked ? Colors.grey : Colors.black,
                           ),
                         ),
@@ -166,27 +162,20 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                           ),
-                          onTap:
-                              !isChecked // Prevent opening the date picker if disabled
-                                  ? () async {
-                                      DateTime? pickedDate =
-                                          await showDatePicker(
-                                        context: context,
-                                        initialDate: DateTime.now(),
-                                        firstDate:
-                                            DateTime(2000), // Earliest date
-                                        lastDate: DateTime(2100), // Latest date
-                                        locale:
-                                            const Locale('ar'), // Arabic locale
-                                      );
+                          onTap: () async {
+                            DateTime? pickedDate = await showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000), // Earliest date
+                              lastDate: DateTime(2100), // Latest date
+                              locale: const Locale('ar'), // Arabic locale
+                            );
 
-                                      if (pickedDate != null) {
-                                        expiryDateController.text =
-                                            "${pickedDate.toLocal()}"
-                                                .split(' ')[0];
-                                      }
-                                    }
-                                  : null,
+                            if (pickedDate != null) {
+                              expiryDateController.text =
+                                  "${pickedDate.toLocal()}".split(' ')[0];
+                            }
+                          },
                         ),
                       ],
                     ),
@@ -209,7 +198,7 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
                         });
                       },
                       activeColor:
-                          const Color(0xFF00008D), // Active color when checked
+                          AppColors.primary, // Active color when checked
                       checkColor: Colors.white, // Color of check mark
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
@@ -246,72 +235,6 @@ class _AddExperienceScreenState extends State<AddExperienceScreen> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget buildTextField({required String label, required String hint}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        TextField(
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget buildDropdownField({
-    required String label,
-    required String hint,
-    required List<String> items,
-    required ValueChanged<String?> onChanged,
-    String? selectedValue,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        DropdownButtonFormField<String>(
-          value: selectedValue,
-          decoration: InputDecoration(
-            hintText: hint,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          ),
-          icon: SvgPicture.asset(
-            AppSvgs.arrowDown,
-            width: 28,
-            height: 28,
-            color: Colors.black,
-          ),
-          items: items
-              .map((item) => DropdownMenuItem<String>(
-                    value: item,
-                    child: Text(item),
-                  ))
-              .toList(),
-          onChanged: onChanged,
-        ),
-      ],
     );
   }
 }

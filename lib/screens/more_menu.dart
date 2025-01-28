@@ -1,7 +1,8 @@
 import 'package:champs/core/constants/app_assets.dart';
 import 'package:champs/core/routing/routes.dart';
-import 'package:champs/features/favourite_screen/ui/favourite_screen.dart';
-import 'package:champs/features/auth/login/ui/sign_in.dart';
+import 'package:champs/features/favourite_screen/favourite_screen.dart';
+import 'package:champs/features/auth/login/sign_in.dart';
+import 'package:champs/features/mentor_screen/ui/mentor_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -95,18 +96,20 @@ class MoreMenu extends StatelessWidget {
               child: Divider(thickness: 1, height: 1),
             ),
             ListTile(
-                trailing: const Icon(Icons.arrow_forward_ios),
-                title: const Text(
-                  'المفضلة',
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xFF667085),
-                  ),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              title: const Text(
+                'المفضلة',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color(0xFF667085),
                 ),
-
+              ),
               onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const FavouriteScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FavouriteScreen()));
               },
             ),
             const Padding(
@@ -124,7 +127,10 @@ class MoreMenu extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                // Handle navigation
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MentorProfileScreen()));
               },
             ),
             const Padding(
@@ -147,7 +153,8 @@ class MoreMenu extends StatelessWidget {
                 ),
               ),
               onTap: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context) => const SignIn()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SignIn()));
               },
             ),
           ],
