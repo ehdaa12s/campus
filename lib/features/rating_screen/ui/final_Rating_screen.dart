@@ -56,7 +56,7 @@ Future showFeedbackDialogForFinalRating(BuildContext context) {
 
               CustomTextButtonForBoarding(buttonText:
               'التالي ', onPressed: () {
-                Navigator.pushNamed(context, Routes.showSessionDetails);
+                Navigator.pushNamed(context, Routes.homeScreen);
               }, width: 310, height: 54),
 
         ],

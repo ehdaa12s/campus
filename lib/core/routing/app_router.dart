@@ -27,6 +27,9 @@ import 'package:champs/features/join_as_guide_screen/ui/rejected_order_screen.da
 import 'package:champs/features/search_screens/ui/result_search.dart';
 import 'package:champs/features/sessions_screen/ui/show_session_dedails.dart';
 import 'package:champs/features/join_as_guide_screen/ui/under_review_screen.dart';
+import 'package:champs/features/setting_screen/personal_screen.dart';
+import 'package:champs/features/setting_screen/ui/secuirty_screen.dart';
+import 'package:champs/features/setting_screen/ui/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/sessions_screen/ui/sessions_screen.dart';
@@ -90,9 +93,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const MenteProfileScreen());
       case Routes.searchScreen:
         return MaterialPageRoute(builder: (_) => const SearchScreen());
-      case Routes.mentorProfileScreen:
-        return MaterialPageRoute(builder: (_) => const MentorProfileScreen());
-        case Routes.signIn:
+      case Routes.signIn:
       case Routes.resultSearchScreen:
         return MaterialPageRoute(builder: (_) => const ResultSearch());
       case Routes.showSessionDetails:
@@ -101,6 +102,13 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const FavouriteScreen());
       case Routes.signInScreen:
         return MaterialPageRoute(builder: (_) => const SignIn());
+        case Routes.settingScreen:
+        return MaterialPageRoute(builder: (_) => const SettingScreen());
+      case Routes.personalScreen:
+        return MaterialPageRoute(builder: (_) => const PersonalScreen());
+      case Routes.secuirtyScreen:
+        return MaterialPageRoute(builder: (_) => const SecuirtyScreen());
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
