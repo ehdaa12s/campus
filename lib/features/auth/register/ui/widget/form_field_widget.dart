@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:champs/core/widgets/custom_drop_button_list.dart';
 import 'package:champs/core/widgets/custom_text_field.dart';
-import '';
 
 class FormFieldWidget extends StatelessWidget {
   final String label;

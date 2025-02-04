@@ -1,4 +1,3 @@
-import 'package:champs/core/routing/routes.dart';
 import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/features/rating_screen/ui/thank_you_screen.dart';
 import 'package:flutter/material.dart';

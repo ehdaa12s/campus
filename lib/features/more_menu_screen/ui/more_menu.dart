@@ -92,7 +92,7 @@ class MoreMenu extends StatelessWidget {
                   textAlign: TextAlign.right,
                   style: AppTextStyles.font16Gray500BalooBhaijaan2),
               onTap: () {
-                // Settings
+                context.pushNamed(Routes.statisticsScreen);
               },
             ),
             const Padding(

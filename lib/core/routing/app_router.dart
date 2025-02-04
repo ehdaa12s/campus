@@ -2,6 +2,7 @@ import 'package:champs/core/routing/routes.dart';
 import 'package:champs/features/auth/login/ui/check_with_code_login.dart';
 import 'package:champs/features/auth/login/ui/sign_in.dart';
 import 'package:champs/features/home_screen/ui/home_screen.dart';
+import 'package:champs/features/statistics_screen/ui/statistics_screen.dart';
 import 'package:champs/features/on_boarding/on_boarding_view.dart';
 import 'package:champs/features/search_screens/ui/search_screen.dart';
 import 'package:champs/features/chat_screen/ui/chat_screen.dart';
@@ -70,13 +71,15 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const ContactsScreen());
       case Routes.notificationsScreen:
         return MaterialPageRoute(builder: (_) => const NotifcationScreen());
-        case Routes.chatScreen:
+      case Routes.chatScreen:
         return MaterialPageRoute(builder: (_) => const ChatScreen());
-        case Routes.enterEmailForPasswordResetScreen:
-        return MaterialPageRoute(builder: (_) => const EnterEmailForgetPassword());
-        case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeScreenForNavagationBar());
-        case Routes.signUpScreen:
+      case Routes.enterEmailForPasswordResetScreen:
+        return MaterialPageRoute(
+            builder: (_) => const EnterEmailForgetPassword());
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+            builder: (_) => const HomeScreenForNavagationBar());
+      case Routes.signUpScreen:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case Routes.correctLogin:
         return MaterialPageRoute(builder: (_) => const CorrectLogin());
@@ -90,9 +93,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const MenteProfileScreen());
       case Routes.searchScreen:
         return MaterialPageRoute(builder: (_) => const SearchScreen());
-      case Routes.mentorProfileScreen:
-        return MaterialPageRoute(builder: (_) => const MentorProfileScreen());
-        case Routes.signIn:
+      case Routes.signIn:
       case Routes.resultSearchScreen:
         return MaterialPageRoute(builder: (_) => const ResultSearch());
       case Routes.showSessionDetails:
@@ -101,6 +102,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const FavouriteScreen());
       case Routes.signInScreen:
         return MaterialPageRoute(builder: (_) => const SignIn());
+      case Routes.statisticsScreen:
+        return MaterialPageRoute(builder: (_) =>  const StatisticsScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
@@ -112,4 +115,3 @@ class AppRouter {
     }
   }
 }
-

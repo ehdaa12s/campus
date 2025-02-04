@@ -146,18 +146,6 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                 ),
               ),
               const SizedBox(height: 16),
-              // Years of Experience
-              buildTextField(
-                label: 'عدد سنوات الخبرة',
-                hint: '',
-              ),
-              const SizedBox(height: 16),
-              // LinkedIn URL
-              buildTextField(
-                label: 'رابط حساب لينكدان',
-                hint: 'https://www.linkedin.com/in/...',
-              ),
-              const SizedBox(height: 16),
               // Specialization Dropdown
               buildDropdownField(
                 label: 'التخصص',
@@ -166,10 +154,12 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                 onChanged: (String? value) {},
               ),
               const SizedBox(height: 16),
-              // Tool
-              buildTextField(
-                label: 'الأداة',
+              // Years of Experience
+              buildDropdownField(
+                label: 'عدد سنوات الخبرة',
                 hint: 'النص المقترح',
+                items: ['Option 1', 'Option 2', 'Option 3'],
+                onChanged: (String? value) {},
               ),
               const SizedBox(height: 16),
               // Target Audience
@@ -184,6 +174,13 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
               buildTextField(
                 label: 'نبذة عني',
                 hint: 'النص المقترح',
+                height: 150,
+              ),
+              const SizedBox(height: 20),
+              // About Me
+              buildTextField(
+                label: 'ملاحظاتك',
+                hint: 'اكتب ملاحظاتك التي تريد من المتدرب معرفتها و تزويدك بها',
                 height: 150,
               ),
               const SizedBox(height: 20),

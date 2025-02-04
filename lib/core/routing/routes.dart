@@ -34,4 +34,5 @@ class Routes {
   static const String resultSearchScreen = "/resultSearchScreen";
   static const String favouriteScreen = "/favouriteScreen";
   static const String signInScreen = "/signInScreen";
+  static const String statisticsScreen = "/statisticsScreen";
 }

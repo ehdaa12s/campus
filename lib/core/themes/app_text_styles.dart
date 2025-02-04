@@ -28,6 +28,30 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.black,
   );
+  static TextStyle font12Gray400BalooBhaijaan2Bold = TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.gray400,
+  );
+  static TextStyle font12Gray400BalooBhaijaan2 = TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.gray400,
+  );
+  static TextStyle font13LightBrownBalooBhaijaan2 = TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.lightBrown,
+  );
+  static TextStyle font13LightBrown100BalooBhaijaan2 = TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.lightBrown100,
+  );
   static TextStyle font14BlackBalooBhaijaan2w700 = TextStyle(
     fontFamily: balooBhaiJaan2FontFamily,
     fontSize: 14.sp,
@@ -210,7 +234,6 @@ class AppTextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
     color: AppColors.black,
-
   );
   static TextStyle font16Gray600BalooBhaijaan2w500 = TextStyle(
     fontFamily: balooBhaiJaan2FontFamily,
@@ -400,23 +423,17 @@ class AppTextStyles {
       fontFamily: balooBhaiJaan2FontFamily,
       fontSize: 16.sp,
       color: AppColors.black,
-      fontWeight: FontWeight.w600
-
-  );
-  static TextStyle font16Brown200BalooBhaijann2w500= TextStyle(
+      fontWeight: FontWeight.w600);
+  static TextStyle font16Brown200BalooBhaijann2w500 = TextStyle(
     fontFamily: balooBhaiJaan2FontFamily,
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
     color: AppColors.brown200,
   );
-  static TextStyle font16GreyBalooBhaijaan2w500= TextStyle(
+  static TextStyle font16GreyBalooBhaijaan2w500 = TextStyle(
     fontFamily: balooBhaiJaan2FontFamily,
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
-   color: AppColors.brown200,
+    color: AppColors.brown200,
   );
-
-
-
-
 }
