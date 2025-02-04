@@ -31,6 +31,9 @@ import 'package:champs/features/join_as_guide_screen/ui/under_review_screen.dart
 import 'package:flutter/material.dart';
 
 import '../../features/sessions_screen/ui/sessions_screen.dart';
+import '../../features/setting_screen/personal_screen.dart';
+import '../../features/setting_screen/ui/secuirty_screen.dart';
+import '../../features/setting_screen/ui/setting_screen.dart';
 
 class AppRouter {
   static final GlobalKey<NavigatorState> navigatorKey =
