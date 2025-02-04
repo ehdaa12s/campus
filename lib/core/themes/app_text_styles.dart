@@ -188,6 +188,14 @@ class AppTextStyles {
     color: AppColors.black,
     height: 1.50,
   );
+  static TextStyle font16Gray900BalooBhaijaan2w500= TextStyle(
+
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.gray900,
+
+  );
   static TextStyle font16Gray550BalooBhaijaan2w700 = TextStyle(
     fontFamily: balooBhaiJaan2FontFamily,
     fontSize: 16.sp,
@@ -282,7 +290,7 @@ class AppTextStyles {
     fontFamily: balooBhaiJaan2FontFamily,
     fontSize: 15.sp,
     fontWeight: FontWeight.w500,
-    color: AppColors.darkbrown,
+    color: AppColors.darkBrown,
   );
   static TextStyle fornt15RedBalooBhaijaan2w500 = TextStyle(
     fontFamily: balooBhaiJaan2FontFamily,
@@ -435,5 +443,44 @@ class AppTextStyles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
     color: AppColors.brown200,
+  );
+  static TextStyle font14Gray500BalooBhaijaanw400=TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.gray500,
+    height: 2.14,
+  );
+  static TextStyle font14Blue100BalooBhaijaanw500=TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.blue100,
+    height: 2.14,
+
+  );
+  static TextStyle font16Blue100BalooBhaijaanw500=TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.blue100,
+    height: 1.88,
+
+  );
+
+  static TextStyle font12GreyBalooBhaijaan2w400 =TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.gray500,
+    height: 1.75,
+  );
+
+  static TextStyle font12LightGreyBalooBhaijaan2w400= TextStyle(
+    fontFamily: balooBhaiJaan2FontFamily,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.gray500,
+    height: 1.75,
   );
 }

@@ -104,6 +104,13 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SignIn());
       case Routes.statisticsScreen:
         return MaterialPageRoute(builder: (_) =>  const StatisticsScreen());
+        case Routes.settingScreen:
+        return MaterialPageRoute(builder: (_) => const SettingScreen());
+      case Routes.personalScreen:
+        return MaterialPageRoute(builder: (_) => const PersonalScreen());
+      case Routes.secuirtyScreen:
+        return MaterialPageRoute(builder: (_) => const SecuirtyScreen());
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
