@@ -19,15 +19,20 @@ class AppColors {
   static const Color gray100 = Color(0xFFF2F4F7);
   static const Color gray50 = Color(0xFFF9FAFB);
   static const Color gray25 = Color(0xFFFCFCFD);
-  static const  Color amber= Color(0xFFFFD700);
+  static const Color amber = Color(0xFFFFD700);
   static const Color red = Color(0xFFD0021B);
   static const Color black = Color(0xFF090909);
   static const Color brown = Color(0xFF636262);
   static const Color darkBlue = Color(0xFF00001D);
-  static const Color darkbrown = Color(0xFF353535);
-  static const  Color brown50  = Color(0xFF666677);
-  static const Color brown100 =  Color(0xFF7F7F8E);
-  static const Color brown200 =Color(0xFF9098A3);
+  static const Color darkBrown = Color(0xFF353535);
+  static const Color brown50 = Color(0xFF666677);
+  static const Color brown100 = Color(0xFF7F7F8E);
+  static const Color brown200 = Color(0xFF9098A3);
+  static const Color amber200 = Color(0xFFF3B14E);
+  static const Color amber100 = Color(0xFFFFCE51);
+  static const Color amber900 = Color(0xFFFEF3DC);
+  static const Color lightBrown = Color(0xFF685613);
+  static const Color lightBrown100 = Color(0xFF8D751C);
   static const Color blue100=Color(0xFF00008F);
 
   static const MaterialColor themeColor =

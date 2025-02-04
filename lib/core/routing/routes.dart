@@ -37,5 +37,5 @@ class Routes {
   static const String settingScreen = "/settingScreen";
   static const String personalScreen = "/personalScreen";
   static const String secuirtyScreen ="/secuirtyScreen";
-
+  static const String statisticsScreen = "/statisticsScreen";
 }

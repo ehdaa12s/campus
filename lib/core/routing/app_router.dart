@@ -2,6 +2,7 @@ import 'package:champs/core/routing/routes.dart';
 import 'package:champs/features/auth/login/ui/check_with_code_login.dart';
 import 'package:champs/features/auth/login/ui/sign_in.dart';
 import 'package:champs/features/home_screen/ui/home_screen.dart';
+import 'package:champs/features/statistics_screen/ui/statistics_screen.dart';
 import 'package:champs/features/on_boarding/on_boarding_view.dart';
 import 'package:champs/features/search_screens/ui/search_screen.dart';
 import 'package:champs/features/chat_screen/ui/chat_screen.dart';
@@ -27,12 +28,12 @@ import 'package:champs/features/join_as_guide_screen/ui/rejected_order_screen.da
 import 'package:champs/features/search_screens/ui/result_search.dart';
 import 'package:champs/features/sessions_screen/ui/show_session_dedails.dart';
 import 'package:champs/features/join_as_guide_screen/ui/under_review_screen.dart';
-import 'package:champs/features/setting_screen/personal_screen.dart';
-import 'package:champs/features/setting_screen/ui/secuirty_screen.dart';
-import 'package:champs/features/setting_screen/ui/setting_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/sessions_screen/ui/sessions_screen.dart';
+import '../../features/setting_screen/personal_screen.dart';
+import '../../features/setting_screen/ui/secuirty_screen.dart';
+import '../../features/setting_screen/ui/setting_screen.dart';
 
 class AppRouter {
   static final GlobalKey<NavigatorState> navigatorKey =
@@ -73,13 +74,15 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const ContactsScreen());
       case Routes.notificationsScreen:
         return MaterialPageRoute(builder: (_) => const NotifcationScreen());
-        case Routes.chatScreen:
+      case Routes.chatScreen:
         return MaterialPageRoute(builder: (_) => const ChatScreen());
-        case Routes.enterEmailForPasswordResetScreen:
-        return MaterialPageRoute(builder: (_) => const EnterEmailForgetPassword());
-        case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeScreenForNavagationBar());
-        case Routes.signUpScreen:
+      case Routes.enterEmailForPasswordResetScreen:
+        return MaterialPageRoute(
+            builder: (_) => const EnterEmailForgetPassword());
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+            builder: (_) => const HomeScreenForNavagationBar());
+      case Routes.signUpScreen:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case Routes.correctLogin:
         return MaterialPageRoute(builder: (_) => const CorrectLogin());
@@ -102,6 +105,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const FavouriteScreen());
       case Routes.signInScreen:
         return MaterialPageRoute(builder: (_) => const SignIn());
+      case Routes.statisticsScreen:
+        return MaterialPageRoute(builder: (_) =>  const StatisticsScreen());
         case Routes.settingScreen:
         return MaterialPageRoute(builder: (_) => const SettingScreen());
       case Routes.personalScreen:
@@ -120,4 +125,3 @@ class AppRouter {
     }
   }
 }
-

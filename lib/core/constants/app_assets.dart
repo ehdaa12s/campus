@@ -35,4 +35,5 @@ class AppSvgs {
   static const String logout = 'assets/svg/logout.svg';
   static const String medallions = 'assets/svg/Medallions.svg';
   static const String tickCircle = 'assets/svg/tick-circle.svg';
+  static const String trendUp = 'assets/svg/trend-up.svg';
 }

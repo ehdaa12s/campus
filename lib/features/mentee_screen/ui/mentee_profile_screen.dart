@@ -62,10 +62,7 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
             TabBar(
               indicatorColor: AppColors.primary,
               labelColor: AppColors.primary,
-              labelStyle: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
+              labelStyle: AppTextStyles.font16BlackBalooBhaijaan2w600,
               unselectedLabelStyle: AppTextStyles.font16BrownBalooBhaijaan2w600
                   .copyWith(color: AppColors.gray550),
               tabs: const [
