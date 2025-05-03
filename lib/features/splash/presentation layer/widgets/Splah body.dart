@@ -1,15 +1,13 @@
 // ignore: file_names
 // ignore: file_names
 // ignore: file_names
-import 'package:champs/features/on_boarding/on_boarding_view.dart';
+import 'package:champs/core/helpers/extensions.dart';
+import 'package:champs/core/routing/routes.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:champs/core/utiles/size_config.dart';
 
 class SplahBody extends StatefulWidget {
-
   const SplahBody({super.key});
-
 
   @override
   State<SplahBody> createState() => _SplahBodyState();
@@ -23,14 +21,14 @@ class _SplahBodyState extends State<SplahBody>
   @override
   void initState() {
     super.initState();
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(milliseconds: 600));
+    animationController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 600));
     fadingAnimation =
         Tween<double>(begin: .2, end: 1).animate(animationController!);
 
     animationController?.repeat(reverse: true);
 
-    goToNextView();
+    goToNextView(context);
   }
 
   @override
@@ -54,13 +52,10 @@ class _SplahBodyState extends State<SplahBody>
           children: [
             const Spacer(),
             const SizedBox(
-
               width: double.infinity,
-              child:
-
-            Image(
-              image: AssetImage("assets/images/splash.png"),
-            ),
+              child: Image(
+                image: AssetImage("assets/images/splash.png"),
+              ),
             ),
             FadeTransition(
               opacity: fadingAnimation!,
@@ -74,8 +69,9 @@ class _SplahBodyState extends State<SplahBody>
   }
 }
 
-void goToNextView() {
-  Future.delayed(const Duration(seconds: 3), () {
-    Get.to(() => const OnBoardingView(), transition: Transition.fade);
-  });
+void goToNextView(BuildContext context) {
+  Future.delayed(
+      const Duration(seconds: 3),
+      () => context.pushNamedAndRemoveUntil(Routes.onboardingScreen,
+          predicate: (route) => false));
 }
