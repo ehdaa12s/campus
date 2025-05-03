@@ -63,8 +63,8 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
               indicatorColor: AppColors.primary,
               labelColor: AppColors.primary,
               labelStyle: AppTextStyles.font16BlackBalooBhaijaan2w600,
-              unselectedLabelStyle: AppTextStyles.font16BrownBalooBhaijaan2w600
-                  .copyWith(color: AppColors.gray550),
+              unselectedLabelStyle: AppTextStyles.font16Gray600BalooBhaijaan2w500
+                  .copyWith(color: AppColors.gray500),
               tabs: const [
                 Tab(text: 'نبذة عني'),
                 Tab(text: 'توصيات عني'),
@@ -160,7 +160,7 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
                                     AppSvgs.filledHeart,
                                     width: 23,
                                     height: 23,
-                                    color: AppColors.red,
+                                    color: AppColors.red200,
                                   ),
                                 ),
                               ],

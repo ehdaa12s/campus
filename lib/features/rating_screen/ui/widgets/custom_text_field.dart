@@ -29,7 +29,7 @@ class CustomTextFieldForFeadback extends StatelessWidget {
         Container(
           height: height,
           decoration: BoxDecoration(
-            color:  AppColors.gray100,
+            color:  AppColors.white,
             borderRadius: BorderRadius.circular(8),
           ),
           child: Padding(

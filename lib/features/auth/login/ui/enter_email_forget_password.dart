@@ -33,7 +33,7 @@ class EnterEmailForgetPassword extends StatelessWidget {
                   child: Text(
                     'سيتم ارسال كود تاكيد الى بريدك الالكتروني ',
                     textAlign: TextAlign.right,
-                    style: AppTextStyles.font20BrownBalooBhaijaan2w400,
+                    style: AppTextStyles.font20Gray800BalooBhaijaan2w400,
                   ),
                 ),
                 const SizedBox(

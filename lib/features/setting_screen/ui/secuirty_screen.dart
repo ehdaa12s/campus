@@ -45,7 +45,7 @@ class SecuirtyScreen extends StatelessWidget {
 
               },
               child: Text('Google Account',
-                  style: AppTextStyles.font14Blue100BalooBhaijaanw500),
+                  style: AppTextStyles.font14PrimaryBalooBhaijaan2w600),
             ),
           ),
           const Padding(
@@ -57,7 +57,7 @@ class SecuirtyScreen extends StatelessWidget {
               padding:const  EdgeInsets.symmetric(horizontal: 20.0),child:
             Text(
               'حذف الحساب',
-              style: AppTextStyles.font16Blue100BalooBhaijaanw500,
+              style: AppTextStyles.font16PrimaryBalooBhaijaan2w600,
               textAlign: TextAlign.right,
             ),
             ),

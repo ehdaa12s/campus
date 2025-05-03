@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 
 class AchievementsCard extends StatelessWidget {
   final int index;
+
   const AchievementsCard({
     super.key,
     required this.index,
@@ -86,7 +87,10 @@ class AchievementsCard extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           gradient: const LinearGradient(
-                            colors: [AppColors.amber900, AppColors.amber900],
+                            colors: [
+                              AppColors.secondary900,
+                              AppColors.secondary900
+                            ],
                             begin: Alignment.centerLeft,
                             end: Alignment.centerRight,
                           ),
@@ -104,7 +108,10 @@ class AchievementsCard extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             gradient: const LinearGradient(
-                              colors: [AppColors.amber200, AppColors.amber100],
+                              colors: [
+                                AppColors.secondary200,
+                                AppColors.secondary100
+                              ],
                               begin: Alignment.centerLeft,
                               end: Alignment.centerRight,
                             ),
@@ -119,13 +126,11 @@ class AchievementsCard extends StatelessWidget {
                           children: [
                             Text(
                               '6000',
-                              style: AppTextStyles
-                                  .font13LightBrown100BalooBhaijaan2,
+                              style: AppTextStyles.font13Gray200BalooBhaijaan2,
                             ),
                             Text(
                               '/5200',
-                              style:
-                                  AppTextStyles.font13LightBrownBalooBhaijaan2,
+                              style: AppTextStyles.font13Gray200BalooBhaijaan2,
                             ),
                           ],
                         ),
@@ -151,8 +156,8 @@ class AchievementsCard extends StatelessWidget {
                           ],
                         ),
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 8,
-                            vertical: 4), // Padding around the text
+                            horizontal: 8, vertical: 4),
+                        // Padding around the text
                         child: Text(
                           '${index + 3}',
                           style: TextStyle(

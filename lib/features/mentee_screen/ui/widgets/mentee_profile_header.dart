@@ -53,7 +53,7 @@ class MenteProfileHeader extends StatelessWidget {
                           AppSvgs.edit,
                           width: 24,
                           height: 24,
-                          color: AppColors.gray350,
+                          color: AppColors.gray300,
                         ),
                       ),
                     ),
@@ -76,7 +76,7 @@ class MenteProfileHeader extends StatelessWidget {
                           AppSvgs.sharingNetwork,
                           width: 24,
                           height: 24,
-                          color: AppColors.gray350,
+                          color: AppColors.gray300,
                         ),
                       ),
                     ),
@@ -98,7 +98,7 @@ class MenteProfileHeader extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: AppColors.gray350, // Border color
+                    color: AppColors.gray300, // Border color
                     width: 1.5, // Border width
                   ),
                 ),
@@ -134,7 +134,7 @@ class MenteProfileHeader extends StatelessWidget {
                 AppSvgs.star,
                 width: 20,
                 height: 20,
-                color: AppColors.amber,
+                color: AppColors.secondary600,
               ),
               const SizedBox(width: 3),
               Text('24 / 4.9',

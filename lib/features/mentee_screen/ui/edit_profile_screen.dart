@@ -90,7 +90,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: AppColors.gray350,
+                          color: AppColors.gray300,
                           width: 1.5,
                         ),
                       ),
@@ -131,7 +131,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                             AppSvgs.edit,
                             width: 24,
                             height: 24,
-                            color: AppColors.gray350,
+                            color: AppColors.gray300,
                           ),
                         ),
                       ),

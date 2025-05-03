@@ -30,7 +30,7 @@ class CustomListTileForPersonalEdit extends StatelessWidget {
         onTap: onEdit,
         child: Text(
           'تعديل',
-          style: AppTextStyles.font14Blue100BalooBhaijaanw500,
+          style: AppTextStyles.font14PrimaryBalooBhaijaan2w600,
         ),
       ),
     );

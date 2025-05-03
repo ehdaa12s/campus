@@ -1,6 +1,8 @@
 import 'package:champs/constant.dart';
 import 'package:flutter/material.dart';
 
+import '../themes/app_colors.dart';
+
 class CustomTextButtonForBoarding extends StatelessWidget {
   final String buttonText;
   final VoidCallback onPressed;
@@ -24,7 +26,7 @@ class CustomTextButtonForBoarding extends StatelessWidget {
         onPressed: onPressed,
         style: const ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(
-            Color(0xFF00008D),
+            AppColors.primary,
           ),
           shape: WidgetStatePropertyAll(
             RoundedRectangleBorder(

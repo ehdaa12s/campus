@@ -17,7 +17,7 @@ class ThanksTitleSection extends StatelessWidget {
         IconButton(onPressed: (){
           Navigator.pop(context);
 
-        }, icon:const Icon(Icons.arrow_back_ios, color:AppColors.brown, size: 24)),
+        }, icon:const Icon(Icons.arrow_back_ios, color:AppColors.gray800, size: 24)),
         Expanded(child: Text(
           "شكراً على تقييمك ",
           textAlign: TextAlign.center,
@@ -29,7 +29,7 @@ class ThanksTitleSection extends StatelessWidget {
         Text(
           "نرجوا منك وصف تجربتك لمساعد غيرك.",
           textAlign: TextAlign.center,
-          style: AppTextStyles.font16Brown200BalooBhaijann2w500,
+          style: AppTextStyles.font16Gray700BalooBhaijann2w500,
         ),
       ],
       ),
