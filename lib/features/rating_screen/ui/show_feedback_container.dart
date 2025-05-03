@@ -1,6 +1,6 @@
 import 'package:champs/core/themes/app_colors.dart';
 import 'package:champs/core/themes/app_text_styles.dart';
-import 'package:champs/features/rating_screen/ui/widgets/feaback_options.dart';
+import 'package:champs/features/rating_screen/ui/widgets/feedback_options.dart';
 import 'package:flutter/material.dart';
 
 Future showFeedbackDialog(BuildContext context) {

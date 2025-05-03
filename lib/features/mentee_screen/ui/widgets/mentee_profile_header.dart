@@ -8,8 +8,8 @@ import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class MenteProfileHeader extends StatelessWidget {
-  const MenteProfileHeader({
+class MenteeProfileHeader extends StatelessWidget {
+  const MenteeProfileHeader({
     super.key,
     required File? image,
     required this.profileName,

@@ -1,16 +1,16 @@
 
 import 'package:champs/features/notification/ui/widget/header_section.dart';
-import 'package:champs/features/notification/ui/widget/notifcation_body_section.dart';
+import 'package:champs/features/notification/ui/widget/notification_body_section.dart';
 import 'package:flutter/material.dart';
 
-class NotifcationScreen extends StatefulWidget {
-  const NotifcationScreen({super.key});
+class NotificationsScreen extends StatefulWidget {
+  const NotificationsScreen({super.key});
 
   @override
-  State<NotifcationScreen> createState() => _NotifcationScreenState();
+  State<NotificationsScreen> createState() => _NotificationScreenState();
 }
 
-class _NotifcationScreenState extends State<NotifcationScreen> {
+class _NotificationScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -28,7 +28,7 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
               SizedBox(
                 height: 16,
               ),
-              NotifcationBodySection(),
+              NotificationBodySection(),
             ],
           ),
         ),

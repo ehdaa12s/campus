@@ -14,14 +14,14 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io';
 
-class MenteProfileScreen extends StatefulWidget {
-  const MenteProfileScreen({super.key});
+class MenteeProfileScreen extends StatefulWidget {
+  const MenteeProfileScreen({super.key});
 
   @override
-  State<MenteProfileScreen> createState() => _MenteProfileScreenState();
+  State<MenteeProfileScreen> createState() => _MenteeProfileScreenState();
 }
 
-class _MenteProfileScreenState extends State<MenteProfileScreen> {
+class _MenteeProfileScreenState extends State<MenteeProfileScreen> {
   File? _image;
   String profileName = 'خديجة اشرف';
   String profileJopTitle = 'UX UI Designer';
@@ -52,7 +52,7 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
         body: Column(
           children: [
             // Profile Header
-            MenteProfileHeader(
+            MenteeProfileHeader(
               image: _image,
               profileName: profileName,
               profileJopTitle: profileJopTitle,

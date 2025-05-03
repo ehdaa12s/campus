@@ -12,7 +12,7 @@ import 'package:champs/features/auth/register/ui/sign_up_screen.dart';
 import 'package:champs/features/favourite_screen/ui/favourite_screen.dart';
 import 'package:champs/features/mentee_screen/ui/mentee_profile_screen.dart';
 import 'package:champs/features/mentor_screen/ui/mentor_profile_screen.dart';
-import 'package:champs/features/notification/ui/notifcation_screen.dart';
+import 'package:champs/features/notification/ui/notification_screen.dart';
 import 'package:champs/features/join_as_guide_screen/ui/accepted_order_screen.dart';
 import 'package:champs/features/more_menu_screen/ui/achievements_screen.dart';
 import 'package:champs/features/mentee_screen/ui/add_certificate_screen.dart';
@@ -26,13 +26,13 @@ import 'package:champs/features/join_as_guide_screen/ui/join_as_guide_screen.dar
 import 'package:champs/features/more_menu_screen/ui/more_menu.dart';
 import 'package:champs/features/join_as_guide_screen/ui/rejected_order_screen.dart';
 import 'package:champs/features/search_screens/ui/result_search.dart';
-import 'package:champs/features/sessions_screen/ui/show_session_dedails.dart';
+import 'package:champs/features/sessions_screen/ui/show_session_details.dart';
 import 'package:champs/features/join_as_guide_screen/ui/under_review_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/sessions_screen/ui/sessions_screen.dart';
 import '../../features/setting_screen/personal_screen.dart';
-import '../../features/setting_screen/ui/secuirty_screen.dart';
+import '../../features/setting_screen/ui/security_screen.dart';
 import '../../features/setting_screen/ui/setting_screen.dart';
 
 class AppRouter {
@@ -73,7 +73,7 @@ class AppRouter {
       case Routes.contactsScreen:
         return MaterialPageRoute(builder: (_) => const ContactsScreen());
       case Routes.notificationsScreen:
-        return MaterialPageRoute(builder: (_) => const NotifcationScreen());
+        return MaterialPageRoute(builder: (_) => const NotificationsScreen());
       case Routes.chatScreen:
         return MaterialPageRoute(builder: (_) => const ChatScreen());
       case Routes.enterEmailForPasswordResetScreen:
@@ -93,7 +93,7 @@ class AppRouter {
       case Routes.mentorProfileScreen:
         return MaterialPageRoute(builder: (_) => const MentorProfileScreen());
       case Routes.menteProfileScreen:
-        return MaterialPageRoute(builder: (_) => const MenteProfileScreen());
+        return MaterialPageRoute(builder: (_) => const MenteeProfileScreen());
       case Routes.searchScreen:
         return MaterialPageRoute(builder: (_) => const SearchScreen());
       case Routes.signIn:
@@ -106,13 +106,13 @@ class AppRouter {
       case Routes.signInScreen:
         return MaterialPageRoute(builder: (_) => const SignIn());
       case Routes.statisticsScreen:
-        return MaterialPageRoute(builder: (_) =>  const StatisticsScreen());
-        case Routes.settingScreen:
+        return MaterialPageRoute(builder: (_) => const StatisticsScreen());
+      case Routes.settingScreen:
         return MaterialPageRoute(builder: (_) => const SettingScreen());
       case Routes.personalScreen:
         return MaterialPageRoute(builder: (_) => const PersonalScreen());
       case Routes.secuirtyScreen:
-        return MaterialPageRoute(builder: (_) => const SecuirtyScreen());
+        return MaterialPageRoute(builder: (_) => const SecurityScreen());
 
       default:
         return MaterialPageRoute(

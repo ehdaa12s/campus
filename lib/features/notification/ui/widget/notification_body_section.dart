@@ -2,8 +2,8 @@
 import 'package:champs/features/notification/ui/widget/custom_card_for_notifaction.dart';
 import 'package:flutter/cupertino.dart';
 
-class NotifcationBodySection extends StatelessWidget {
-  const NotifcationBodySection({super.key});
+class NotificationBodySection extends StatelessWidget {
+  const NotificationBodySection({super.key});
 
   @override
   Widget build(BuildContext context) {

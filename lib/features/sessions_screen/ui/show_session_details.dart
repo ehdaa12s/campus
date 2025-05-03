@@ -1,7 +1,7 @@
 import 'package:champs/core/themes/app_text_styles.dart';
-import 'package:champs/features/rating_screen/ui/show_fedback_container.dart';
+import 'package:champs/features/rating_screen/ui/show_feedback_container.dart';
 import 'package:champs/features/sessions_screen/ui/widgets/profile_card_show_details_check.dart';
-import 'package:champs/features/sessions_screen/ui/widgets/show_deails_info_card.dart';
+import 'package:champs/features/sessions_screen/ui/widgets/show_details_info_card.dart';
 
 import 'package:flutter/material.dart';
 import 'package:champs/core/widgets/custom_text_button_for_boarding.dart';

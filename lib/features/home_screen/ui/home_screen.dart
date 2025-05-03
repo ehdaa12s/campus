@@ -26,7 +26,7 @@ class _HomeScreenForNaState extends State<HomeScreenForNavagationBar> {
     const HomeScreenContent(),
     const MessagesScreen(),
     const SessionsScreen(),
-    const MenteProfileScreen(),
+    const MenteeProfileScreen(),
     const MoreMenu()
   ];
 

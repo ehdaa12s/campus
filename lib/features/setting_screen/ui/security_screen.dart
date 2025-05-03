@@ -2,8 +2,8 @@ import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/features/setting_screen/ui/widgets/privacy_screen.dart';
 import 'package:flutter/material.dart';
 
-class SecuirtyScreen extends StatelessWidget {
-  const SecuirtyScreen({super.key});
+class SecurityScreen extends StatelessWidget {
+  const SecurityScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,6 @@ class SecuirtyScreen extends StatelessWidget {
             style: AppTextStyles.font20blackBalooBhaijaan2Bold),
       ),
       body: Container(
-
         height: 120,
         margin: const EdgeInsets.all(26),
         decoration: BoxDecoration(
@@ -29,10 +28,7 @@ class SecuirtyScreen extends StatelessWidget {
             ),
           ],
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           ListTile(
             title: Text('البريد الالكتروني',
                 textAlign: TextAlign.right,
@@ -41,9 +37,7 @@ class SecuirtyScreen extends StatelessWidget {
                 textAlign: TextAlign.right,
                 style: AppTextStyles.font14Gray500BalooBhaijaanw400),
             trailing: GestureDetector(
-              onTap: () {
-
-              },
+              onTap: () {},
               child: Text('Google Account',
                   style: AppTextStyles.font14PrimaryBalooBhaijaan2w600),
             ),
@@ -53,20 +47,18 @@ class SecuirtyScreen extends StatelessWidget {
             child: Divider(thickness: 1, height: 1),
           ),
           GestureDetector(
-            child:  Padding(
-              padding:const  EdgeInsets.symmetric(horizontal: 20.0),child:
-            Text(
-              'حذف الحساب',
-              style: AppTextStyles.font16PrimaryBalooBhaijaan2w600,
-              textAlign: TextAlign.right,
-            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                'حذف الحساب',
+                style: AppTextStyles.font16PrimaryBalooBhaijaan2w600,
+                textAlign: TextAlign.right,
+              ),
             ),
             onTap: () {
-             showDeleteAccountDialog(context,"");
+              showDeleteAccountDialog(context, "");
             },
           ),
-
-
         ]),
       ),
     );
