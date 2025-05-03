@@ -46,7 +46,7 @@ Future showFeedbackDialogForFinalRating(BuildContext context) {
                     Text(
                       "شكراً على تقييمك! 🌟 ملاحظاتك تهمنا لتحسين تجربتك دائماً. ❤️",
                       textAlign: TextAlign.center,
-                      style: AppTextStyles.font16GreyBalooBhaijaan2w500,
+                      style: AppTextStyles.font16Grey200BalooBhaijaan2w500,
                     ),
                     ),
                   ],

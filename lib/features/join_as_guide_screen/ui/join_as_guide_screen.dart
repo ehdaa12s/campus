@@ -220,14 +220,14 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                     Text(
                                       fileName,
                                       style: AppTextStyles
-                                          .fornt15DarkBrownBalooBhaijaan2w400,
+                                          .fornt15RedBalooBhaijaan2w500,
                                     ),
                                     const SizedBox(height: 5),
                                     Directionality(
                                       textDirection: TextDirection.ltr,
                                       child: Text(fileSize,
                                           style: AppTextStyles
-                                              .fornt13Gray450BalooBhaijaan2),
+                                              .fornt13Gray400BalooBhaijaan2),
                                     ),
                                   ],
                                 ),
@@ -312,13 +312,13 @@ class _JoinAsGuideScreenState extends State<JoinAsGuideScreen> {
                                   children: [
                                     Text(fileName,
                                         style: AppTextStyles
-                                            .fornt15DarkBrownBalooBhaijaan2w400),
+                                            .fornt15RedBalooBhaijaan2w500),
                                     const SizedBox(height: 5),
                                     Directionality(
                                       textDirection: TextDirection.ltr,
                                       child: Text(fileSize,
                                           style: AppTextStyles
-                                              .fornt13Gray450BalooBhaijaan2),
+                                              .fornt13Gray400BalooBhaijaan2),
                                     ),
                                     const SizedBox(height: 5),
                                     TextButton(

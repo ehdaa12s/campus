@@ -1,8 +1,8 @@
+import 'package:champs/core/helpers/extensions.dart';
+import 'package:champs/core/routing/routes.dart';
 import 'package:champs/core/themes/app_text_styles.dart';
 import 'package:champs/core/utiles/size_config.dart';
-import 'package:champs/features/home_screen/ui/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class CorrectLogin extends StatefulWidget {
   const CorrectLogin({super.key});
@@ -26,7 +26,7 @@ class _CorrectLoginState extends State<CorrectLogin>
 
     animationController?.repeat(reverse: true);
 
-    goToNextView();
+    goToNextView(context);
   }
 
   @override
@@ -55,17 +55,16 @@ class _CorrectLoginState extends State<CorrectLogin>
                   const SizedBox(
                     height: 20,
                   ),
-
                   SizedBox(
                     width: 231,
-                    child: Expanded(child: Text(
-                      'تم انشاء الحساب بنجاح ',
-                      textAlign: TextAlign.right,
-                      style: AppTextStyles.font24Grey900BalooBhaijaan2w700,
-                    ),
+                    child: Expanded(
+                      child: Text(
+                        'تم انشاء الحساب بنجاح ',
+                        textAlign: TextAlign.right,
+                        style: AppTextStyles.font24Grey900BalooBhaijaan2w700,
+                      ),
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -81,9 +80,9 @@ class _CorrectLoginState extends State<CorrectLogin>
   }
 }
 
-void goToNextView() {
-  Future.delayed(const Duration(seconds: 3), () {
-    Get.to(() => const HomeScreenForNavagationBar(),
-        transition: Transition.fade);
-  });
+void goToNextView(BuildContext context) {
+  Future.delayed(
+      const Duration(seconds: 3),
+      () => context.pushNamedAndRemoveUntil(Routes.homeScreen,
+          predicate: (route) => false));
 }

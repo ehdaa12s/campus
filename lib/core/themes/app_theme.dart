@@ -18,9 +18,9 @@ ThemeData appTheme(context) => ThemeData(
       scaffoldBackgroundColor: AppColors.white,
       fontFamily: AppTextStyles.balooBhaiJaan2FontFamily,
       primarySwatch: AppColors.themeColor,
-      textSelectionTheme: const TextSelectionThemeData(
+      textSelectionTheme:  TextSelectionThemeData(
         cursorColor: AppColors.primary,
-        selectionColor: AppColors.primary50,
+        selectionColor: AppColors.primary20,
         selectionHandleColor: AppColors.primary50,
       ),
       dividerColor: AppColors.white,
@@ -41,13 +41,13 @@ ThemeData appTheme(context) => ThemeData(
           dividerColor: AppColors.white,
           todayBackgroundColor: WidgetStateProperty.resolveWith((states) {
             if (states.contains(WidgetState.selected)) {
-              return AppColors.primary25;
+              return AppColors.primary20;
             }
             return AppColors.white;
           }),
           dayBackgroundColor: WidgetStateProperty.resolveWith((states) {
             if (states.contains(WidgetState.selected)) {
-              return AppColors.primary25;
+              return AppColors.primary20;
             }
             return AppColors.white;
           }),

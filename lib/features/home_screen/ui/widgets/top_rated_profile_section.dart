@@ -20,7 +20,7 @@ class TopRatedProfilesSection extends StatelessWidget {
             rating: '4.9',
             numOfRating: '24',
             sessions: '45 جلسة',
-            icon: Icon(Icons.star, color: AppColors.amber, size: 16), iconColor:AppColors.gray900,
+            icon: Icon(Icons.star, color: AppColors.secondary600, size: 16), iconColor:AppColors.gray900,
           ),
           SizedBox(width: 8),
           ProfileCard(
@@ -32,7 +32,7 @@ class TopRatedProfilesSection extends StatelessWidget {
             rating: '4.9',
             numOfRating: '24',
             sessions: '45 جلسة',
-            icon:  Icon(Icons.star, color: AppColors.amber, size: 16), iconColor:AppColors.gray900,
+            icon:  Icon(Icons.star, color: AppColors.secondary600, size: 16), iconColor:AppColors.gray900,
           ),
         ],
       ),

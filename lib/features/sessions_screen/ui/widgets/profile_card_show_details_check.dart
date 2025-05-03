@@ -31,7 +31,7 @@ class ProfileCardForDetailsSession extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   'Product Designer',
-                  style: AppTextStyles.font14Brown100BalooBhaijaan2,
+                  style: AppTextStyles.font12Gray700BalooBhaijaan2w400,
                 ),
               ],
             ),

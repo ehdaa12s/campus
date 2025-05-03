@@ -74,7 +74,7 @@ class _MenteProfileScreenState extends State<MentorProfileScreen> {
               indicatorColor: AppColors.primary,
               labelColor: AppColors.primary,
               labelStyle: AppTextStyles.font16BlackBalooBhaijaan2w700,
-              unselectedLabelStyle: AppTextStyles.font16BrownBalooBhaijaan2w600,
+              unselectedLabelStyle: AppTextStyles.font16Gray600BalooBhaijaan2w500,
               tabs: const [
                 Tab(text: 'معلوماتي'),
                 Tab(text: 'أراء عملائي'),

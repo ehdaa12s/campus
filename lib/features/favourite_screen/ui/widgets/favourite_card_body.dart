@@ -19,7 +19,7 @@ class FavouriteCardBody extends StatelessWidget {
           numOfRating: '24',
           sessions: '45 جلسة',
           iconColor: Color(0xFFFF1D35),
-          icon: Icon(Icons.star, color: AppColors.amber, size: 16),
+          icon: Icon(Icons.star, color: AppColors.secondary600, size: 16),
         ),
         SizedBox(height: 8),
         ProfileCard(
@@ -32,7 +32,7 @@ class FavouriteCardBody extends StatelessWidget {
           numOfRating: '24',
           sessions: '45 جلسة',
           iconColor: Color(0xFFFF1D35),
-          icon: Icon(Icons.star, color: AppColors.amber, size: 16),
+          icon: Icon(Icons.star, color: AppColors.secondary600, size: 16),
         ),
         SizedBox(height: 8),
         ProfileCard(
@@ -45,7 +45,7 @@ class FavouriteCardBody extends StatelessWidget {
           numOfRating: '24',
           sessions: '45 جلسة',
           iconColor: Color(0xFFFF1D35),
-          icon: Icon(Icons.star, color: AppColors.amber, size: 16),
+          icon: Icon(Icons.star, color: AppColors.secondary600, size: 16),
         ),
         SizedBox(height: 8),
         ProfileCard(
@@ -58,7 +58,7 @@ class FavouriteCardBody extends StatelessWidget {
           numOfRating: '24',
           sessions: '45 جلسة',
           iconColor: Color(0xFFFF1D35),
-          icon: Icon(Icons.star, color: AppColors.amber, size: 16),
+          icon: Icon(Icons.star, color: AppColors.secondary600, size: 16),
         ),
         SizedBox(height: 8),
       ],

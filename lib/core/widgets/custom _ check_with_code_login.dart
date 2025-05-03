@@ -42,7 +42,7 @@ class CustomCheckCodeForLogin extends StatelessWidget {
             child: Text(
               description,
               textAlign: TextAlign.right,
-              style: AppTextStyles.font20BrownBalooBhaijaan2w400,
+              style: AppTextStyles.font20Gray800BalooBhaijaan2w400,
             ),
           ),
           const SizedBox(
@@ -59,11 +59,11 @@ class CustomCheckCodeForLogin extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: 'لم يتم ارسال الكود ؟ ',
-                    style: AppTextStyles.font16BrownBalooBhaijaan2w400,
+                    style: AppTextStyles.font16Gray800BalooBhaijaan2w400,
                   ),
                   TextSpan(
                     text: 'ارسل الكود مرة اخرى',
-                    style: AppTextStyles.font16BrownBalooBhaijaan2w600,
+                    style: AppTextStyles.font16Grey1000BalooBhaijaan2w600,
                   ),
                 ],
               ),

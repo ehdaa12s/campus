@@ -44,7 +44,7 @@ class ProfileRecommendationCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(name,
-                        style: AppTextStyles.font16Gray550BalooBhaijaan2w700),
+                        style: AppTextStyles.font16Gray500BalooBhaijaan2),
                     const SizedBox(height: 3),
                     Row(
                       children: List.generate(
@@ -53,7 +53,7 @@ class ProfileRecommendationCard extends StatelessWidget {
                           AppSvgs.star,
                           width: 13,
                           height: 13,
-                          color: AppColors.amber,
+                          color: AppColors.secondary600,
                         ),
                       ),
                     ),
@@ -63,7 +63,7 @@ class ProfileRecommendationCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Text(content, style: AppTextStyles.fornt14Gray550BalooBhaijaan2w400),
+          Text(content, style: AppTextStyles.font16Gray500BalooBhaijaan2),
         ],
       ),
     );

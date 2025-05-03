@@ -29,7 +29,7 @@ class SessionsScreen extends StatelessWidget {
                 indicatorColor: const Color(0xFF00008D),
                 labelColor: const Color(0xFF00008D),
                 labelStyle:AppTextStyles.font16PrimaryBalooBhaijaan2w600,
-                unselectedLabelStyle: AppTextStyles.font16Brown500BalooBhaijaan2w500,
+                unselectedLabelStyle: AppTextStyles.font16Gray500BalooBhaijaan2w700,
                   tabs: const [
                   Tab(text: 'القادمة'),
                   Tab(text: 'المعلقة'),

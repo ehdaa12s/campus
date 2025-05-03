@@ -14,14 +14,14 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io';
 
-class MenteProfileScreen extends StatefulWidget {
-  const MenteProfileScreen({super.key});
+class MenteeProfileScreen extends StatefulWidget {
+  const MenteeProfileScreen({super.key});
 
   @override
-  State<MenteProfileScreen> createState() => _MenteProfileScreenState();
+  State<MenteeProfileScreen> createState() => _MenteeProfileScreenState();
 }
 
-class _MenteProfileScreenState extends State<MenteProfileScreen> {
+class _MenteeProfileScreenState extends State<MenteeProfileScreen> {
   File? _image;
   String profileName = 'خديجة اشرف';
   String profileJopTitle = 'UX UI Designer';
@@ -52,7 +52,7 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
         body: Column(
           children: [
             // Profile Header
-            MenteProfileHeader(
+            MenteeProfileHeader(
               image: _image,
               profileName: profileName,
               profileJopTitle: profileJopTitle,
@@ -63,8 +63,8 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
               indicatorColor: AppColors.primary,
               labelColor: AppColors.primary,
               labelStyle: AppTextStyles.font16BlackBalooBhaijaan2w600,
-              unselectedLabelStyle: AppTextStyles.font16BrownBalooBhaijaan2w600
-                  .copyWith(color: AppColors.gray550),
+              unselectedLabelStyle: AppTextStyles.font16Gray600BalooBhaijaan2w500
+                  .copyWith(color: AppColors.gray500),
               tabs: const [
                 Tab(text: 'نبذة عني'),
                 Tab(text: 'توصيات عني'),
@@ -160,7 +160,7 @@ class _MenteProfileScreenState extends State<MenteProfileScreen> {
                                     AppSvgs.filledHeart,
                                     width: 23,
                                     height: 23,
-                                    color: AppColors.red,
+                                    color: AppColors.red200,
                                   ),
                                 ),
                               ],

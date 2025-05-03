@@ -41,7 +41,7 @@ class SessionInfoCard extends StatelessWidget {
         children: [
           Text(
             detail['title'] as String,
-            style: AppTextStyles.font16Brown50BalooBhaijaan2w400,
+            style: AppTextStyles.font16Gray800BalooBhaijaan2w400,
           ),
           const SizedBox(height: 4),
           Row(

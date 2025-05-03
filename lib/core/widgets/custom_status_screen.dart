@@ -31,7 +31,7 @@ class CustomStatusScreen extends StatelessWidget {
         const SizedBox(height: 15),
         Text(subtitle,
             textAlign: TextAlign.center,
-            style: AppTextStyles.fornt14Gray550BalooBhaijaan2w400),
+            style: AppTextStyles.fornt14Gray500BalooBhaijaan2w400),
       ],
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../themes/app_colors.dart';
+
 class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
@@ -15,7 +17,7 @@ class CustomButton extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 20),
         padding: const EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
-          color: const Color(0xFF00008D), // Background color
+          color: AppColors.primary, // Background color
           borderRadius: BorderRadius.circular(8), // Rounded corners
           boxShadow: [
             BoxShadow(

@@ -58,7 +58,7 @@ class ProfileCardListWidget extends StatelessWidget {
            numOfRating: profile['numOfRating']!,
            sessions: profile['sessions']!,
            iconColor: Colors.grey,
-           icon: const Icon(Icons.star, color: AppColors.amber, size: 16),
+           icon: const Icon(Icons.star, color: AppColors.secondary600, size: 16),
          ),
 
        )

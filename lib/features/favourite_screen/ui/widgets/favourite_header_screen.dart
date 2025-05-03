@@ -20,7 +20,7 @@ class FavouriteHeaderScreen extends StatelessWidget {
           child: Text(
             'المفضلة',
             textAlign: TextAlign.center,
-            style: AppTextStyles. font24DarkBlueBalooBhaijaan2w700,
+            style: AppTextStyles. font24Grey900BalooBhaijaan2w700,
         ),
         ),
       ],
